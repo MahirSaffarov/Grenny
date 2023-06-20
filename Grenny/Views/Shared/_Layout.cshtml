@@ -1,49 +1,47 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+<!-- Mirrored from mironmahmud.com/greeny/assets/ltr/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 17 Jun 2023 11:58:30 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type"
+      content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Grenny</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Grenny.styles.css" asp-append-version="true" />
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="template" content="greeny" />
+    <meta name="title" content="greeny - Ecommerce Food Store HTML Template" />
+    <meta name="keywords"
+          content="organic, food, shop, ecommerce, store, html, bootstrap, template, agriculture, vegetables, products, farm, grocery, natural, online" />
+    <title>Index Home - Greeny</title>
+    <link rel="icon" href="~/images/favicon.png" />
+    <link rel="stylesheet" href="~/fonts/flaticon/flaticon.css" />
+    <link rel="stylesheet" href="~/fonts/icofont/icofont.min.css" />
+    <link rel="stylesheet" href="~/fonts/fontawesome/fontawesome.min.css" />
+    <link rel="stylesheet" href="~/vendor/venobox/venobox.min.css" />
+    <link rel="stylesheet" href="~/vendor/slickslider/slick.min.css" />
+    <link rel="stylesheet" href="~/vendor/niceselect/nice-select.min.css" />
+    <link rel="stylesheet" href="~/vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/main.css" />
+    <link rel="stylesheet" href="~/css/index.css" />
+    @await RenderSectionAsync("css",required: false)
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Grenny</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+    @await Component.InvokeAsync("Header")
             @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - Grenny - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
-</body>
+    @await Component.InvokeAsync("Footer")
+<script src="~/vendor/bootstrap/jquery-1.12.4.min.js"></script>
+    <script src="~/vendor/bootstrap/popper.min.js"></script>
+    <script src="~/vendor/bootstrap/bootstrap.min.js"></script>
+<script src="~/vendor/countdown/countdown.min.js"></script>
+<script src="~/vendor/niceselect/nice-select.min.js"></script>
+<script src="~/vendor/slickslider/slick.min.js"></script>
+<script src="~/vendor/venobox/venobox.min.js"></script>
+<script src="~/js/nice-select.js"></script>
+<script src="~/js/countdown.js"></script>
+<script src="~/js/accordion.js"></script>
+<script src="~/js/venobox.js"></script>
+<script src="~/js/slick.js"></script>
+    <script src="~/js/main.js"></script>
+  </body>
+<!-- Mirrored from mironmahmud.com/greeny/assets/ltr/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 17 Jun 2023 11:59:00 GMT -->
 </html>

@@ -1,0 +1,17 @@
+C:\Users\mahir\Documents\CodeAcademy\Asp.NET Core MVC\Grenny\RepositoryLayer\bin\Debug\net6.0\RepositoryLayer.deps.json
+C:\Users\mahir\Documents\CodeAcademy\Asp.NET Core MVC\Grenny\RepositoryLayer\bin\Debug\net6.0\RepositoryLayer.runtimeconfig.json
+C:\Users\mahir\Documents\CodeAcademy\Asp.NET Core MVC\Grenny\RepositoryLayer\bin\Debug\net6.0\RepositoryLayer.dll
+C:\Users\mahir\Documents\CodeAcademy\Asp.NET Core MVC\Grenny\RepositoryLayer\bin\Debug\net6.0\RepositoryLayer.pdb
+C:\Users\mahir\Documents\CodeAcademy\Asp.NET Core MVC\Grenny\RepositoryLayer\bin\Debug\net6.0\DomainLayer.dll
+C:\Users\mahir\Documents\CodeAcademy\Asp.NET Core MVC\Grenny\RepositoryLayer\bin\Debug\net6.0\DomainLayer.pdb
+C:\Users\mahir\Documents\CodeAcademy\Asp.NET Core MVC\Grenny\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.csproj.AssemblyReference.cache
+C:\Users\mahir\Documents\CodeAcademy\Asp.NET Core MVC\Grenny\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mahir\Documents\CodeAcademy\Asp.NET Core MVC\Grenny\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.AssemblyInfoInputs.cache
+C:\Users\mahir\Documents\CodeAcademy\Asp.NET Core MVC\Grenny\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.AssemblyInfo.cs
+C:\Users\mahir\Documents\CodeAcademy\Asp.NET Core MVC\Grenny\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.csproj.CoreCompileInputs.cache
+C:\Users\mahir\Documents\CodeAcademy\Asp.NET Core MVC\Grenny\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.csproj.CopyComplete
+C:\Users\mahir\Documents\CodeAcademy\Asp.NET Core MVC\Grenny\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.dll
+C:\Users\mahir\Documents\CodeAcademy\Asp.NET Core MVC\Grenny\RepositoryLayer\obj\Debug\net6.0\refint\RepositoryLayer.dll
+C:\Users\mahir\Documents\CodeAcademy\Asp.NET Core MVC\Grenny\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.pdb
+C:\Users\mahir\Documents\CodeAcademy\Asp.NET Core MVC\Grenny\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.genruntimeconfig.cache
+C:\Users\mahir\Documents\CodeAcademy\Asp.NET Core MVC\Grenny\RepositoryLayer\obj\Debug\net6.0\ref\RepositoryLayer.dll

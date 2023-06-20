@@ -1,0 +1,1285 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Grenny.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Grenny.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\admin\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\css\\style.css",
+      "PackagePath": "staticwebassets\\admin\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\img\\profile.png",
+      "PackagePath": "staticwebassets\\admin\\img\\profile.png"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\img\\testimonial-1.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\testimonial-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\img\\testimonial-2.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\testimonial-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\js\\main.js",
+      "PackagePath": "staticwebassets\\admin\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\lib\\chart\\chart.min.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\chart\\chart.min.js"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\lib\\easing\\easing.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\easing\\easing.js"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\lib\\easing\\easing.min.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\easing\\easing.min.js"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\lib\\owlcarousel\\LICENSE",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\lib\\owlcarousel\\assets\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\ajax-loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\owl.carousel.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\owl.carousel.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.theme.default.css",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\owl.theme.default.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.theme.default.min.css",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\owl.theme.default.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.theme.green.css",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\owl.theme.green.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.theme.green.min.css",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\owl.theme.green.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.video.play.png",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\owl.video.play.png"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\lib\\owlcarousel\\owl.carousel.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\owl.carousel.js"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\lib\\owlcarousel\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.css",
+      "PackagePath": "staticwebassets\\admin\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.min.css",
+      "PackagePath": "staticwebassets\\admin\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\lib\\tempusdominus\\js\\moment-timezone.min.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\tempusdominus\\js\\moment-timezone.min.js"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\lib\\tempusdominus\\js\\moment.min.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\tempusdominus\\js\\moment.min.js"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.js"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.min.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.min.js"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\lib\\waypoints\\links.php",
+      "PackagePath": "staticwebassets\\admin\\lib\\waypoints\\links.php"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\lib\\waypoints\\waypoints.min.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\waypoints\\waypoints.min.js"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_accordion.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_accordion.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_alert.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_badge.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_badge.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_breadcrumb.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_button-group.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_button-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_buttons.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_card.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_card.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_carousel.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_carousel.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_close.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_close.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_containers.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_containers.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_dropdown.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_forms.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_functions.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_functions.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_grid.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_helpers.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_helpers.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_images.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_images.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_list-group.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_modal.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_modal.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_nav.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_nav.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_navbar.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_navbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_offcanvas.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_offcanvas.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_pagination.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_popover.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_popover.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_progress.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_progress.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_reboot.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_root.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_root.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_spinners.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_spinners.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_tables.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_tables.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_toasts.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_toasts.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_tooltip.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_transitions.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_transitions.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_type.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_type.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_utilities.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap-grid.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\bootstrap-grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap-reboot.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\bootstrap-reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap-utilities.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\bootstrap-utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\bootstrap.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_floating-labels.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_floating-labels.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_form-check.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_form-check.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_form-control.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_form-control.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_form-range.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_form-range.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_form-select.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_form-select.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_form-text.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_form-text.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_input-group.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_input-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_labels.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_labels.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_validation.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_validation.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\helpers\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_colored-links.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\helpers\\_colored-links.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_position.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\helpers\\_position.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_ratio.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\helpers\\_ratio.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_stretched-link.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\helpers\\_stretched-link.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_text-truncation.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\helpers\\_text-truncation.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\helpers\\_visually-hidden.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_box-shadow.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_box-shadow.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_color-scheme.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_color-scheme.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_container.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_container.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_deprecate.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_deprecate.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_image.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_table-variants.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_table-variants.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_utilities.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_visually-hidden.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\utilities\\_api.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\utilities\\_api.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\scss\\bootstrap\\scss\\vendor\\_rfs.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\vendor\\_rfs.scss"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\about.css",
+      "PackagePath": "staticwebassets\\css\\about.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\all-category.css",
+      "PackagePath": "staticwebassets\\css\\all-category.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\blog-author.css",
+      "PackagePath": "staticwebassets\\css\\blog-author.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\blog-details.css",
+      "PackagePath": "staticwebassets\\css\\blog-details.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\blog-grid.css",
+      "PackagePath": "staticwebassets\\css\\blog-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\blog-standard.css",
+      "PackagePath": "staticwebassets\\css\\blog-standard.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\brand-list.css",
+      "PackagePath": "staticwebassets\\css\\brand-list.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\brand-single.css",
+      "PackagePath": "staticwebassets\\css\\brand-single.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\checkout.css",
+      "PackagePath": "staticwebassets\\css\\checkout.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\coming-soon.css",
+      "PackagePath": "staticwebassets\\css\\coming-soon.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\compare.css",
+      "PackagePath": "staticwebassets\\css\\compare.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\contact.css",
+      "PackagePath": "staticwebassets\\css\\contact.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\error.css",
+      "PackagePath": "staticwebassets\\css\\error.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\faq.css",
+      "PackagePath": "staticwebassets\\css\\faq.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\home-category.css",
+      "PackagePath": "staticwebassets\\css\\home-category.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\home-classic.css",
+      "PackagePath": "staticwebassets\\css\\home-classic.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\home-grid.css",
+      "PackagePath": "staticwebassets\\css\\home-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\home-standard.css",
+      "PackagePath": "staticwebassets\\css\\home-standard.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\index.css",
+      "PackagePath": "staticwebassets\\css\\index.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\invoice.css",
+      "PackagePath": "staticwebassets\\css\\invoice.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\main.css",
+      "PackagePath": "staticwebassets\\css\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\orderlist.css",
+      "PackagePath": "staticwebassets\\css\\orderlist.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\privacy.css",
+      "PackagePath": "staticwebassets\\css\\privacy.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\product-details.css",
+      "PackagePath": "staticwebassets\\css\\product-details.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\product-grid.css",
+      "PackagePath": "staticwebassets\\css\\product-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\profile.css",
+      "PackagePath": "staticwebassets\\css\\profile.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\user-auth.css",
+      "PackagePath": "staticwebassets\\css\\user-auth.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\wallet.css",
+      "PackagePath": "staticwebassets\\css\\wallet.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\css\\wishlist.css",
+      "PackagePath": "staticwebassets\\css\\wishlist.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\flaticon\\Flaticon.eot",
+      "PackagePath": "staticwebassets\\fonts\\flaticon\\Flaticon.eot"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\flaticon\\Flaticon.svg",
+      "PackagePath": "staticwebassets\\fonts\\flaticon\\Flaticon.svg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\flaticon\\Flaticon.ttf",
+      "PackagePath": "staticwebassets\\fonts\\flaticon\\Flaticon.ttf"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\flaticon\\Flaticon.woff",
+      "PackagePath": "staticwebassets\\fonts\\flaticon\\Flaticon.woff"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\flaticon\\Flaticon.woff2",
+      "PackagePath": "staticwebassets\\fonts\\flaticon\\Flaticon.woff2"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\flaticon\\Flaticond41d.eot",
+      "PackagePath": "staticwebassets\\fonts\\flaticon\\Flaticond41d.eot"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\flaticon\\flaticon.css",
+      "PackagePath": "staticwebassets\\fonts\\flaticon\\flaticon.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\fontawesome\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-brands-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\fontawesome\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-brands-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\fontawesome\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\fontawesome\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-brands-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\fontawesome\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\fontawesome\\fa-brands-400d41d.eot",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-brands-400d41d.eot"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\fontawesome\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-regular-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\fontawesome\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-regular-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\fontawesome\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\fontawesome\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-regular-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\fontawesome\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\fontawesome\\fa-regular-400d41d.eot",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-regular-400d41d.eot"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\fontawesome\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-solid-900.eot"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\fontawesome\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-solid-900.svg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\fontawesome\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\fontawesome\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-solid-900.woff"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\fontawesome\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\fontawesome\\fa-solid-900d41d.eot",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-solid-900d41d.eot"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\fontawesome\\fontawesome.min.css",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fontawesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\icofont\\icofont.min.css",
+      "PackagePath": "staticwebassets\\fonts\\icofont\\icofont.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\icofont\\icofont.woff",
+      "PackagePath": "staticwebassets\\fonts\\icofont\\icofont.woff"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\fonts\\icofont\\icofont.woff2",
+      "PackagePath": "staticwebassets\\fonts\\icofont\\icofont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\about\\01.jpg",
+      "PackagePath": "staticwebassets\\images\\about\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\about\\02.jpg",
+      "PackagePath": "staticwebassets\\images\\about\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\about\\03.jpg",
+      "PackagePath": "staticwebassets\\images\\about\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\about\\04.jpg",
+      "PackagePath": "staticwebassets\\images\\about\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\app-store.png",
+      "PackagePath": "staticwebassets\\images\\app-store.png"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\avatar\\01.jpg",
+      "PackagePath": "staticwebassets\\images\\avatar\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\avatar\\02.jpg",
+      "PackagePath": "staticwebassets\\images\\avatar\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\avatar\\03.jpg",
+      "PackagePath": "staticwebassets\\images\\avatar\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\avatar\\04.jpg",
+      "PackagePath": "staticwebassets\\images\\avatar\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\banner-shape.png",
+      "PackagePath": "staticwebassets\\images\\banner-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\blog-widget\\01.jpg",
+      "PackagePath": "staticwebassets\\images\\blog-widget\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\blog-widget\\02.jpg",
+      "PackagePath": "staticwebassets\\images\\blog-widget\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\blog-widget\\03.jpg",
+      "PackagePath": "staticwebassets\\images\\blog-widget\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\blog-widget\\04.jpg",
+      "PackagePath": "staticwebassets\\images\\blog-widget\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\blog-widget\\05.jpg",
+      "PackagePath": "staticwebassets\\images\\blog-widget\\05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\blog\\01.jpg",
+      "PackagePath": "staticwebassets\\images\\blog\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\blog\\02.jpg",
+      "PackagePath": "staticwebassets\\images\\blog\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\blog\\03.jpg",
+      "PackagePath": "staticwebassets\\images\\blog\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\blog\\04.jpg",
+      "PackagePath": "staticwebassets\\images\\blog\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\blog\\05.jpg",
+      "PackagePath": "staticwebassets\\images\\blog\\05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\blog\\06.jpg",
+      "PackagePath": "staticwebassets\\images\\blog\\06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\blog\\07.jpg",
+      "PackagePath": "staticwebassets\\images\\blog\\07.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\blog\\08.jpg",
+      "PackagePath": "staticwebassets\\images\\blog\\08.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\branch\\01.jpg",
+      "PackagePath": "staticwebassets\\images\\branch\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\branch\\02.jpg",
+      "PackagePath": "staticwebassets\\images\\branch\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\branch\\03.jpg",
+      "PackagePath": "staticwebassets\\images\\branch\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\branch\\04.jpg",
+      "PackagePath": "staticwebassets\\images\\branch\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\brand\\01.jpg",
+      "PackagePath": "staticwebassets\\images\\brand\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\brand\\02.jpg",
+      "PackagePath": "staticwebassets\\images\\brand\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\brand\\03.jpg",
+      "PackagePath": "staticwebassets\\images\\brand\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\brand\\04.jpg",
+      "PackagePath": "staticwebassets\\images\\brand\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\brand\\05.jpg",
+      "PackagePath": "staticwebassets\\images\\brand\\05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\brand\\06.jpg",
+      "PackagePath": "staticwebassets\\images\\brand\\06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\category\\dairy.jpg",
+      "PackagePath": "staticwebassets\\images\\category\\dairy.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\category\\drinks.jpg",
+      "PackagePath": "staticwebassets\\images\\category\\drinks.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\category\\fastfoods.jpg",
+      "PackagePath": "staticwebassets\\images\\category\\fastfoods.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\category\\fish.jpg",
+      "PackagePath": "staticwebassets\\images\\category\\fish.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\category\\fruits.jpg",
+      "PackagePath": "staticwebassets\\images\\category\\fruits.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\category\\groceries.jpg",
+      "PackagePath": "staticwebassets\\images\\category\\groceries.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\category\\meat.jpg",
+      "PackagePath": "staticwebassets\\images\\category\\meat.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\category\\seafoods.jpg",
+      "PackagePath": "staticwebassets\\images\\category\\seafoods.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\category\\vegetables.jpg",
+      "PackagePath": "staticwebassets\\images\\category\\vegetables.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\coming-soon.png",
+      "PackagePath": "staticwebassets\\images\\coming-soon.png"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\countdown.png",
+      "PackagePath": "staticwebassets\\images\\countdown.png"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\error.png",
+      "PackagePath": "staticwebassets\\images\\error.png"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\favicon.png",
+      "PackagePath": "staticwebassets\\images\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\google-store.png",
+      "PackagePath": "staticwebassets\\images\\google-store.png"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\home\\category\\01.jpg",
+      "PackagePath": "staticwebassets\\images\\home\\category\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\home\\category\\02.jpg",
+      "PackagePath": "staticwebassets\\images\\home\\category\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\home\\category\\03.jpg",
+      "PackagePath": "staticwebassets\\images\\home\\category\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\home\\classic\\01.jpg",
+      "PackagePath": "staticwebassets\\images\\home\\classic\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\home\\classic\\02.jpg",
+      "PackagePath": "staticwebassets\\images\\home\\classic\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\home\\classic\\03.jpg",
+      "PackagePath": "staticwebassets\\images\\home\\classic\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\home\\grid\\01.jpg",
+      "PackagePath": "staticwebassets\\images\\home\\grid\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\home\\grid\\02.jpg",
+      "PackagePath": "staticwebassets\\images\\home\\grid\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\home\\index\\01.png",
+      "PackagePath": "staticwebassets\\images\\home\\index\\01.png"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\home\\index\\02.png",
+      "PackagePath": "staticwebassets\\images\\home\\index\\02.png"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\home\\index\\03.png",
+      "PackagePath": "staticwebassets\\images\\home\\index\\03.png"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\newsletter.jpg",
+      "PackagePath": "staticwebassets\\images\\newsletter.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\offer\\01.jpg",
+      "PackagePath": "staticwebassets\\images\\offer\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\offer\\02.jpg",
+      "PackagePath": "staticwebassets\\images\\offer\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\offer\\03.jpg",
+      "PackagePath": "staticwebassets\\images\\offer\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\offer\\04.jpg",
+      "PackagePath": "staticwebassets\\images\\offer\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\offer\\05.jpg",
+      "PackagePath": "staticwebassets\\images\\offer\\05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\offer\\06.jpg",
+      "PackagePath": "staticwebassets\\images\\offer\\06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\offer\\07.jpg",
+      "PackagePath": "staticwebassets\\images\\offer\\07.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\offer\\08.jpg",
+      "PackagePath": "staticwebassets\\images\\offer\\08.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\offer\\09.jpg",
+      "PackagePath": "staticwebassets\\images\\offer\\09.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\offer\\10.jpg",
+      "PackagePath": "staticwebassets\\images\\offer\\10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\offer\\11.jpg",
+      "PackagePath": "staticwebassets\\images\\offer\\11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\payment\\jpg\\01.jpg",
+      "PackagePath": "staticwebassets\\images\\payment\\jpg\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\payment\\jpg\\02.jpg",
+      "PackagePath": "staticwebassets\\images\\payment\\jpg\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\payment\\jpg\\03.jpg",
+      "PackagePath": "staticwebassets\\images\\payment\\jpg\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\payment\\jpg\\04.jpg",
+      "PackagePath": "staticwebassets\\images\\payment\\jpg\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\payment\\png\\01.png",
+      "PackagePath": "staticwebassets\\images\\payment\\png\\01.png"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\payment\\png\\02.png",
+      "PackagePath": "staticwebassets\\images\\payment\\png\\02.png"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\payment\\png\\03.png",
+      "PackagePath": "staticwebassets\\images\\payment\\png\\03.png"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\01.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\02.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\03.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\04.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\05.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\06.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\07.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\07.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\08.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\08.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\09.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\09.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\10.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\11.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\12.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\13.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\14.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\15.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\15.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\16.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\16.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\17.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\17.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\18.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\18.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\19.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\19.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\20.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\20.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\promo\\blog\\01.jpg",
+      "PackagePath": "staticwebassets\\images\\promo\\blog\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\promo\\home\\01.jpg",
+      "PackagePath": "staticwebassets\\images\\promo\\home\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\promo\\home\\02.jpg",
+      "PackagePath": "staticwebassets\\images\\promo\\home\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\promo\\home\\03.jpg",
+      "PackagePath": "staticwebassets\\images\\promo\\home\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\promo\\home\\04.jpg",
+      "PackagePath": "staticwebassets\\images\\promo\\home\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\promo\\home\\05.jpg",
+      "PackagePath": "staticwebassets\\images\\promo\\home\\05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\promo\\home\\06.jpg",
+      "PackagePath": "staticwebassets\\images\\promo\\home\\06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\promo\\home\\07.jpg",
+      "PackagePath": "staticwebassets\\images\\promo\\home\\07.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\promo\\home\\08.jpg",
+      "PackagePath": "staticwebassets\\images\\promo\\home\\08.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\promo\\home\\09.jpg",
+      "PackagePath": "staticwebassets\\images\\promo\\home\\09.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\promo\\shop\\01.jpg",
+      "PackagePath": "staticwebassets\\images\\promo\\shop\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\single-banner.jpg",
+      "PackagePath": "staticwebassets\\images\\single-banner.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\suggest\\01.jpg",
+      "PackagePath": "staticwebassets\\images\\suggest\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\suggest\\02.jpg",
+      "PackagePath": "staticwebassets\\images\\suggest\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\suggest\\03.jpg",
+      "PackagePath": "staticwebassets\\images\\suggest\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\suggest\\04.jpg",
+      "PackagePath": "staticwebassets\\images\\suggest\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\suggest\\05.jpg",
+      "PackagePath": "staticwebassets\\images\\suggest\\05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\suggest\\06.jpg",
+      "PackagePath": "staticwebassets\\images\\suggest\\06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\suggest\\07.jpg",
+      "PackagePath": "staticwebassets\\images\\suggest\\07.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\suggest\\08.jpg",
+      "PackagePath": "staticwebassets\\images\\suggest\\08.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\team\\01.jpg",
+      "PackagePath": "staticwebassets\\images\\team\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\team\\02.jpg",
+      "PackagePath": "staticwebassets\\images\\team\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\team\\03.jpg",
+      "PackagePath": "staticwebassets\\images\\team\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\team\\04.jpg",
+      "PackagePath": "staticwebassets\\images\\team\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\team\\05.jpg",
+      "PackagePath": "staticwebassets\\images\\team\\05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\testimonial-shape.png",
+      "PackagePath": "staticwebassets\\images\\testimonial-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\testimonial\\01.jpg",
+      "PackagePath": "staticwebassets\\images\\testimonial\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\testimonial\\02.jpg",
+      "PackagePath": "staticwebassets\\images\\testimonial\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\user.png",
+      "PackagePath": "staticwebassets\\images\\user.png"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\video.jpg",
+      "PackagePath": "staticwebassets\\images\\video.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\js\\accordion.js",
+      "PackagePath": "staticwebassets\\js\\accordion.js"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\js\\countdown.js",
+      "PackagePath": "staticwebassets\\js\\countdown.js"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\js\\isotope.js",
+      "PackagePath": "staticwebassets\\js\\isotope.js"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\js\\nice-select.js",
+      "PackagePath": "staticwebassets\\js\\nice-select.js"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\js\\slick.js",
+      "PackagePath": "staticwebassets\\js\\slick.js"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\js\\venobox.js",
+      "PackagePath": "staticwebassets\\js\\venobox.js"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\vendor\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\vendor\\bootstrap\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\vendor\\bootstrap\\jquery-1.12.4.min.js",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\jquery-1.12.4.min.js"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\vendor\\bootstrap\\popper.min.js",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\popper.min.js"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\vendor\\countdown\\countdown.min.js",
+      "PackagePath": "staticwebassets\\vendor\\countdown\\countdown.min.js"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\vendor\\isotope\\isotope.pkgd.min.js",
+      "PackagePath": "staticwebassets\\vendor\\isotope\\isotope.pkgd.min.js"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\vendor\\niceselect\\nice-select.min.css",
+      "PackagePath": "staticwebassets\\vendor\\niceselect\\nice-select.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\vendor\\niceselect\\nice-select.min.js",
+      "PackagePath": "staticwebassets\\vendor\\niceselect\\nice-select.min.js"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\vendor\\slickslider\\slick.min.css",
+      "PackagePath": "staticwebassets\\vendor\\slickslider\\slick.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\vendor\\slickslider\\slick.min.js",
+      "PackagePath": "staticwebassets\\vendor\\slickslider\\slick.min.js"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\vendor\\venobox\\venobox.min.css",
+      "PackagePath": "staticwebassets\\vendor\\venobox\\venobox.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\vendor\\venobox\\venobox.min.js",
+      "PackagePath": "staticwebassets\\vendor\\venobox\\venobox.min.js"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Grenny.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Grenny.props",
+      "PackagePath": "build\\Grenny.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Grenny.props",
+      "PackagePath": "buildMultiTargeting\\Grenny.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Grenny.props",
+      "PackagePath": "buildTransitive\\Grenny.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
