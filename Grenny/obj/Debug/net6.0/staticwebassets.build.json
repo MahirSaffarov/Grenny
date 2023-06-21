@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ApjE7SnCiOzK5tOSg60JvTPopOYE86WN3wo1tcCv2Dw=",
+  "Hash": "Oj99NNJWGWLoY35Ke4hB4ZEXUwbe8wCa1ERZipn3xuQ=",
   "Source": "Grenny",
   "BasePath": "_content/Grenny",
   "Mode": "Default",
@@ -5200,6 +5200,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\venobox.js"
+    },
+    {
+      "Identity": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\template\\account.html",
+      "SourceId": "Grenny",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\",
+      "BasePath": "_content/Grenny",
+      "RelativePath": "template/account.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\template\\account.html"
     },
     {
       "Identity": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\vendor\\bootstrap\\bootstrap.min.css",

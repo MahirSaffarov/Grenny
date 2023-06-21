@@ -1,15 +1,30 @@
 ﻿
+using DomainLayer.Entities;
 using Microsoft.AspNetCore.Mvc;
+using ServiceLayer.Services.Interfaces;
+using ServiceLayer.ViewModels.HomeVM;
 using System.Diagnostics;
 
 namespace Grenny.Controllers
 {
     public class HomeController : Controller
     { 
-
-        public IActionResult Index()
+        private readonly IProductService _productService;
+        public HomeController(IProductService productService)
         {
-            return View();
+            _productService = productService;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            IEnumerable<Product> products = await _productService.GetAllAsync();
+
+            HomeVM homeVM = new()
+            {
+                Products = products
+            };
+
+            return View(homeVM);
         }
     }
 }

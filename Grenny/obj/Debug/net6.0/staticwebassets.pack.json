@@ -1217,6 +1217,10 @@
       "PackagePath": "staticwebassets\\js\\venobox.js"
     },
     {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\template\\account.html",
+      "PackagePath": "staticwebassets\\template\\account.html"
+    },
+    {
       "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\vendor\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\vendor\\bootstrap\\bootstrap.min.css"
     },

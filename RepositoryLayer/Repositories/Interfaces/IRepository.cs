@@ -15,6 +15,7 @@ namespace RepositoryLayer.Repositories.Interfaces
         Task SoftDeleteAsync(int? id);
         Task<T> GetByIdAsync(int? id);
         Task<IEnumerable<T>> GetAllAsync(Expression<Func<T,bool>> expession = null);
+        Task<IEnumerable<T>> GetAllWithIncludes(params Expression<Func<T, object>>[] includes);
 
     }
 }

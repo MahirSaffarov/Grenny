@@ -2,9 +2,9 @@
 using DomainLayer.Entities;
 using ServiceLayer.Helpers;
 using ServiceLayer.Services.Interfaces;
-using ServiceLayer.ViewModels;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
+using ServiceLayer.ViewModels.AccountVM;
 
 namespace Fiorello.Services
 {
@@ -53,11 +53,24 @@ namespace Fiorello.Services
             return token;
         }
 
-        public async Task SendConfirmationEmailAsync(AppUser user, string link)
+        public async Task SendConfirmationEmailAsync(AppUser user, string link,string subject, string confirmationProp)
         {
-            string subject = "Email Confirmation";
-            string html = $"Please confirm your email by clicking the link below:<br/><a href='{link}'>Confirm Email</a>";
+            string html = EmailTemplate(link, user, confirmationProp);
              _emailService.Send(user.Email, subject, html);
+        }
+        public string EmailTemplate(string link, AppUser user, string confirmationProp)
+        {
+            string html = string.Empty;
+            using (StreamReader reader = new("wwwroot/template/account.html"))
+            {
+                html = reader.ReadToEnd();
+            }
+
+            html = html.Replace("{{link}}", link);
+            html = html.Replace("{{confirmationProp}}", confirmationProp);
+            html = html.Replace("{{fullname}}", user.FullName);
+
+            return html;
         }
 
         public async Task ConfirmEmailAsync(string userId, string token)
@@ -95,11 +108,11 @@ namespace Fiorello.Services
             }
         }
 
-        public async Task<AppUser> GetUserByEmailOrUsername(string emailOrUsername)
+        public async Task<AppUser> GetUserByEmailOrUsername(string emailUsername)
         {
-            AppUser user = await _userManager.FindByEmailAsync(emailOrUsername);
+            AppUser user = await _userManager.FindByEmailAsync(emailUsername);
 
-            user ??= await _userManager.FindByNameAsync(emailOrUsername);
+            user ??= await _userManager.FindByNameAsync(emailUsername);
 
             return user;
         }

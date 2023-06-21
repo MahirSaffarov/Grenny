@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DomainLayer.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,10 @@ using System.Threading.Tasks;
 
 namespace DomainLayer.Entities
 {
-    internal class Discount
+    public class Discount : BaseEntity
     {
+        public string Name { get; set; }
+        public byte Percent { get; set; }
+        public ICollection<Product> Products { get; set; }
     }
 }

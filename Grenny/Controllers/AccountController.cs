@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using ServiceLayer.Helpers;
 using ServiceLayer.Services.Interfaces;
-using ServiceLayer.ViewModels;
+using ServiceLayer.ViewModels.AccountVM;
 using System.Security.Claims;
 
 namespace Grenny.Controllers
@@ -40,15 +40,16 @@ namespace Grenny.Controllers
                 return View(request);
             }
 
-            AppUser user = await _accountService.GetUserByEmailOrUsername(request.UserName);
+            AppUser user = await _accountService.GetUserByEmailOrUsername(request.Email);
 
             await _accountService.AddUserToRoleAsync(user, Roles.Member);
 
             string token = await _accountService.GenerateEmailConfirmationTokenAsync(user);
 
-            string link = GenerateConfirmationEmailLink(user.Id, token,ConfirmEmail);
-
-            await _accountService.SendConfirmationEmailAsync(user, link);
+            string link = GenerateConfirmationEmailLink(user.Id, token, "ConfirmEmail");
+            string subject = "Email for register Confirmation";
+            string confirmationProp = "confirm your email address";
+            await _accountService.SendConfirmationEmailAsync(user, link,subject, confirmationProp);
 
             return RedirectToAction(nameof(VerifyEmail));
         }
@@ -112,17 +113,16 @@ namespace Grenny.Controllers
             return Ok();
         }
 
-        private string GenerateConfirmationEmailLink(string userId, string token, Func<string, string, Task<IActionResult>> method)
+        private string GenerateConfirmationEmailLink(string userId, string token, string action)
         {
-            string link = Url.Action(nameof(method), "Account", new { userId, token }, Request.Scheme);
+            var request = HttpContext.Request;
+            var baseUrl = $"{request.Scheme}://{request.Host}";
+            var link = $"{baseUrl}/Account/{action}/?userId={userId}&token={token}";
             return link;
         }
 
         [HttpGet]
-        public IActionResult ForgotPassword()
-        {
-            return View();
-        }
+        public IActionResult ForgotPassword() => View();
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -143,9 +143,10 @@ namespace Grenny.Controllers
 
             string token = await _accountService.GeneratePasswordResetTokenAsync(existUser);
 
-            string link = GenerateConfirmationEmailLink(existUser.Id, token,ResetPassword);
-
-            await _accountService.SendConfirmationEmailAsync(existUser, link);
+            string link = GenerateConfirmationEmailLink(existUser.Id, token, "ResetPassword");
+            string subject = "Password reset Confirmation";
+            string confirmationProp = "reset your password";
+            await _accountService.SendConfirmationEmailAsync(existUser, link,subject, confirmationProp);
 
             return RedirectToAction(nameof(VerifyEmail));
         }

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ServiceLayer.ViewModels
+namespace ServiceLayer.ViewModels.AccountVM
 {
     public class RegisterVM
     {

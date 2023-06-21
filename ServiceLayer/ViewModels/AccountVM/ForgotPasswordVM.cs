@@ -5,13 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ServiceLayer.ViewModels
+namespace ServiceLayer.ViewModels.AccountVM
 {
-    public class LoginVM
+    public class ForgotPasswordVM
     {
         [Required]
-        public string EmailOrUsername { get; set; }
-        [DataType(DataType.Password)]
-        public string Password { get; set; }
+        [DataType(DataType.EmailAddress)]
+        public string Email { get; set; }
     }
 }
