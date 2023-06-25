@@ -9,7 +9,9 @@ namespace DomainLayer.Entities
 {
     public class Basket : BaseEntity
     {
-        public ICollection<UserBasket> UserBaskets { get; set; }
-        public ICollection<Product> Products { get; set; }
+        public string AppUserId { get; set; }
+        public AppUser AppUser { get; set; }
+        public int ProductCount { get; set; }
+        public ICollection<ProductBasket> ProductBaskets { get; set; }
     }
 }

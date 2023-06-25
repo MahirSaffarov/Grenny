@@ -99,13 +99,23 @@ namespace RepositoryLayer.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<string>("AppUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("ProductCount")
+                        .HasColumnType("int");
 
                     b.Property<bool>("SoftDelete")
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AppUserId")
+                        .IsUnique();
 
                     b.ToTable("Baskets");
 
@@ -113,13 +123,17 @@ namespace RepositoryLayer.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2023, 6, 21, 0, 45, 53, 237, DateTimeKind.Local).AddTicks(4168),
+                            AppUserId = "b59d27ed-5ac4-4cbc-819e-c36b80e2d334",
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(7641),
+                            ProductCount = 0,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 2,
-                            CreateDate = new DateTime(2023, 6, 21, 0, 45, 53, 237, DateTimeKind.Local).AddTicks(4180),
+                            AppUserId = "f565482b-e971-4580-8493-e5c5ba0479c9",
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(7657),
+                            ProductCount = 0,
                             SoftDelete = false
                         });
                 });
@@ -154,7 +168,7 @@ namespace RepositoryLayer.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2023, 6, 21, 0, 45, 53, 237, DateTimeKind.Local).AddTicks(4286),
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(7856),
                             Image = "01.jpg",
                             Name = "Vegan Lover",
                             SoftDelete = false
@@ -162,9 +176,9 @@ namespace RepositoryLayer.Migrations
                         new
                         {
                             Id = 2,
-                            CreateDate = new DateTime(2023, 6, 21, 0, 45, 53, 237, DateTimeKind.Local).AddTicks(4287),
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(7859),
                             Image = "03.jpg",
-                            Name = "Vegan Lover",
+                            Name = "Organic Foody",
                             SoftDelete = false
                         });
                 });
@@ -199,7 +213,7 @@ namespace RepositoryLayer.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2023, 6, 21, 0, 45, 53, 237, DateTimeKind.Local).AddTicks(4296),
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(7876),
                             Image = "01.jpg",
                             Name = "Vegetables",
                             SoftDelete = false
@@ -207,7 +221,7 @@ namespace RepositoryLayer.Migrations
                         new
                         {
                             Id = 2,
-                            CreateDate = new DateTime(2023, 6, 21, 0, 45, 53, 237, DateTimeKind.Local).AddTicks(4297),
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(7879),
                             Image = "02.jpg",
                             Name = "Foods",
                             SoftDelete = false
@@ -243,7 +257,7 @@ namespace RepositoryLayer.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2023, 6, 21, 0, 45, 53, 237, DateTimeKind.Local).AddTicks(4305),
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(7896),
                             Name = "Black Friday",
                             Percent = (byte)50,
                             SoftDelete = false
@@ -251,7 +265,7 @@ namespace RepositoryLayer.Migrations
                         new
                         {
                             Id = 2,
-                            CreateDate = new DateTime(2023, 6, 21, 0, 45, 53, 237, DateTimeKind.Local).AddTicks(4306),
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(7898),
                             Name = "No Discount",
                             Percent = (byte)0,
                             SoftDelete = false
@@ -265,9 +279,6 @@ namespace RepositoryLayer.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("BasketId")
-                        .HasColumnType("int");
 
                     b.Property<int>("BrandId")
                         .HasColumnType("int");
@@ -310,12 +321,7 @@ namespace RepositoryLayer.Migrations
                     b.Property<int>("SubCategoryId")
                         .HasColumnType("int");
 
-                    b.Property<int>("WishlistId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("BasketId");
 
                     b.HasIndex("BrandId");
 
@@ -327,18 +333,15 @@ namespace RepositoryLayer.Migrations
 
                     b.HasIndex("SubCategoryId");
 
-                    b.HasIndex("WishlistId");
-
                     b.ToTable("Products");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            BasketId = 1,
                             BrandId = 1,
                             CategoryId = 1,
-                            CreateDate = new DateTime(2023, 6, 21, 0, 45, 53, 237, DateTimeKind.Local).AddTicks(4314),
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(7917),
                             Description = "Cucumbers are commonly mistaken for vegetables. But in fact they are fruits, specifically berries. The long, green berries of the cucumber plant are what you usually find in your salads and sandwiches. They are made up of over 90% water, making them excellent for staying hydrated.",
                             DiscountId = 1,
                             Name = "Cucumber",
@@ -348,16 +351,14 @@ namespace RepositoryLayer.Migrations
                             SalesCount = 80,
                             SoftDelete = false,
                             StockCount = 100,
-                            SubCategoryId = 1,
-                            WishlistId = 1
+                            SubCategoryId = 1
                         },
                         new
                         {
                             Id = 2,
-                            BasketId = 2,
                             BrandId = 2,
                             CategoryId = 2,
-                            CreateDate = new DateTime(2023, 6, 21, 0, 45, 53, 237, DateTimeKind.Local).AddTicks(4318),
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(7923),
                             Description = "The standard eggplant is an oval or pear-shaped, glossy, purplish fruit 6 to 9 inches long. Japanese and oriental varieties tend to be elongated and slender with a thinner, more delicate skin. Ornamental varieties are edible and tend to produce small, white-skinned, oval-shaped fruit.",
                             DiscountId = 2,
                             Name = "Eggplant",
@@ -367,8 +368,49 @@ namespace RepositoryLayer.Migrations
                             SalesCount = 180,
                             SoftDelete = false,
                             StockCount = 200,
-                            SubCategoryId = 2,
-                            WishlistId = 2
+                            SubCategoryId = 2
+                        });
+                });
+
+            modelBuilder.Entity("DomainLayer.Entities.ProductBasket", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("BasketId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductCount")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BasketId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductBaskets");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            BasketId = 1,
+                            ProductCount = 0,
+                            ProductId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            BasketId = 2,
+                            ProductCount = 0,
+                            ProductId = 2
                         });
                 });
 
@@ -406,7 +448,7 @@ namespace RepositoryLayer.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2023, 6, 21, 0, 45, 53, 237, DateTimeKind.Local).AddTicks(4329),
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(7964),
                             Image = "01.jpg",
                             IsMain = true,
                             ProductId = 1,
@@ -415,7 +457,7 @@ namespace RepositoryLayer.Migrations
                         new
                         {
                             Id = 2,
-                            CreateDate = new DateTime(2023, 6, 21, 0, 45, 53, 237, DateTimeKind.Local).AddTicks(4330),
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(7967),
                             Image = "02.jpg",
                             IsMain = false,
                             ProductId = 1,
@@ -424,7 +466,7 @@ namespace RepositoryLayer.Migrations
                         new
                         {
                             Id = 3,
-                            CreateDate = new DateTime(2023, 6, 21, 0, 45, 53, 237, DateTimeKind.Local).AddTicks(4331),
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(7968),
                             Image = "03.jpg",
                             IsMain = true,
                             ProductId = 2,
@@ -433,7 +475,7 @@ namespace RepositoryLayer.Migrations
                         new
                         {
                             Id = 4,
-                            CreateDate = new DateTime(2023, 6, 21, 0, 45, 53, 237, DateTimeKind.Local).AddTicks(4331),
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(7969),
                             Image = "04.jpg",
                             IsMain = false,
                             ProductId = 2,
@@ -478,6 +520,43 @@ namespace RepositoryLayer.Migrations
                         });
                 });
 
+            modelBuilder.Entity("DomainLayer.Entities.ProductWishlist", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("WishlistId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("WishlistId");
+
+                    b.ToTable("ProductWishlists");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            ProductId = 1,
+                            WishlistId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            ProductId = 2,
+                            WishlistId = 2
+                        });
+                });
+
             modelBuilder.Entity("DomainLayer.Entities.Rating", b =>
                 {
                     b.Property<int>("Id")
@@ -503,35 +582,35 @@ namespace RepositoryLayer.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2023, 6, 21, 0, 45, 53, 237, DateTimeKind.Local).AddTicks(4350),
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8026),
                             RatingCount = (byte)1,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 2,
-                            CreateDate = new DateTime(2023, 6, 21, 0, 45, 53, 237, DateTimeKind.Local).AddTicks(4351),
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8028),
                             RatingCount = (byte)2,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 3,
-                            CreateDate = new DateTime(2023, 6, 21, 0, 45, 53, 237, DateTimeKind.Local).AddTicks(4351),
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8029),
                             RatingCount = (byte)3,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 4,
-                            CreateDate = new DateTime(2023, 6, 21, 0, 45, 53, 237, DateTimeKind.Local).AddTicks(4352),
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8030),
                             RatingCount = (byte)4,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 5,
-                            CreateDate = new DateTime(2023, 6, 21, 0, 45, 53, 237, DateTimeKind.Local).AddTicks(4353),
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8031),
                             RatingCount = (byte)5,
                             SoftDelete = false
                         });
@@ -544,6 +623,10 @@ namespace RepositoryLayer.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("AppUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
@@ -563,6 +646,8 @@ namespace RepositoryLayer.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("AppUserId");
+
                     b.HasIndex("ProductId");
 
                     b.HasIndex("RatingId");
@@ -573,7 +658,8 @@ namespace RepositoryLayer.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2023, 6, 21, 0, 45, 53, 237, DateTimeKind.Local).AddTicks(4363),
+                            AppUserId = "b59d27ed-5ac4-4cbc-819e-c36b80e2d334",
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8051),
                             Describe = "Very tasty, it is the best cucumber i have ever eaten.",
                             ProductId = 1,
                             RatingId = 1,
@@ -582,7 +668,8 @@ namespace RepositoryLayer.Migrations
                         new
                         {
                             Id = 2,
-                            CreateDate = new DateTime(2023, 6, 21, 0, 45, 53, 237, DateTimeKind.Local).AddTicks(4365),
+                            AppUserId = "f565482b-e971-4580-8493-e5c5ba0479c9",
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8055),
                             Describe = "It is a fresh vegetables. I liked it.",
                             ProductId = 2,
                             RatingId = 2,
@@ -643,7 +730,7 @@ namespace RepositoryLayer.Migrations
                         {
                             Id = 1,
                             CategoryId = 1,
-                            CreateDate = new DateTime(2023, 6, 21, 0, 45, 53, 237, DateTimeKind.Local).AddTicks(4377),
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8076),
                             Name = "Cucumber",
                             SoftDelete = false
                         },
@@ -651,7 +738,7 @@ namespace RepositoryLayer.Migrations
                         {
                             Id = 2,
                             CategoryId = 2,
-                            CreateDate = new DateTime(2023, 6, 21, 0, 45, 53, 237, DateTimeKind.Local).AddTicks(4378),
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8079),
                             Name = "Eggplant",
                             SoftDelete = false
                         });
@@ -683,92 +770,107 @@ namespace RepositoryLayer.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2023, 6, 21, 0, 45, 53, 237, DateTimeKind.Local).AddTicks(4385),
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8133),
                             Name = "Organic",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 2,
-                            CreateDate = new DateTime(2023, 6, 21, 0, 45, 53, 237, DateTimeKind.Local).AddTicks(4386),
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8138),
                             Name = "Fruits",
                             SoftDelete = false
-                        });
-                });
-
-            modelBuilder.Entity("DomainLayer.Entities.UserBasket", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("AppUserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("BasketId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AppUserId");
-
-                    b.HasIndex("BasketId");
-
-                    b.ToTable("UserBaskets");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            AppUserId = "63da8847-87d5-4263-8977-2a15314c3cda",
-                            BasketId = 1
                         },
                         new
                         {
-                            Id = 2,
-                            AppUserId = "e674e9e0-4b03-45ba-b0ee-1634052fd308",
-                            BasketId = 2
-                        });
-                });
-
-            modelBuilder.Entity("DomainLayer.Entities.UserWishlist", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("AppUserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("WishlistId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AppUserId");
-
-                    b.HasIndex("WishlistId");
-
-                    b.ToTable("UserWishlists");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            AppUserId = "63da8847-87d5-4263-8977-2a15314c3cda",
-                            WishlistId = 1
+                            Id = 3,
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8139),
+                            Name = "Vegan",
+                            SoftDelete = false
                         },
                         new
                         {
-                            Id = 2,
-                            AppUserId = "e674e9e0-4b03-45ba-b0ee-1634052fd308",
-                            WishlistId = 2
+                            Id = 4,
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8140),
+                            Name = "Healthy",
+                            SoftDelete = false
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8141),
+                            Name = "Seafood",
+                            SoftDelete = false
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8142),
+                            Name = "Crunchy",
+                            SoftDelete = false
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8143),
+                            Name = "Savory",
+                            SoftDelete = false
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8144),
+                            Name = "Gourmet",
+                            SoftDelete = false
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8145),
+                            Name = "Satisfying",
+                            SoftDelete = false
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8146),
+                            Name = "Delicious",
+                            SoftDelete = false
+                        },
+                        new
+                        {
+                            Id = 11,
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8148),
+                            Name = "Fresh",
+                            SoftDelete = false
+                        },
+                        new
+                        {
+                            Id = 12,
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8149),
+                            Name = "Juicy",
+                            SoftDelete = false
+                        },
+                        new
+                        {
+                            Id = 13,
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8151),
+                            Name = "SpiceUp",
+                            SoftDelete = false
+                        },
+                        new
+                        {
+                            Id = 14,
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8152),
+                            Name = "Tasty",
+                            SoftDelete = false
+                        },
+                        new
+                        {
+                            Id = 15,
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8153),
+                            Name = "Zesty",
+                            SoftDelete = false
                         });
                 });
 
@@ -780,6 +882,10 @@ namespace RepositoryLayer.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<string>("AppUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
@@ -788,19 +894,24 @@ namespace RepositoryLayer.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("AppUserId")
+                        .IsUnique();
+
                     b.ToTable("Wishlists");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2023, 6, 21, 0, 45, 53, 237, DateTimeKind.Local).AddTicks(4518),
+                            AppUserId = "b59d27ed-5ac4-4cbc-819e-c36b80e2d334",
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8178),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 2,
-                            CreateDate = new DateTime(2023, 6, 21, 0, 45, 53, 237, DateTimeKind.Local).AddTicks(4519),
+                            AppUserId = "f565482b-e971-4580-8493-e5c5ba0479c9",
+                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8180),
                             SoftDelete = false
                         });
                 });
@@ -938,14 +1049,19 @@ namespace RepositoryLayer.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("DomainLayer.Entities.Product", b =>
+            modelBuilder.Entity("DomainLayer.Entities.Basket", b =>
                 {
-                    b.HasOne("DomainLayer.Entities.Basket", "Basket")
-                        .WithMany("Products")
-                        .HasForeignKey("BasketId")
+                    b.HasOne("DomainLayer.Entities.AppUser", "AppUser")
+                        .WithOne("Basket")
+                        .HasForeignKey("DomainLayer.Entities.Basket", "AppUserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("AppUser");
+                });
+
+            modelBuilder.Entity("DomainLayer.Entities.Product", b =>
+                {
                     b.HasOne("DomainLayer.Entities.Brand", "Brand")
                         .WithMany("Products")
                         .HasForeignKey("BrandId")
@@ -976,14 +1092,6 @@ namespace RepositoryLayer.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("DomainLayer.Entities.Wishlist", "Wishlist")
-                        .WithMany("Products")
-                        .HasForeignKey("WishlistId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Basket");
-
                     b.Navigation("Brand");
 
                     b.Navigation("Category");
@@ -993,8 +1101,25 @@ namespace RepositoryLayer.Migrations
                     b.Navigation("Rating");
 
                     b.Navigation("SubCategory");
+                });
 
-                    b.Navigation("Wishlist");
+            modelBuilder.Entity("DomainLayer.Entities.ProductBasket", b =>
+                {
+                    b.HasOne("DomainLayer.Entities.Basket", "Basket")
+                        .WithMany("ProductBaskets")
+                        .HasForeignKey("BasketId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DomainLayer.Entities.Product", "Product")
+                        .WithMany("ProductBaskets")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Basket");
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("DomainLayer.Entities.ProductImage", b =>
@@ -1027,8 +1152,33 @@ namespace RepositoryLayer.Migrations
                     b.Navigation("Tag");
                 });
 
+            modelBuilder.Entity("DomainLayer.Entities.ProductWishlist", b =>
+                {
+                    b.HasOne("DomainLayer.Entities.Product", "Product")
+                        .WithMany("ProductWishlists")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DomainLayer.Entities.Wishlist", "Wishlist")
+                        .WithMany("ProductWishlists")
+                        .HasForeignKey("WishlistId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+
+                    b.Navigation("Wishlist");
+                });
+
             modelBuilder.Entity("DomainLayer.Entities.Review", b =>
                 {
+                    b.HasOne("DomainLayer.Entities.AppUser", "AppUser")
+                        .WithMany("Reviews")
+                        .HasForeignKey("AppUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("DomainLayer.Entities.Product", "Product")
                         .WithMany("Reviews")
                         .HasForeignKey("ProductId")
@@ -1040,6 +1190,8 @@ namespace RepositoryLayer.Migrations
                         .HasForeignKey("RatingId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.Navigation("AppUser");
 
                     b.Navigation("Product");
 
@@ -1057,42 +1209,15 @@ namespace RepositoryLayer.Migrations
                     b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("DomainLayer.Entities.UserBasket", b =>
+            modelBuilder.Entity("DomainLayer.Entities.Wishlist", b =>
                 {
                     b.HasOne("DomainLayer.Entities.AppUser", "AppUser")
-                        .WithMany("UserBaskets")
-                        .HasForeignKey("AppUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("DomainLayer.Entities.Basket", "Basket")
-                        .WithMany("UserBaskets")
-                        .HasForeignKey("BasketId")
+                        .WithOne("Wishlist")
+                        .HasForeignKey("DomainLayer.Entities.Wishlist", "AppUserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("AppUser");
-
-                    b.Navigation("Basket");
-                });
-
-            modelBuilder.Entity("DomainLayer.Entities.UserWishlist", b =>
-                {
-                    b.HasOne("DomainLayer.Entities.AppUser", "AppUser")
-                        .WithMany("UserWishlists")
-                        .HasForeignKey("AppUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("DomainLayer.Entities.Wishlist", "Wishlist")
-                        .WithMany("UserWishlists")
-                        .HasForeignKey("WishlistId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("AppUser");
-
-                    b.Navigation("Wishlist");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -1148,16 +1273,18 @@ namespace RepositoryLayer.Migrations
 
             modelBuilder.Entity("DomainLayer.Entities.AppUser", b =>
                 {
-                    b.Navigation("UserBaskets");
+                    b.Navigation("Basket")
+                        .IsRequired();
 
-                    b.Navigation("UserWishlists");
+                    b.Navigation("Reviews");
+
+                    b.Navigation("Wishlist")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("DomainLayer.Entities.Basket", b =>
                 {
-                    b.Navigation("Products");
-
-                    b.Navigation("UserBaskets");
+                    b.Navigation("ProductBaskets");
                 });
 
             modelBuilder.Entity("DomainLayer.Entities.Brand", b =>
@@ -1181,7 +1308,11 @@ namespace RepositoryLayer.Migrations
                 {
                     b.Navigation("Images");
 
+                    b.Navigation("ProductBaskets");
+
                     b.Navigation("ProductTags");
+
+                    b.Navigation("ProductWishlists");
 
                     b.Navigation("Reviews");
                 });
@@ -1205,9 +1336,7 @@ namespace RepositoryLayer.Migrations
 
             modelBuilder.Entity("DomainLayer.Entities.Wishlist", b =>
                 {
-                    b.Navigation("Products");
-
-                    b.Navigation("UserWishlists");
+                    b.Navigation("ProductWishlists");
                 });
 #pragma warning restore 612, 618
         }

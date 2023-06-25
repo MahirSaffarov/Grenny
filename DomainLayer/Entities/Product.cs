@@ -26,15 +26,13 @@ namespace DomainLayer.Entities
         public Discount Discount { get; set; }
         public int BrandId { get; set; }
         public Brand Brand { get; set; }
-        public int BasketId { get; set; }
-        public Basket Basket { get; set; }
-        public int WishlistId { get; set; }
-        public Wishlist Wishlist { get; set; }
         public int RatingId { get; set; }
         public Rating Rating { get; set; }
         public ICollection<ProductImage> Images { get; set; }
         public ICollection<Review> Reviews { get; set; }
         public ICollection<ProductTag> ProductTags { get; set; }
+        public ICollection<ProductWishlist> ProductWishlists { get; set; }
+        public ICollection<ProductBasket> ProductBaskets { get; set; }
 
     }
 }

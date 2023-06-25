@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Oj99NNJWGWLoY35Ke4hB4ZEXUwbe8wCa1ERZipn3xuQ=",
+  "Hash": "w3/tv6BxpUU0pqDkpnEhburl+LaQZ+CyrB9s1bTmJlk=",
   "Source": "Grenny",
   "BasePath": "_content/Grenny",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Grenny.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\css\\add.css",
+      "SourceId": "Grenny",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\",
+      "BasePath": "_content/Grenny",
+      "RelativePath": "admin/css/add.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\css\\add.css"
+    },
+    {
       "Identity": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\css\\bootstrap.min.css",
       "SourceId": "Grenny",
       "SourceType": "Discovered",
@@ -66,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\admin\\css\\bootstrap.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\css\\detail.css",
+      "SourceId": "Grenny",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\",
+      "BasePath": "_content/Grenny",
+      "RelativePath": "admin/css/detail.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\css\\detail.css"
     },
     {
       "Identity": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\css\\style.css",
@@ -136,6 +170,40 @@
       "OriginalItemSpec": "wwwroot\\admin\\img\\testimonial-2.jpg"
     },
     {
+      "Identity": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\js\\add.js",
+      "SourceId": "Grenny",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\",
+      "BasePath": "_content/Grenny",
+      "RelativePath": "admin/js/add.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\js\\add.js"
+    },
+    {
+      "Identity": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\js\\detail.js",
+      "SourceId": "Grenny",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\",
+      "BasePath": "_content/Grenny",
+      "RelativePath": "admin/js/detail.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\js\\detail.js"
+    },
+    {
       "Identity": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\js\\main.js",
       "SourceId": "Grenny",
       "SourceType": "Discovered",
@@ -151,6 +219,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\admin\\js\\main.js"
+    },
+    {
+      "Identity": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\js\\product.js",
+      "SourceId": "Grenny",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\",
+      "BasePath": "_content/Grenny",
+      "RelativePath": "admin/js/product.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\js\\product.js"
+    },
+    {
+      "Identity": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\js\\subcategoryFilter.js",
+      "SourceId": "Grenny",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\",
+      "BasePath": "_content/Grenny",
+      "RelativePath": "admin/js/subcategoryFilter.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\js\\subcategoryFilter.js"
     },
     {
       "Identity": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\lib\\chart\\chart.min.js",
@@ -2975,12 +3077,12 @@
       "OriginalItemSpec": "wwwroot\\images\\about\\04.jpg"
     },
     {
-      "Identity": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\app-store.png",
+      "Identity": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\app-store - Copy.png",
       "SourceId": "Grenny",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\",
       "BasePath": "_content/Grenny",
-      "RelativePath": "images/app-store.png",
+      "RelativePath": "images/app-store - Copy.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2989,7 +3091,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\app-store.png"
+      "OriginalItemSpec": "wwwroot\\images\\app-store - Copy.png"
     },
     {
       "Identity": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\avatar\\01.jpg",
@@ -3060,12 +3162,12 @@
       "OriginalItemSpec": "wwwroot\\images\\avatar\\04.jpg"
     },
     {
-      "Identity": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\banner-shape.png",
+      "Identity": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\banner-shape - Copy.png",
       "SourceId": "Grenny",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\",
       "BasePath": "_content/Grenny",
-      "RelativePath": "images/banner-shape.png",
+      "RelativePath": "images/banner-shape - Copy.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3074,7 +3176,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\banner-shape.png"
+      "OriginalItemSpec": "wwwroot\\images\\banner-shape - Copy.png"
     },
     {
       "Identity": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\blog\\01.jpg",
@@ -3842,6 +3944,23 @@
       "OriginalItemSpec": "wwwroot\\images\\home\\grid\\02.jpg"
     },
     {
+      "Identity": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\home\\index\\01 - Copy.png",
+      "SourceId": "Grenny",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\",
+      "BasePath": "_content/Grenny",
+      "RelativePath": "images/home/index/01 - Copy.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\home\\index\\01 - Copy.png"
+    },
+    {
       "Identity": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\home\\index\\01.png",
       "SourceId": "Grenny",
       "SourceType": "Discovered",
@@ -3874,6 +3993,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\home\\index\\02.png"
+    },
+    {
+      "Identity": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\home\\index\\03 - Copy.png",
+      "SourceId": "Grenny",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\",
+      "BasePath": "_content/Grenny",
+      "RelativePath": "images/home/index/03 - Copy.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\home\\index\\03 - Copy.png"
     },
     {
       "Identity": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\home\\index\\03.png",
@@ -4386,6 +4522,23 @@
       "OriginalItemSpec": "wwwroot\\images\\product\\09.jpg"
     },
     {
+      "Identity": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\0a6973f3-0f3a-4638-8bc7-25962525ba0c_03 - Copy.png",
+      "SourceId": "Grenny",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\",
+      "BasePath": "_content/Grenny",
+      "RelativePath": "images/product/0a6973f3-0f3a-4638-8bc7-25962525ba0c_03 - Copy.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product\\0a6973f3-0f3a-4638-8bc7-25962525ba0c_03 - Copy.png"
+    },
+    {
       "Identity": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\10.jpg",
       "SourceId": "Grenny",
       "SourceType": "Discovered",
@@ -4571,6 +4724,57 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\product\\20.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\438d0eec-e250-40a1-8bdb-6510e6d8fab9_WIN_20230624_18_12_53_Pro.jpg",
+      "SourceId": "Grenny",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\",
+      "BasePath": "_content/Grenny",
+      "RelativePath": "images/product/438d0eec-e250-40a1-8bdb-6510e6d8fab9_WIN_20230624_18_12_53_Pro.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product\\438d0eec-e250-40a1-8bdb-6510e6d8fab9_WIN_20230624_18_12_53_Pro.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\d6a6a006-743f-4e0d-aa0b-f3aedb0e1aac_03 - Copy.png",
+      "SourceId": "Grenny",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\",
+      "BasePath": "_content/Grenny",
+      "RelativePath": "images/product/d6a6a006-743f-4e0d-aa0b-f3aedb0e1aac_03 - Copy.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product\\d6a6a006-743f-4e0d-aa0b-f3aedb0e1aac_03 - Copy.png"
+    },
+    {
+      "Identity": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\eb96aa1e-fe9d-4537-bd61-207e911ef8df_WIN_20230624_18_12_53_Pro.jpg",
+      "SourceId": "Grenny",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\",
+      "BasePath": "_content/Grenny",
+      "RelativePath": "images/product/eb96aa1e-fe9d-4537-bd61-207e911ef8df_WIN_20230624_18_12_53_Pro.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product\\eb96aa1e-fe9d-4537-bd61-207e911ef8df_WIN_20230624_18_12_53_Pro.jpg"
     },
     {
       "Identity": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\promo\\blog\\01.jpg",

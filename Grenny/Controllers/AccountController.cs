@@ -1,6 +1,8 @@
 ﻿using DomainLayer.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using RepositoryLayer.DAL;
 using ServiceLayer.Helpers;
 using ServiceLayer.Services.Interfaces;
 using ServiceLayer.ViewModels.AccountVM;
@@ -11,10 +13,16 @@ namespace Grenny.Controllers
     public class AccountController : Controller
     {
         private readonly IAccountService _accountService;
+        private readonly IBasketService _basketService;
+        private readonly IWishlistService _wishlistService;
 
-        public AccountController(IAccountService accountService)
+        public AccountController(IAccountService accountService,
+                                 IBasketService basketService,
+                                 IWishlistService wishlistService)
         {
             _accountService = accountService;
+            _basketService = basketService;
+            _wishlistService = wishlistService;
         }
 
         [HttpGet]
@@ -44,7 +52,10 @@ namespace Grenny.Controllers
 
             await _accountService.AddUserToRoleAsync(user, Roles.Member);
 
-            string token = await _accountService.GenerateEmailConfirmationTokenAsync(user);
+            await _basketService.CreateAsync(user);
+            await _wishlistService.CreateAsync(user);
+            
+           string token = await _accountService.GenerateEmailConfirmationTokenAsync(user);
 
             string link = GenerateConfirmationEmailLink(user.Id, token, "ConfirmEmail");
             string subject = "Email for register Confirmation";
@@ -61,7 +72,7 @@ namespace Grenny.Controllers
             await _accountService.ConfirmEmailAsync(userId, token);
 
             AppUser user = await _accountService.GetUserById(userId);
-
+            
             await _accountService.SignInUserAsync(user);
 
             return RedirectToAction("Index", "Home");
@@ -115,9 +126,8 @@ namespace Grenny.Controllers
 
         private string GenerateConfirmationEmailLink(string userId, string token, string action)
         {
-            var request = HttpContext.Request;
-            var baseUrl = $"{request.Scheme}://{request.Host}";
-            var link = $"{baseUrl}/Account/{action}/?userId={userId}&token={token}";
+            string link = Url.Action(action, "Account", new { userId = userId, token }, Request.Scheme);
+            
             return link;
         }
 

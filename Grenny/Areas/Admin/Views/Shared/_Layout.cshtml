@@ -23,6 +23,8 @@
     <!-- Libraries Stylesheet -->
     <link href="~/admin/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="~/admin/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    @await RenderSectionAsync("AdminCss",required: false)
+
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="~/admin/css/bootstrap.min.css" rel="stylesheet">
@@ -33,13 +35,7 @@
 
 <body>
     <div class="container-fluid position-relative d-flex p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
+
 
 
         <!-- Sidebar Start -->
@@ -61,11 +57,9 @@
                 <div class="navbar-nav w-100">
                     <a asp-area="Admin" asp-controller="Dashboard" asp-action="Index" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Elements</a>
+                        <a  class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Product</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="button.html" class="dropdown-item">Buttons</a>
-                            <a href="typography.html" class="dropdown-item">Typography</a>
-                            <a href="element.html" class="dropdown-item">Other Elements</a>
+                            <a asp-area="Admin" asp-controller="Product" asp-action="Index" class="dropdown-item">Product CRUD</a>
                         </div>
                     </div>
                 </div>
@@ -101,31 +95,14 @@
 
             <!-- Blank Start -->
             <div class="container-fluid pt-4 px-4">
-                <div class="row vh-100 bg-secondary rounded align-items-center justify-content-center mx-0">
-                    <div class="col-md-6 text-center">
-                        <h3>This is blank page</h3>
+                <div class="row bg-secondary rounded justify-content-center mx-0">
+                    <div class="col-12">
+                        @RenderBody()
                     </div>
                 </div>
             </div>
             <!-- Blank End -->
 
-
-            <!-- Footer Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="bg-secondary rounded-top p-4">
-                    <div class="row">
-                        <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">Your Site Name</a>, All Right Reserved. 
-                        </div>
-                        <div class="col-12 col-sm-6 text-center text-sm-end">
-                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                            <br>Distributed By: <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Footer End -->
         </div>
         <!-- Content End -->
 
@@ -133,7 +110,7 @@
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
-        @RenderBody()
+        
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -144,9 +121,24 @@
         <script src="~/admin/lib/tempusdominus/js/moment.min.js"></script>
         <script src="~/admin/lib/tempusdominus/js/moment-timezone.min.js"></script>
         <script src="~/admin/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="https://kit.fontawesome.com/81978b2f48.js" crossorigin="anonymous"></script>
+    @await RenderSectionAsync("AdminScript",required: false)
 
         <!-- Template Javascript -->
         <script src="~/admin/js/main.js"></script>
+        <style>
+        ::-webkit-scrollbar {
+            width: 0;
+        }
+        td{
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .btn:hover{
+            color: #191C24 !important;
+        }
+        </style>
 </body>
 
 </html>

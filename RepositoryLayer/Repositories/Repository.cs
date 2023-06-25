@@ -4,16 +4,18 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
+using RepositoryLayer.DAL;
 using RepositoryLayer.Repositories.Interfaces;
 
 namespace RepositoryLayer.Repositories
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        protected readonly DbContext _dbContext;
-        private readonly DbSet<T> _dbSet;
+        protected readonly AppDbContext _dbContext;
+        protected readonly DbSet<T> _dbSet;
 
-        public Repository(DbContext dbContext)
+        public Repository(AppDbContext dbContext)
         {
             _dbContext = dbContext;
             _dbSet = _dbContext.Set<T>();
@@ -29,8 +31,24 @@ namespace RepositoryLayer.Repositories
             await _dbSet.AddAsync(entity);
             await _dbContext.SaveChangesAsync();
         }
+        public async Task<T> GetByExpressionForPivotTable(Expression<Func<T, bool>> expression)
+        {
+            return await _dbSet.FirstOrDefaultAsync(expression);
+        }
 
-        public async Task UpdateAsync(T entity)
+        public async Task AddRangeAsync(IEnumerable<T> entities)
+        {
+            await _dbContext.Set<T>().AddRangeAsync(entities);
+            await _dbContext.SaveChangesAsync();
+        }
+
+        public async Task<IEnumerable<T>> FindByConditionAsync(Expression<Func<T, bool>> expression)
+        {
+            return await _dbSet.Where(expression).ToListAsync();
+        }
+
+
+        public async Task EditAsync(T entity)
         {
             if (entity == null)
             {
@@ -87,16 +105,29 @@ namespace RepositoryLayer.Repositories
             return await query.ToListAsync();
         }
 
-        public async Task<IEnumerable<T>> GetAllWithIncludes(params Expression<Func<T, object>>[] includes)
+        public async Task<IEnumerable<T>> GetAllWithIncludesAsync(Func<IQueryable<T>, IIncludableQueryable<T, object>>[] includeFuncs)
         {
             IQueryable<T> query = _dbContext.Set<T>();
 
-            foreach (var include in includes)
+            foreach (var includeFunc in includeFuncs)
             {
-                query = query.Include(include);
+                query = includeFunc(query);
             }
 
             return await query.ToListAsync();
+        }
+
+        public async Task<T> GetByIdWithAllIncludesAsync(int id, Func<IQueryable<T>, IIncludableQueryable<T, object>>[] includeFuncs)
+        {
+            IQueryable<T> query = _dbContext.Set<T>();
+
+            foreach (var includeFunc in includeFuncs)
+            {
+                query = includeFunc(query);
+            }
+
+
+            return await query.FirstOrDefaultAsync(m => EF.Property<int>(m, "Id") == id);
         }
     }
 }

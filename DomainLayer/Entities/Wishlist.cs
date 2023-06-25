@@ -9,7 +9,8 @@ namespace DomainLayer.Entities
 {
     public class Wishlist : BaseEntity
     {
-        public ICollection<UserWishlist> UserWishlists { get; set; }
-        public ICollection<Product> Products { get; set; }
+        public string AppUserId { get; set; }
+        public AppUser AppUser { get; set; }
+        public ICollection<ProductWishlist> ProductWishlists { get; set; }
     }
 }

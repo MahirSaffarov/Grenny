@@ -4279,7 +4279,10 @@
         },
         "runtime": {
           "bin/placeholder/ServiceLayer.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },

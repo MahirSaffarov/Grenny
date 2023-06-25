@@ -1,0 +1,260 @@
+﻿body {
+    background-color: #222;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    background-color: #333;
+}
+
+h1 {
+    color: #ff9900;
+    text-align: center;
+    margin: 0 0 20px;
+    font-size: 28px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+}
+
+.product-image {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+    .product-image img {
+        width: 250px;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(255, 153, 0, 0.7);
+        transition: transform 0.3s ease-in-out;
+    }
+
+        .product-image img:hover {
+            transform: scale(1.1);
+        }
+
+.product-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.product-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.product-category {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.product-brand {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #aaa;
+}
+
+.product-details {
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+    .product-details.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+    .detail-item.show {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+.label {
+    color: #ff9900;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.value {
+    color: #fff;
+    font-size: 16px;
+    display:block !important;
+}
+
+.gradient-bg {
+    background: linear-gradient(135deg, #ffcc00, #ff5e62);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    20% {
+        opacity: 0.2;
+        transform: translateY(15px);
+    }
+
+    40% {
+        opacity: 0.4;
+        transform: translateY(10px);
+    }
+
+    60% {
+        opacity: 0.6;
+        transform: translateY(5px);
+    }
+
+    80% {
+        opacity: 0.8;
+        transform: translateY(2px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    25% {
+        opacity: 0.25;
+        transform: translateX(-15px);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateX(-7px);
+    }
+
+    75% {
+        opacity: 0.75;
+        transform: translateX(-3px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scaleInOut {
+    0% {
+        transform: scale(0);
+    }
+
+    10% {
+        transform: scale(0.5);
+    }
+
+    20% {
+        transform: scale(0.7);
+    }
+
+    30% {
+        transform: scale(0.9);
+    }
+
+    40% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(0.9);
+    }
+
+    70% {
+        transform: scale(0.7);
+    }
+
+    80% {
+        transform: scale(0.5);
+    }
+
+    90% {
+        transform: scale(0.3);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: #ff9900;
+    }
+
+    20% {
+        color: #ff8a11;
+    }
+
+    40% {
+        color: #ff7c22;
+    }
+
+    60% {
+        color: #ff6d33;
+    }
+
+    80% {
+        color: #ff5e44;
+    }
+
+    100% {
+        color: #ff4f55;
+    }
+}

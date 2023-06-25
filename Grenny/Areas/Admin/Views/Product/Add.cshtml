@@ -1,0 +1,82 @@
+﻿@model AddVM
+
+@{
+    ViewData["Title"] = "Add";
+}
+
+<div class="container">
+    <h1 class="mb-5">Create Product</h1>
+    <form method="post" asp-action="Add" enctype="multipart/form-data">
+        <div class="file-input text-center">
+            <label for="upload" class="file-label">
+                <span class="file-icon"><i class="fas fa-cloud-upload-alt"></i></span>
+                <span class="file-text">Choose a file</span>
+            </label>
+            <input asp-for="Images" id="upload"  class="file-hidden " />
+        </div>
+        <div class="product-info">
+            <div class="product-name my-3">
+                <input asp-for="Name" class="animated-input" type="text" placeholder="Name" />
+            </div>
+        </div>
+        <div class="product-details">
+            <div class="detail-item">
+                <span class="label">Stock Count:</span>
+                <span class="value"><input asp-for="StockCount" class="animated-input" type="text" /></span>
+            </div>
+            <div class="detail-item">
+                <span class="label">Price:</span>
+                <span class="value"><input asp-for="Price" class="animated-input" type="number" /></span>
+            </div>
+            <div class="detail-item">
+                <span class="label">Discount:</span>
+                <span class="value"><select asp-for="DiscountId" asp-items="ViewBag.discounts" class="animated-input"></select></span>
+            </div>
+            <div class="detail-item">
+                <span class="label">Brand:</span>
+                <span class="value"><select asp-for="BrandId" asp-items="ViewBag.brands" class="animated-input"></select></span>
+            </div>
+            <div class="detail-item">
+                <span class="label">Category > SubCategory:</span>
+                <span class="value">
+                    <select id="categoryId" asp-for="CategoryId" asp-items="ViewBag.categories" class="animated-input">
+                        <option disabled selected>--Select Category--</option>
+                    </select>
+                    <select id="subCatogId" asp-for="SubCategoryId" asp-items="ViewBag.subcategories" class="animated-input"></select>
+                </span>
+            </div>
+            <div class="detail-item flex-column">
+                <span class="label mb-2">Tags:</span>
+                <span class="value grid-container">
+                    @for (var i = 0; i < Model.CheckBoxes.Count; i++)
+                    {
+                        <input type="checkbox" asp-for="@Model.CheckBoxes[i].IsChecked" class="form-check-input custom-input" />
+                        <label class="form-check-label grid-item" asp-for="@Model.CheckBoxes[i].IsChecked">
+                            @Model.CheckBoxes[i].LabelName
+                        </label>
+                        <input type="hidden" asp-for="@Model.CheckBoxes[i].Id" />
+                        <input type="hidden" asp-for="@Model.CheckBoxes[i].LabelName" />
+                        <br />
+                    }
+                </span>
+            </div>
+            <div class="detail-item d-flex flex-column">
+                <span class="label">Description:</span>
+                <textarea asp-for="Description" id="w3review" rows="4" cols="50" style="border-radius:5px" class="mt-4"></textarea>
+            </div>
+        </div>
+        <div style="display:flex; justify-content:center; gap:10px">
+            <button type="submit" class="btn btn-outline-success">Add</button>
+            <button asp-action="Index" class="btn btn-outline-danger">Back</button>
+        </div>
+    </form>
+</div>
+
+@section AdminCss{
+    <link rel="stylesheet" href="~/admin/css/add.css" />
+}
+
+@section AdminScript{
+    <script src="~/admin/js/add.js"></script>
+    <script src="~/admin/js/subcategoryFilter.js"></script>
+}

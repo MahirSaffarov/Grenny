@@ -5,6 +5,10 @@ using ServiceLayer.Services.Interfaces;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
 using ServiceLayer.ViewModels.AccountVM;
+using RepositoryLayer.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using System.Runtime.ConstrainedExecution;
+using RepositoryLayer.DAL;
 
 namespace Fiorello.Services
 {
@@ -15,13 +19,16 @@ namespace Fiorello.Services
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IEmailService _emailService;
         private readonly IHttpContextAccessor _accessor;
+        private readonly AppDbContext _context;
 
         public AccountService(UserManager<AppUser> userManager,
+            AppDbContext context,
                               SignInManager<AppUser> signInManager,
                               RoleManager<IdentityRole> roleManager,
                               IEmailService emailService,
                               IHttpContextAccessor accessor)
         {
+            _context = context;
             _userManager = userManager;
             _signInManager = signInManager;
             _roleManager = roleManager;
@@ -39,7 +46,7 @@ namespace Fiorello.Services
             };
 
             var result = await _userManager.CreateAsync(user, request.Password);
-            return result;
+            return result;  
         }
 
         public async Task AddUserToRoleAsync(AppUser user, Roles role)
@@ -50,6 +57,7 @@ namespace Fiorello.Services
         public async Task<string> GenerateEmailConfirmationTokenAsync(AppUser user)
         {
             string token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+            
             return token;
         }
 
@@ -76,6 +84,8 @@ namespace Fiorello.Services
         public async Task ConfirmEmailAsync(string userId, string token)
         {
             AppUser user = await _userManager.FindByIdAsync(userId);
+            //user.EmailConfirmed = true;
+            //await _context.SaveChangesAsync();
             await _userManager.ConfirmEmailAsync(user, token);
         }
 
@@ -125,6 +135,7 @@ namespace Fiorello.Services
         public async Task SignInUserAsync(AppUser user)
         {
             await _signInManager.SignInAsync(user, false);
+           
         }
 
         public async Task<ProfileVM> ProfileDataAsync()

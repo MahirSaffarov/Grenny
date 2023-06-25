@@ -10,8 +10,8 @@ namespace DomainLayer.Entities
     public class AppUser : IdentityUser
     {
         public string FullName { get; set; }
-        public ICollection<UserBasket> UserBaskets { get; set; }
-        public ICollection<UserWishlist> UserWishlists { get; set; }
-
+        public Basket Basket { get; set; }
+        public Wishlist Wishlist { get; set; }
+        public ICollection<Review> Reviews { get; set; }
     }
 }

@@ -1,0 +1,87 @@
+﻿@model ProductDetailVM
+
+<div class="container">
+    <h1>Product Detail</h1>
+    <div class="product-image d-flex gap-4 justify-content-center">
+        @foreach (var item in Model.Images)
+        {
+            <img src="~/images/product/@item.Image" alt="Product Image" />
+        }
+    </div>
+    <div class="product-info">
+        <div class="product-name">@Model.Name</div>
+        <div class="product-category">@Model.Category > @Model.SubCategory</div>
+        <div class="product-brand">Brand: @Model.Brand</div>
+    </div>
+    <div class="product-details">
+        <div class="detail-item">
+            <span class="label">SKU Code:</span>
+            <span class="value">@Model.SKUCode</span>
+        </div>
+        <div class="detail-item">
+            <span class="label">Discount:</span>
+            <span class="value">@Model.Discount</span>
+        </div>
+        <div class="detail-item">
+            <span class="label">Stock Count:</span>
+            <span class="value">@Model.StockCount</span>
+        </div>
+        <div class="detail-item">
+            <span class="label">Sales Count:</span>
+            <span class="value">@Model.SalesCount</span>
+        </div>
+        <div class="detail-item">
+            <span class="label">Rating:</span>
+            <span class="value">
+            @for (int i = 0; i < Model.Rating; i++)
+            {
+                <i class="fa-solid fa-star"></i>
+            }
+            @for (int i = 0; i < (5 - Model.Rating); i++)
+            {
+                <i class="fa-regular fa-star"></i>
+            }
+            </span>
+        </div>
+        <div class="">
+            <span class="label">Product Tags:</span>
+            <div>
+                @foreach (var item in Model.ProductTags)
+                {
+                    <div class="value">
+                        @item.Tag.Name
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="detail-item">
+            <span class="label">Price:</span>
+            <span class="value">@Model.Price</span>
+        </div>
+        <div class="detail-item d-flex flex-column my-3">
+            <span class="label">Description:</span>
+            <span class="value my-3">@Model.Description</span>
+        </div>
+        <div class="detail-item d-flex flex-column  my-3">
+            <span class="label" style="display:block">Reviews:</span>
+            <div class="value">
+                @foreach (var item in Model.Reviews)
+                {
+                    <span style="display:block; font-size:16px; font-weight:bold">@item.AppUser.FullName :</span>
+                    <span>@item.Describe</span>
+                }
+            </div>
+        </div>
+        <div style="display:flex; justify-content:right">
+        <a asp-action="Index" class="btn btn-outline-danger" >Back</a>
+        </div>
+    </div>
+</div>
+
+@section AdminCss{
+    <link rel="stylesheet" href="~/admin/css/detail.css" />
+}
+
+@section AdminScript{
+    <script src="~/admin/js/detail.js"></script>
+}
