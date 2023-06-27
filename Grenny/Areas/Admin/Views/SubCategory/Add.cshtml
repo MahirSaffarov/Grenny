@@ -1,0 +1,35 @@
+﻿@model SubCategoryAddVM
+
+@{
+    ViewData["Title"] = "Add";
+}
+
+<div class="container">
+    <h1 class="mb-5">Create SubCategory</h1>
+    <form method="post" asp-action="Add" enctype="multipart/form-data">
+        <div class="product-info">
+            <div class="product-name my-3">
+                <input asp-for="Name" class="animated-input" type="text" placeholder="Name" />
+            </div>
+        </div>
+        <div class="product-details">
+            <div class="detail-item">
+                <span class="label">Category:</span>
+                <span class="value"><select asp-for="CategoryId" asp-items="ViewBag.categories" class="animated-input"></select></span>
+            </div>
+        </div>
+        <div style="display:flex; justify-content:center; gap:10px">
+            <button type="submit" class="btn btn-outline-success">Add</button>
+            <button asp-action="Index" class="btn btn-outline-danger">Back</button>
+        </div>
+    </form>
+</div>
+
+@section AdminCss{
+    <link rel="stylesheet" href="~/admin/css/add.css" />
+}
+
+@section AdminScript{
+    <script src="~/admin/js/add.js"></script>
+    <script src="~/admin/js/subcategoryFilter.js"></script>
+}

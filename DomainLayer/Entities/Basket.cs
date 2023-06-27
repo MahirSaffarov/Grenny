@@ -11,7 +11,7 @@ namespace DomainLayer.Entities
     {
         public string AppUserId { get; set; }
         public AppUser AppUser { get; set; }
-        public int ProductCount { get; set; }
+        public int Count { get; set; }
         public ICollection<ProductBasket> ProductBaskets { get; set; }
     }
 }

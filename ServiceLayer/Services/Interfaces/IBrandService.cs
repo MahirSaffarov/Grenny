@@ -1,4 +1,5 @@
 ﻿using DomainLayer.Entities;
+using ServiceLayer.ViewModels.AdminVM.BrandVM;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,5 +12,9 @@ namespace ServiceLayer.Services.Interfaces
     public interface IBrandService
     {
         Task<IEnumerable<Brand>> GetAllAsync();
+        Task<Brand> GetByIdAsync(int id);
+        Task AddAsync(BrandAddVM model);
+        Task DeleteAsync(int id);
+        Task EditAsync(int brandId, BrandEditVM model);
     }
 }

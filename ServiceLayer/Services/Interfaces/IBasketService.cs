@@ -14,6 +14,5 @@ namespace ServiceLayer.Services.Interfaces
         Task<Basket> GetBasketByUserId(string userId);
         void AddProductToBasket(List<BasketVM> basket, Product product);
         List<BasketVM> GetBasketDatas();
-        void GetBasketDatasAndSaveSession(ProductBasket productBasket);
     }
 }

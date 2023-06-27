@@ -84,8 +84,7 @@ namespace Fiorello.Services
         public async Task ConfirmEmailAsync(string userId, string token)
         {
             AppUser user = await _userManager.FindByIdAsync(userId);
-            //user.EmailConfirmed = true;
-            //await _context.SaveChangesAsync();
+
             await _userManager.ConfirmEmailAsync(user, token);
         }
 
@@ -106,7 +105,7 @@ namespace Fiorello.Services
         {
             await _signInManager.SignOutAsync();
         }
-
+        
         public async Task CreateRolesAsync()
         {
             foreach (var role in Enum.GetValues(typeof(Roles)))
@@ -173,6 +172,13 @@ namespace Fiorello.Services
             await _userManager.ResetPasswordAsync(user, token, password);
 
             return true;
+        }
+
+        public async Task<string> GetUserId(string emailOrUsername)
+        {
+            AppUser user = await GetUserByEmailOrUsername(emailOrUsername);
+
+            return await _userManager.GetUserIdAsync(user);
         }
     }
 }

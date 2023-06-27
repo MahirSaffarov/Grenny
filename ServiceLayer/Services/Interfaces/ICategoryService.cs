@@ -1,4 +1,6 @@
 ﻿using DomainLayer.Entities;
+using ServiceLayer.ViewModels.AdminVM.BrandVM;
+using ServiceLayer.ViewModels.AdminVM.CategoryVM;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,5 +13,9 @@ namespace ServiceLayer.Services.Interfaces
     public interface ICategoryService
     {
         Task<IEnumerable<Category>> GetAllAsync();
+        Task<Category> GetByIdAsync(int id);
+        Task DeleteAsync(int id);
+        Task AddAsync(CategoryAddVM model);
+        Task EditAsync(int categoryId, CategoryEditVM model);
     }
 }

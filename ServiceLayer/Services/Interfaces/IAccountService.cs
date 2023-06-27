@@ -29,5 +29,6 @@ namespace ServiceLayer.Services.Interfaces
         Task<AppUser> ForgotPasswordAsync(string email);
         Task<AppUser> ConfirmForgotPasswordAsync(string id);
         Task<bool> ResetPasswordAsync(AppUser user, string password,string token);
+        Task<string> GetUserId(string emaiUsername);
     }
 }

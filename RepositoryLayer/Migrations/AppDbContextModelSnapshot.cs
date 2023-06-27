@@ -103,11 +103,11 @@ namespace RepositoryLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<int>("ProductCount")
-                        .HasColumnType("int");
 
                     b.Property<bool>("SoftDelete")
                         .HasColumnType("bit");
@@ -124,16 +124,16 @@ namespace RepositoryLayer.Migrations
                         {
                             Id = 1,
                             AppUserId = "b59d27ed-5ac4-4cbc-819e-c36b80e2d334",
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(7641),
-                            ProductCount = 0,
+                            Count = 0,
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(607),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 2,
                             AppUserId = "f565482b-e971-4580-8493-e5c5ba0479c9",
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(7657),
-                            ProductCount = 0,
+                            Count = 0,
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(621),
                             SoftDelete = false
                         });
                 });
@@ -168,7 +168,7 @@ namespace RepositoryLayer.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(7856),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(773),
                             Image = "01.jpg",
                             Name = "Vegan Lover",
                             SoftDelete = false
@@ -176,7 +176,7 @@ namespace RepositoryLayer.Migrations
                         new
                         {
                             Id = 2,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(7859),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(775),
                             Image = "03.jpg",
                             Name = "Organic Foody",
                             SoftDelete = false
@@ -213,7 +213,7 @@ namespace RepositoryLayer.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(7876),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(791),
                             Image = "01.jpg",
                             Name = "Vegetables",
                             SoftDelete = false
@@ -221,7 +221,7 @@ namespace RepositoryLayer.Migrations
                         new
                         {
                             Id = 2,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(7879),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(793),
                             Image = "02.jpg",
                             Name = "Foods",
                             SoftDelete = false
@@ -257,7 +257,7 @@ namespace RepositoryLayer.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(7896),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(811),
                             Name = "Black Friday",
                             Percent = (byte)50,
                             SoftDelete = false
@@ -265,7 +265,7 @@ namespace RepositoryLayer.Migrations
                         new
                         {
                             Id = 2,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(7898),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(813),
                             Name = "No Discount",
                             Percent = (byte)0,
                             SoftDelete = false
@@ -341,7 +341,7 @@ namespace RepositoryLayer.Migrations
                             Id = 1,
                             BrandId = 1,
                             CategoryId = 1,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(7917),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(832),
                             Description = "Cucumbers are commonly mistaken for vegetables. But in fact they are fruits, specifically berries. The long, green berries of the cucumber plant are what you usually find in your salads and sandwiches. They are made up of over 90% water, making them excellent for staying hydrated.",
                             DiscountId = 1,
                             Name = "Cucumber",
@@ -358,7 +358,7 @@ namespace RepositoryLayer.Migrations
                             Id = 2,
                             BrandId = 2,
                             CategoryId = 2,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(7923),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(838),
                             Description = "The standard eggplant is an oval or pear-shaped, glossy, purplish fruit 6 to 9 inches long. Japanese and oriental varieties tend to be elongated and slender with a thinner, more delicate skin. Ornamental varieties are edible and tend to produce small, white-skinned, oval-shaped fruit.",
                             DiscountId = 2,
                             Name = "Eggplant",
@@ -448,7 +448,7 @@ namespace RepositoryLayer.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(7964),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(878),
                             Image = "01.jpg",
                             IsMain = true,
                             ProductId = 1,
@@ -457,7 +457,7 @@ namespace RepositoryLayer.Migrations
                         new
                         {
                             Id = 2,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(7967),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(879),
                             Image = "02.jpg",
                             IsMain = false,
                             ProductId = 1,
@@ -466,7 +466,7 @@ namespace RepositoryLayer.Migrations
                         new
                         {
                             Id = 3,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(7968),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(881),
                             Image = "03.jpg",
                             IsMain = true,
                             ProductId = 2,
@@ -475,7 +475,7 @@ namespace RepositoryLayer.Migrations
                         new
                         {
                             Id = 4,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(7969),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(882),
                             Image = "04.jpg",
                             IsMain = false,
                             ProductId = 2,
@@ -582,35 +582,35 @@ namespace RepositoryLayer.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8026),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(929),
                             RatingCount = (byte)1,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 2,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8028),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(930),
                             RatingCount = (byte)2,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 3,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8029),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(931),
                             RatingCount = (byte)3,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 4,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8030),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(931),
                             RatingCount = (byte)4,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 5,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8031),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(932),
                             RatingCount = (byte)5,
                             SoftDelete = false
                         });
@@ -659,7 +659,7 @@ namespace RepositoryLayer.Migrations
                         {
                             Id = 1,
                             AppUserId = "b59d27ed-5ac4-4cbc-819e-c36b80e2d334",
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8051),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(944),
                             Describe = "Very tasty, it is the best cucumber i have ever eaten.",
                             ProductId = 1,
                             RatingId = 1,
@@ -669,7 +669,7 @@ namespace RepositoryLayer.Migrations
                         {
                             Id = 2,
                             AppUserId = "f565482b-e971-4580-8493-e5c5ba0479c9",
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8055),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(948),
                             Describe = "It is a fresh vegetables. I liked it.",
                             ProductId = 2,
                             RatingId = 2,
@@ -730,7 +730,7 @@ namespace RepositoryLayer.Migrations
                         {
                             Id = 1,
                             CategoryId = 1,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8076),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(957),
                             Name = "Cucumber",
                             SoftDelete = false
                         },
@@ -738,7 +738,7 @@ namespace RepositoryLayer.Migrations
                         {
                             Id = 2,
                             CategoryId = 2,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8079),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(958),
                             Name = "Eggplant",
                             SoftDelete = false
                         });
@@ -770,105 +770,105 @@ namespace RepositoryLayer.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8133),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(966),
                             Name = "Organic",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 2,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8138),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(967),
                             Name = "Fruits",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 3,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8139),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(968),
                             Name = "Vegan",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 4,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8140),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(969),
                             Name = "Healthy",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 5,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8141),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(969),
                             Name = "Seafood",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 6,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8142),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(970),
                             Name = "Crunchy",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 7,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8143),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(971),
                             Name = "Savory",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 8,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8144),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(972),
                             Name = "Gourmet",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 9,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8145),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(972),
                             Name = "Satisfying",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 10,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8146),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(973),
                             Name = "Delicious",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 11,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8148),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(974),
                             Name = "Fresh",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 12,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8149),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(975),
                             Name = "Juicy",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 13,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8151),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(975),
                             Name = "SpiceUp",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 14,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8152),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(976),
                             Name = "Tasty",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 15,
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8153),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(977),
                             Name = "Zesty",
                             SoftDelete = false
                         });
@@ -904,14 +904,14 @@ namespace RepositoryLayer.Migrations
                         {
                             Id = 1,
                             AppUserId = "b59d27ed-5ac4-4cbc-819e-c36b80e2d334",
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8178),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(990),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 2,
                             AppUserId = "f565482b-e971-4580-8493-e5c5ba0479c9",
-                            CreateDate = new DateTime(2023, 6, 25, 17, 29, 29, 691, DateTimeKind.Local).AddTicks(8180),
+                            CreateDate = new DateTime(2023, 6, 27, 2, 7, 49, 703, DateTimeKind.Local).AddTicks(991),
                             SoftDelete = false
                         });
                 });

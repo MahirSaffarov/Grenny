@@ -6,7 +6,9 @@ using RepositoryLayer.DAL;
 using ServiceLayer.Helpers;
 using ServiceLayer.Services.Interfaces;
 using ServiceLayer.ViewModels.AccountVM;
+using ServiceLayer.ViewModels.BasketVM;
 using System.Security.Claims;
+using System.Text.Json;
 
 namespace Grenny.Controllers
 {
@@ -15,14 +17,19 @@ namespace Grenny.Controllers
         private readonly IAccountService _accountService;
         private readonly IBasketService _basketService;
         private readonly IWishlistService _wishlistService;
-
+        private readonly IProductBasketService _productBasketService;
+        private readonly IHttpContextAccessor _accessor;
         public AccountController(IAccountService accountService,
                                  IBasketService basketService,
-                                 IWishlistService wishlistService)
+                                 IWishlistService wishlistService,
+                                 IProductBasketService productBasketService,
+                                 IHttpContextAccessor accessor)
         {
             _accountService = accountService;
             _basketService = basketService;
             _wishlistService = wishlistService;
+            _productBasketService = productBasketService;
+            _accessor = accessor;
         }
 
         [HttpGet]
@@ -107,14 +114,25 @@ namespace Grenny.Controllers
                 return View(request);
             }
 
+            var userId = await _accountService.GetUserId(request.EmailOrUsername);
+
+            _productBasketService.GetBasketDatasAndSaveSession(userId);
+
             return RedirectToAction("Index", "Home");
+
         }
 
         [HttpGet]
         public async Task<IActionResult> Logout()
         {
+            List<BasketVM>  basketVM=  _basketService.GetBasketDatas();
+
+            await _productBasketService.GetBasketDatasAndSaveDataBase(basketVM);
+
             await _accountService.SignOutAsync();
+
             return RedirectToAction(nameof(SignIn));
+
         }
 
         public async Task<IActionResult> CreateRoles()

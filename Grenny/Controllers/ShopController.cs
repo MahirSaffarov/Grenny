@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DomainLayer.Entities;
+using Microsoft.AspNetCore.Mvc;
 using ServiceLayer.Services.Interfaces;
 using ServiceLayer.ViewModels.BasketVM;
 
@@ -30,7 +31,9 @@ namespace Grenny.Controllers
 
             _basketService.AddProductToBasket(baskets, product);
 
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index","Home");
         }
+
+
     }
 }

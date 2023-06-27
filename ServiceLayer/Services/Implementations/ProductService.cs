@@ -206,7 +206,7 @@ namespace ServiceLayer.Services.Implementations
                 await _productTagService.AddTagToProductAsync(product, tagToAdd.TagId);
             }
 
-            await _productImageService.AddRangeAsync(images);//exception
+            await _productImageService.AddRangeAsync(images);
             await _productRepository.EditAsync(product);
         }
 

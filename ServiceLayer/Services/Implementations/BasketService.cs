@@ -16,15 +16,12 @@ namespace ServiceLayer.Services.Implementations
     public class BasketService : IBasketService
     {
         private readonly IBasketRepository _basketRepository;
-        private readonly IProductBasketService _productBasketService;
         private readonly IHttpContextAccessor _accessor;
         public BasketService(IBasketRepository basketRepository,
-                             IHttpContextAccessor accessor,
-                             IProductBasketService productBasketService)
+                             IHttpContextAccessor accessor)
         {
             _basketRepository = basketRepository;
             _accessor = accessor;
-            _productBasketService = productBasketService;
         }
 
         public async Task CreateAsync(AppUser user)
@@ -54,33 +51,30 @@ namespace ServiceLayer.Services.Implementations
                 });
             }
             else
-            {
+            {   
                 existProduct.Count++;
             }
-
-            _accessor.HttpContext.Session.SetString("basket", JsonSerializer.Serialize(basket));
+            _accessor.HttpContext.Response.Cookies.Append("basket", JsonSerializer.Serialize(basket));
+            //var assd = _accessor.HttpContext.Response.Cookies["basket"];
+            GetBasketDatas();
         }
         public List<BasketVM> GetBasketDatas()
         {
-            List<BasketVM> basket;
+            List<BasketVM> basket = new List<BasketVM>();
 
-            if (_accessor.HttpContext.Session.GetString("basket") != null)
+            if (_accessor.HttpContext.User.Identity.IsAuthenticated)
             {
-                basket = JsonSerializer.Deserialize<List<BasketVM>>(_accessor.HttpContext.Session.GetString("basket"));
-            }
-            else
-            {
-                basket = new List<BasketVM>();
+                string basketData = _accessor.HttpContext.Request.Cookies["basket"];
+
+                if (!string.IsNullOrEmpty(basketData))
+                {
+                    basket = JsonSerializer.Deserialize<List<BasketVM>>(basketData);
+                }
             }
 
             return basket;
         }
 
-        public  void GetBasketDatasAndSaveSession(ProductBasket productBasket)
-        {
-            var basketListVM =  _productBasketService.GetAllProductByBasket();
 
-            _accessor.HttpContext.Session.SetString("basket", JsonSerializer.Serialize(basketListVM));
-        }
     }
 }

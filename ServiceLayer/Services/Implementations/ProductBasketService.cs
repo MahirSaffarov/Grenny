@@ -13,6 +13,7 @@ using System.Security.Claims;
 using System.Linq.Expressions;
 using ServiceLayer.ViewModels.AdminVM.ProductVM;
 using ServiceLayer.ViewModels.BasketVM;
+using System.Text.Json;
 
 namespace ServiceLayer.Services.Implementations
 {
@@ -20,14 +21,20 @@ namespace ServiceLayer.Services.Implementations
     {
         private readonly IProductBasketRepository _productBasketRepository;
         private readonly IBasketService _basketService;
+        private readonly IBasketRepository _basketRepository;
+        private readonly IProductService _productService;
         private readonly IHttpContextAccessor _httpContextAccessor;
         public ProductBasketService(IProductBasketRepository productBasketRepository, 
                                     IBasketService basketService,
-                                    IHttpContextAccessor httpContextAccessor)
+                                    IHttpContextAccessor httpContextAccessor,
+                                    IProductService productService,
+                                    IBasketRepository basketRepository)
         {
             _productBasketRepository = productBasketRepository;
             _basketService = basketService;
             _httpContextAccessor = httpContextAccessor;
+            _productService = productService;
+            _basketRepository = basketRepository;
         }
         public async Task AddProductToBasketAsync(List<ProductBasket> productBaskets)
         {
@@ -37,8 +44,6 @@ namespace ServiceLayer.Services.Implementations
 
             foreach (var productBasket in productBaskets)
             {
-                if (productBasket.BasketId == basket.Id)
-                {
                     var existingProductBasket = await _productBasketRepository
                     .GetByExpressionForPivotTable(pb => pb.BasketId == basket.Id && pb.ProductId == productBasket.ProductId);
 
@@ -57,24 +62,51 @@ namespace ServiceLayer.Services.Implementations
 
                         await _productBasketRepository.AddAsync(newProductBasket);
                     }
-                }
             }
+            _httpContextAccessor.HttpContext.Session.Remove("basket");
+
         }
-
-        public async Task<BasketVM> GetAllProductByBasket()
+        public async Task GetBasketDatasAndSaveDataBase(List<BasketVM> basketVM)
         {
-            var userId = _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            List<ProductBasket> listProductBaskets = new();
 
-            var basket = await _basketService.GetBasketByUserId(userId);   
-            var basketProduct = await _productBasketRepository.GetByBasketIdAsync(basket.Id);
-
-            BasketVM basketVM = new()
+            foreach (var item in basketVM)
             {
-                Id = basketProduct.ProductId,
-                Count = basketProduct.ProductCount
-            };
+                ProductBasket productBasket = new()
+                {
+                    ProductCount = item.Count,
+                    ProductId = item.Id
+                };
 
-            return basketVM;
+                listProductBaskets.Add(productBasket);
+
+            }
+            await AddProductToBasketAsync(listProductBaskets);
+        }
+        public async Task<List<BasketVM>> GetAllProductByBasket(string userId)
+        {
+            var basket = await _basketService.GetBasketByUserId(userId);
+            var basketProduct = await _productBasketRepository.GetByBasketIdAsync(basket.Id);
+            List<BasketVM> basketVMs = new();
+
+            var basketProductCount = await _productBasketRepository.FindByConditionAsync(m => m.BasketId == basket.Id);
+            for (int i = 0; i < basketProductCount.Count(); i++)
+            {
+                BasketVM basketVM = new()
+                {
+                    Id = basketProduct.ProductId,
+                    Count = basketProduct.ProductCount
+                };
+                basketVMs.Add(basketVM);
+            }
+
+            return basketVMs;
+        }
+        public void GetBasketDatasAndSaveSession(string userId)
+        {
+            var basketListVM = GetAllProductByBasket(userId);
+
+            _httpContextAccessor.HttpContext.Session.SetString("basket", JsonSerializer.Serialize(basketListVM));
         }
     }
 }

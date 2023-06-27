@@ -30,23 +30,5 @@ namespace Grenny.Controllers
             return View(homeVM);
         }
 
-
-
-        private async void GetBasketDatasAndSaveDataBase(ProductBasket productBasket)
-        {
-            List<BasketVM> basket = _basketService.GetBasketDatas();
-            List<ProductBasket> listPivotBasket = new();
-
-            ProductBasket pivotBasket = new()
-            {
-                ProductCount = productBasket.ProductCount,
-                ProductId = productBasket.ProductId,
-            };
-
-            listPivotBasket.Add(pivotBasket);
-            await _productBasketService.AddProductToBasketAsync(listPivotBasket);
-        }
-
-
     }
 }

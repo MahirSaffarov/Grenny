@@ -44,7 +44,7 @@ namespace Grenny.Areas.Admin.Controllers
 
             List<ProductVM> productsVM = new();
 
-            foreach (var product in products)
+            foreach (var product in products.OrderByDescending(m => m.Id))
             {
                 productsVM.Add(new ProductVM
                 {
@@ -110,6 +110,7 @@ namespace Grenny.Areas.Admin.Controllers
         } 
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddAsync(AddVM request)
         {
             await GetAllSelectOptions();
@@ -139,39 +140,7 @@ namespace Grenny.Areas.Admin.Controllers
 
             return RedirectToAction(nameof(Index)); 
         }   
-        public async Task<JsonResult> GetSubCategoryByCategoryId(int categoryId)
-        {
-            var subCatog = await _subCategoryService.GetAllAsync();
-            
-            return Json(subCatog.Where(m => m.CategoryId == categoryId).ToList());
-        }
-        private async Task GetAllSelectOptions()
-        {
-            ViewBag.categories = await GetCategories();
-            ViewBag.subcategories = await GetSubCategories();
-            ViewBag.discounts = await GetDiscounts();
-            ViewBag.brands = await GetBrands();
-        }
-        private async Task<SelectList> GetCategories()
-        {
-            IEnumerable<Category> categories = await _categoryService.GetAllAsync();
-            return new SelectList(categories, "Id", "Name");
-        }
-        private async Task<SelectList> GetSubCategories()
-        {
-            IEnumerable<SubCategory> subCategories = await _subCategoryService.GetAllAsync();
-            return new SelectList(subCategories, "Id", "Name");
-        }
-        private async Task<SelectList> GetDiscounts()
-        {
-            IEnumerable<Discount> discounts = await _discountService.GetAllAsync();
-            return new SelectList(discounts, "Id", "Name");
-        }
-        private async Task<SelectList> GetBrands()
-        {
-            IEnumerable<Brand> brands = await _brandService.GetAllAsync();
-            return new SelectList(brands, "Id", "Name");
-        }
+
         [HttpPost]
         public async Task<IActionResult> DeleteAsync(int? id)
         {
@@ -249,7 +218,7 @@ namespace Grenny.Areas.Admin.Controllers
                         request.Images = product.Images.ToList();
                         return View(request);
                     }
-
+                        
                     if (image.CheckFileSize(20000))
                     {
                         ModelState.AddModelError("NewImage", "The image size must be a maximum of 200KB.");
@@ -264,7 +233,39 @@ namespace Grenny.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        public async Task<JsonResult> GetSubCategoryByCategoryId(int categoryId)
+        {
+            var subCatog = await _subCategoryService.GetAllWithIncludes();
 
+            return Json(subCatog.Where(m => m.CategoryId == categoryId).ToList());
+        }
+        private async Task GetAllSelectOptions()
+        {
+            ViewBag.categories = await GetCategories();
+            ViewBag.subcategories = await GetSubCategories();
+            ViewBag.discounts = await GetDiscounts();
+            ViewBag.brands = await GetBrands();
+        }
+        private async Task<SelectList> GetCategories()
+        {
+            IEnumerable<Category> categories = await _categoryService.GetAllAsync();
+            return new SelectList(categories, "Id", "Name");
+        }
+        private async Task<SelectList> GetSubCategories()
+        {
+            IEnumerable<SubCategory> subCategories = await _subCategoryService.GetAllWithIncludes();
+            return new SelectList(subCategories, "Id", "Name");
+        }
+        private async Task<SelectList> GetDiscounts()
+        {
+            IEnumerable<Discount> discounts = await _discountService.GetAllAsync();
+            return new SelectList(discounts, "Id", "Name");
+        }
+        private async Task<SelectList> GetBrands()
+        {
+            IEnumerable<Brand> brands = await _brandService.GetAllAsync();
+            return new SelectList(brands, "Id", "Name");
+        }
 
     }
 }
