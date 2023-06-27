@@ -2,6 +2,10 @@
 DoWithoutRefresh(".brand-delete", "/admin/Brand/Delete",".parent");
 DoWithoutRefresh(".category-delete", "/admin/Category/Delete", ".parent");
 DoWithoutRefresh(".subcategory-delete", "/admin/SubCategory/Delete", ".parent");
+DoWithoutRefresh(".discount-delete", "/admin/Discount/Delete", ".parent");
+DoWithoutRefresh(".tag-delete", "/admin/Tag/Delete", ".parent");
+DoWithoutRefresh(".rating-delete", "/admin/Rating/Delete", ".parent");
+
 //DoWithoutRefresh(".restore-item", "Restore");
 
 $('.reload-page').click(function () {

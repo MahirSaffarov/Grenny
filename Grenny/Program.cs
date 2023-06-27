@@ -64,6 +64,7 @@ builder.Services.AddScoped<IBasketRepository, BasketRepository>();
 builder.Services.AddScoped<IcategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IBrandRepository, BrandRepository>();
 builder.Services.AddScoped<IProductImageRepository, ProductImageRepository>();
+builder.Services.AddScoped<IRatingRepository, RatingRepository>();
 
 builder.Services.AddScoped<IProductBasketService, ProductBasketService>();
 builder.Services.AddScoped<ISubCategoryService, SubCategoryService>();
@@ -80,6 +81,7 @@ builder.Services.AddScoped<IBasketService, BasketService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IBrandService, BrandService>();
 builder.Services.AddScoped<IProductImageService, ProductImageService>();
+builder.Services.AddScoped<IRatingService, RatingService>();
 
 builder.Services.AddScoped<EmailSettings>();
 

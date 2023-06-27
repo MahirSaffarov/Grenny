@@ -1,22 +1,18 @@
-﻿@model CategoryAddVM
+﻿@model DiscountAddVM    
 
 @{
     ViewData["Title"] = "Add";
 }
 
 <div class="container">
-    <h1 class="mb-5">Create Category</h1>
+    <h1 class="mb-5">Create Discount</h1>
     <form method="post" asp-action="Add" enctype="multipart/form-data">
-        <div class="file-input text-center">
-            <label for="upload" class="file-label">
-                <span class="file-icon"><i class="fas fa-cloud-upload-alt"></i></span>
-                <span class="file-text">Choose a file</span>
-            </label>
-            <input asp-for="Image" id="upload" class="file-hidden " />
-        </div>
         <div class="product-info">
             <div class="product-name my-3">
                 <input asp-for="Name" class="animated-input" type="text" placeholder="Name" />
+            </div>
+            <div class="product-name my-3">
+                <input asp-for="Percent" class="animated-input" type="text" placeholder="Percent" />
             </div>
         </div>
         <div style="display:flex; justify-content:center; gap:10px">

@@ -46,6 +46,8 @@ namespace Grenny.Areas.Admin.Controllers
 
             foreach (var product in products.OrderByDescending(m => m.Id))
             {
+                string productImage = product.Images.FirstOrDefault()?.Image;
+
                 productsVM.Add(new ProductVM
                 {
                     Brand = product.Brand.Name,
@@ -53,7 +55,7 @@ namespace Grenny.Areas.Admin.Controllers
                     Discount = product.Discount.Name,
                     Name = product.Name,
                     Id = product.Id,
-                    Image = product.Images.FirstOrDefault().Image,
+                    Image = productImage,
                     Price = product.Price,
                     StockCount = product.StockCount,    
                     SubCategory = product.SubCategory.Name
@@ -233,6 +235,7 @@ namespace Grenny.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [HttpGet]
         public async Task<JsonResult> GetSubCategoryByCategoryId(int categoryId)
         {
             var subCatog = await _subCategoryService.GetAllWithIncludes();

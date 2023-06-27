@@ -1,5 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DomainLayer.Entities;
+using Microsoft.AspNetCore.Mvc;
+using Org.BouncyCastle.Asn1.Ocsp;
+using ServiceLayer.Services.Implementations;
 using ServiceLayer.Services.Interfaces;
+using ServiceLayer.ViewModels.AdminVM.CategoryVM;
+using ServiceLayer.ViewModels.AdminVM.DiscountVM;
 
 namespace Grenny.Areas.Admin.Controllers
 {
@@ -12,14 +17,38 @@ namespace Grenny.Areas.Admin.Controllers
             _discountService = discountService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var discounts = await _discountService.GetAllAsync();
+
+            List<DiscountVM> discountVM = new();
+
+            foreach (var discount in discounts.OrderByDescending(m => m.Id))
+            {
+                discountVM.Add(new DiscountVM
+                {
+                    Id = discount.Id,
+                    Name = discount.Name,
+                    Percent = discount.Percent
+                });
+            }
+            return View(discountVM);
         }
         [HttpGet]
-        public IActionResult Detail()
+        public async Task<IActionResult> Detail(int? id)
         {
-            return View();
+            if (id is null) return BadRequest();
+
+            var discount = await _discountService.GetByIdAsync((int)id);
+
+            DiscountDetailVM details = new()
+            {
+                Name = discount.Name,
+                Percent = discount.Percent,
+                CreateDate = discount.CreateDate.ToString("dd/MMMM/yyyy")
+            };
+
+            return View(details);
         }
         [HttpGet]
         public IActionResult Add()
@@ -27,24 +56,61 @@ namespace Grenny.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Add()
+        public async Task<IActionResult> Add(DiscountAddVM request)
         {
-            return View();
+            if (!ModelState.IsValid)
+            {
+                return View(request);
+            }
+
+            await _discountService.AddAsync(request);
+
+            return RedirectToAction(nameof(Index));
         }
         [HttpGet]
-        public IActionResult Edit()
+        public async Task<IActionResult> Edit(int? id)
         {
-            return View();
+            if (id is null) BadRequest();
+
+            Discount discount = await _discountService.GetByIdAsync((int)id);
+
+            if (discount == null) return NotFound();
+
+            DiscountEditVM model = new()
+            {
+                Name = discount.Name,
+                Percent = discount.Percent
+            };
+
+            return View(model);
         }
         [HttpPost]
-        public IActionResult Edit()
+        public async Task<IActionResult> Edit(DiscountEditVM request, int? id)
         {
-            return View();
+            if (id is null)
+                return BadRequest();
+
+            var brand = await _discountService.GetByIdAsync((int)id);
+
+            if (brand == null)
+                return NotFound();
+
+            if (!ModelState.IsValid)
+            {
+                return View(request);
+            }
+
+            await _discountService.EditAsync((int)id, request);
+
+            return RedirectToAction(nameof(Index));
         }
         [HttpPost]
-        public IActionResult Delete()
+        public async Task<IActionResult> Delete(int? id)
         {
-            return View();
+            if (id == null) return BadRequest();
+
+            await _discountService.DeleteAsync((int)id);
+            return Ok();
         }
     }
 }

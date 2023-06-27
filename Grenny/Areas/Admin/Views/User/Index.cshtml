@@ -1,0 +1,44 @@
+﻿@model List<AppUser>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-12">
+            <div class="bg-secondary rounded h-100 p-4">
+                <h6 style="font-size:24px" class="mb-5">Product</h6>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr style="color:wheat">
+                                <th scope="col">Profile</th>
+                                <th scope="col">Fullname</th>
+                                <th scope="col">Username</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Email Confrimation</th>
+                                <th scope="col">Options</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr style="color:floralwhite" class="parent">
+                                   @* <td><img style="width:100px; height:75px" src="~/images/product/@item.Image" /></td>*@
+                                    <td>@item.FullName</td>
+                                    <td>@item.UserName</td>
+                                    <td>@item.Email</td>
+                                    <td>@item.EmailConfirmed</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section AdminScript{
+    <script src="~/admin/js/custom.js"></script>
+}
