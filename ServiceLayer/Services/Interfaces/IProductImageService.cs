@@ -11,5 +11,9 @@ namespace ServiceLayer.Services.Interfaces
     public interface IProductImageService
     {
         Task AddRangeAsync(IEnumerable<ProductImage> model);
+        Task<IEnumerable<ProductImage>> GetAllAsync();
+        Task<ProductImage> GetByIdAsync(int id);
+        Task DeleteAsync(ProductImage image);
+        Task EditAsync(ProductImage image);
     }
 }

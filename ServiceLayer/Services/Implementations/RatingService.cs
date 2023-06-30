@@ -1,4 +1,6 @@
 ﻿using DomainLayer.Entities;
+using Microsoft.EntityFrameworkCore.Query;
+using Microsoft.EntityFrameworkCore;
 using RepositoryLayer.Repositories;
 using RepositoryLayer.Repositories.Interfaces;
 using ServiceLayer.Services.Interfaces;
@@ -49,6 +51,16 @@ namespace ServiceLayer.Services.Implementations
         public async Task<IEnumerable<Rating>> GetAllAsync()
         {
             return await _ratingRepository.GetAllAsync();
+        }
+
+        public async Task<IEnumerable<Rating>> GetAllWithIncludes()
+        {
+            Func<IQueryable<Rating>, IIncludableQueryable<Rating, object>>[] includeFuncs =
+{
+                entity => entity.Include(m=>m.Products)
+            };
+
+            return await _ratingRepository.GetAllWithIncludesAsync(includeFuncs);
         }
 
         public async Task<Rating> GetByIdAsync(int id)

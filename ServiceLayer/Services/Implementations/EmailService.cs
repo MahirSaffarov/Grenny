@@ -3,7 +3,7 @@ using MailKit.Security;
 using Microsoft.Extensions.Options;
 using MimeKit;
 using MimeKit.Text;
-using ServiceLayer.Helper;
+using ServiceLayer.Helpers;
 using ServiceLayer.Services.Interfaces;
 
 namespace ServiceLayer.Services

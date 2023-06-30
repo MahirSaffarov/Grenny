@@ -16,6 +16,7 @@ namespace ServiceLayer.Services.Interfaces
         Task EditAsync(int productId, SubCategoryEditVM model);
         Task<IEnumerable<SubCategory>> GetAllWithIncludes();
         Task<SubCategory> GetByIdWithAllIncludesAsync(int id);
+        Task<IEnumerable<SubCategory>> GetAllAsync();
 
     }
 }

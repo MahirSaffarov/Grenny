@@ -8,6 +8,8 @@ using RepositoryLayer.Repositories;
 using ServiceLayer.Services.Implementations;
 using RepositoryLayer.Repositories.Interfaces;
 using ServiceLayer.Helpers;
+using RepositoryLayer.DAL;
+using Microsoft.EntityFrameworkCore;
 
 namespace Grenny.Areas.Admin.Controllers
 {
@@ -22,6 +24,7 @@ namespace Grenny.Areas.Admin.Controllers
         private readonly IBrandService _brandService;
         private readonly ITagService _tagService;
         private readonly IProductTagService _productTagService;
+        private readonly AppDbContext _context;
 
         public ProductController(IProductService productService,
                                  IDiscountService discountService,
@@ -29,7 +32,8 @@ namespace Grenny.Areas.Admin.Controllers
                                  ISubCategoryService subCategoryService,
                                  IBrandService brandService,
                                  ITagService tagService,
-                                 IProductTagService productTagService)
+                                 IProductTagService productTagService,
+                                 AppDbContext context)
         {
             _productService = productService;
             _discountService = discountService;
@@ -38,6 +42,7 @@ namespace Grenny.Areas.Admin.Controllers
             _brandService = brandService;
             _tagService = tagService;
             _productTagService = productTagService;
+            _context = context;
         }
         public async Task<IActionResult> Index()
         {
@@ -249,12 +254,13 @@ namespace Grenny.Areas.Admin.Controllers
             await _productService.ChangeImageIsMainAsync(id);
             return Ok();
         }
-        
+        [HttpGet]
         public async Task<JsonResult> GetSubCategoryByCategoryId(int categoryId)
         {
-            var subCatog = await _subCategoryService.GetAllWithIncludes();
-            var catsub = subCatog.Where(m => m.CategoryId == categoryId).ToList();
-            return Json(catsub);
+            var subCatog = await _subCategoryService.GetAllAsync();
+            var result = subCatog.Where(m => m.CategoryId == categoryId);
+
+            return Json(result);
         }
         private async Task GetAllSelectOptions()
         {

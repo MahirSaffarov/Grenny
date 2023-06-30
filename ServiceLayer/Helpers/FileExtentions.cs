@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 
-namespace Grenny.Helpers
+namespace ServiceLayer.Helpers
 {
     public static class FileExtentions
     {

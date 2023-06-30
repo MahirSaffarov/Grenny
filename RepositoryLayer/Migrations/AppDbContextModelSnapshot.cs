@@ -22,6 +22,29 @@ namespace RepositoryLayer.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("DomainLayer.Entities.Adversiment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Adversiments");
+                });
+
             modelBuilder.Entity("DomainLayer.Entities.AppUser", b =>
                 {
                     b.Property<string>("Id")
@@ -121,24 +144,42 @@ namespace RepositoryLayer.Migrations
                         .IsUnique();
 
                     b.ToTable("Baskets");
+                });
 
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            AppUserId = "b59d27ed-5ac4-4cbc-819e-c36b80e2d334",
-                            Count = 0,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8354),
-                            SoftDelete = false
-                        },
-                        new
-                        {
-                            Id = 2,
-                            AppUserId = "f565482b-e971-4580-8493-e5c5ba0479c9",
-                            Count = 0,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8368),
-                            SoftDelete = false
-                        });
+            modelBuilder.Entity("DomainLayer.Entities.Blog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("TeamId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TeamId");
+
+                    b.ToTable("Blogs");
                 });
 
             modelBuilder.Entity("DomainLayer.Entities.Brand", b =>
@@ -166,24 +207,6 @@ namespace RepositoryLayer.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Brands");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8488),
-                            Image = "01.jpg",
-                            Name = "Vegan Lover",
-                            SoftDelete = false
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8489),
-                            Image = "03.jpg",
-                            Name = "Organic Foody",
-                            SoftDelete = false
-                        });
                 });
 
             modelBuilder.Entity("DomainLayer.Entities.Category", b =>
@@ -211,24 +234,64 @@ namespace RepositoryLayer.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
+                });
 
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8497),
-                            Image = "01.jpg",
-                            Name = "Vegetables",
-                            SoftDelete = false
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8498),
-                            Image = "02.jpg",
-                            Name = "Foods",
-                            SoftDelete = false
-                        });
+            modelBuilder.Entity("DomainLayer.Entities.City", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Cities");
+                });
+
+            modelBuilder.Entity("DomainLayer.Entities.Contact", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Contacts");
                 });
 
             modelBuilder.Entity("DomainLayer.Entities.Discount", b =>
@@ -255,24 +318,6 @@ namespace RepositoryLayer.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Discounts");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8509),
-                            Name = "Black Friday",
-                            Percent = (byte)50,
-                            SoftDelete = false
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8510),
-                            Name = "No Discount",
-                            Percent = (byte)0,
-                            SoftDelete = false
-                        });
                 });
 
             modelBuilder.Entity("DomainLayer.Entities.Product", b =>
@@ -337,42 +382,6 @@ namespace RepositoryLayer.Migrations
                     b.HasIndex("SubCategoryId");
 
                     b.ToTable("Products");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            BrandId = 1,
-                            CategoryId = 1,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8517),
-                            Description = "Cucumbers are commonly mistaken for vegetables. But in fact they are fruits, specifically berries. The long, green berries of the cucumber plant are what you usually find in your salads and sandwiches. They are made up of over 90% water, making them excellent for staying hydrated.",
-                            DiscountId = 1,
-                            Name = "Cucumber",
-                            Price = 50m,
-                            RatingId = 1,
-                            SKUCode = 12345,
-                            SalesCount = 80,
-                            SoftDelete = false,
-                            StockCount = 100,
-                            SubCategoryId = 1
-                        },
-                        new
-                        {
-                            Id = 2,
-                            BrandId = 2,
-                            CategoryId = 2,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8521),
-                            Description = "The standard eggplant is an oval or pear-shaped, glossy, purplish fruit 6 to 9 inches long. Japanese and oriental varieties tend to be elongated and slender with a thinner, more delicate skin. Ornamental varieties are edible and tend to produce small, white-skinned, oval-shaped fruit.",
-                            DiscountId = 2,
-                            Name = "Eggplant",
-                            Price = 100m,
-                            RatingId = 2,
-                            SKUCode = 54321,
-                            SalesCount = 180,
-                            SoftDelete = false,
-                            StockCount = 200,
-                            SubCategoryId = 2
-                        });
                 });
 
             modelBuilder.Entity("DomainLayer.Entities.ProductBasket", b =>
@@ -399,22 +408,6 @@ namespace RepositoryLayer.Migrations
                     b.HasIndex("ProductId");
 
                     b.ToTable("ProductBaskets");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            BasketId = 1,
-                            ProductCount = 0,
-                            ProductId = 1
-                        },
-                        new
-                        {
-                            Id = 2,
-                            BasketId = 2,
-                            ProductCount = 0,
-                            ProductId = 2
-                        });
                 });
 
             modelBuilder.Entity("DomainLayer.Entities.ProductImage", b =>
@@ -446,44 +439,6 @@ namespace RepositoryLayer.Migrations
                     b.HasIndex("ProductId");
 
                     b.ToTable("ProductImages");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8548),
-                            Image = "01.jpg",
-                            IsMain = true,
-                            ProductId = 1,
-                            SoftDelete = false
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8549),
-                            Image = "02.jpg",
-                            IsMain = false,
-                            ProductId = 1,
-                            SoftDelete = false
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8550),
-                            Image = "03.jpg",
-                            IsMain = true,
-                            ProductId = 2,
-                            SoftDelete = false
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8551),
-                            Image = "04.jpg",
-                            IsMain = false,
-                            ProductId = 2,
-                            SoftDelete = false
-                        });
                 });
 
             modelBuilder.Entity("DomainLayer.Entities.ProductTag", b =>
@@ -507,20 +462,6 @@ namespace RepositoryLayer.Migrations
                     b.HasIndex("TagId");
 
                     b.ToTable("ProductTags");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            ProductId = 1,
-                            TagId = 1
-                        },
-                        new
-                        {
-                            Id = 2,
-                            ProductId = 2,
-                            TagId = 2
-                        });
                 });
 
             modelBuilder.Entity("DomainLayer.Entities.ProductWishlist", b =>
@@ -544,20 +485,6 @@ namespace RepositoryLayer.Migrations
                     b.HasIndex("WishlistId");
 
                     b.ToTable("ProductWishlists");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            ProductId = 1,
-                            WishlistId = 1
-                        },
-                        new
-                        {
-                            Id = 2,
-                            ProductId = 2,
-                            WishlistId = 2
-                        });
                 });
 
             modelBuilder.Entity("DomainLayer.Entities.Rating", b =>
@@ -580,43 +507,6 @@ namespace RepositoryLayer.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Ratings");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8592),
-                            RatingCount = (byte)1,
-                            SoftDelete = false
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8626),
-                            RatingCount = (byte)2,
-                            SoftDelete = false
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8627),
-                            RatingCount = (byte)3,
-                            SoftDelete = false
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8628),
-                            RatingCount = (byte)4,
-                            SoftDelete = false
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8628),
-                            RatingCount = (byte)5,
-                            SoftDelete = false
-                        });
                 });
 
             modelBuilder.Entity("DomainLayer.Entities.Review", b =>
@@ -656,28 +546,33 @@ namespace RepositoryLayer.Migrations
                     b.HasIndex("RatingId");
 
                     b.ToTable("Reviews");
+                });
 
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            AppUserId = "b59d27ed-5ac4-4cbc-819e-c36b80e2d334",
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8640),
-                            Describe = "Very tasty, it is the best cucumber i have ever eaten.",
-                            ProductId = 1,
-                            RatingId = 1,
-                            SoftDelete = false
-                        },
-                        new
-                        {
-                            Id = 2,
-                            AppUserId = "f565482b-e971-4580-8493-e5c5ba0479c9",
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8641),
-                            Describe = "It is a fresh vegetables. I liked it.",
-                            ProductId = 2,
-                            RatingId = 2,
-                            SoftDelete = false
-                        });
+            modelBuilder.Entity("DomainLayer.Entities.Service", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Services");
                 });
 
             modelBuilder.Entity("DomainLayer.Entities.Setting", b =>
@@ -699,6 +594,86 @@ namespace RepositoryLayer.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Settings");
+                });
+
+            modelBuilder.Entity("DomainLayer.Entities.Slider", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Sliders");
+                });
+
+            modelBuilder.Entity("DomainLayer.Entities.SliderInfo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SliderInfos");
+                });
+
+            modelBuilder.Entity("DomainLayer.Entities.Social", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Icon")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Socials");
                 });
 
             modelBuilder.Entity("DomainLayer.Entities.SubCategory", b =>
@@ -727,24 +702,6 @@ namespace RepositoryLayer.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("SubCategories");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CategoryId = 1,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8651),
-                            Name = "Cucumber",
-                            SoftDelete = false
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CategoryId = 2,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8652),
-                            Name = "Eggplant",
-                            SoftDelete = false
-                        });
                 });
 
             modelBuilder.Entity("DomainLayer.Entities.Tag", b =>
@@ -768,113 +725,41 @@ namespace RepositoryLayer.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Tags");
+                });
 
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8659),
-                            Name = "Organic",
-                            SoftDelete = false
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8660),
-                            Name = "Fruits",
-                            SoftDelete = false
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8661),
-                            Name = "Vegan",
-                            SoftDelete = false
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8661),
-                            Name = "Healthy",
-                            SoftDelete = false
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8662),
-                            Name = "Seafood",
-                            SoftDelete = false
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8662),
-                            Name = "Crunchy",
-                            SoftDelete = false
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8663),
-                            Name = "Savory",
-                            SoftDelete = false
-                        },
-                        new
-                        {
-                            Id = 8,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8664),
-                            Name = "Gourmet",
-                            SoftDelete = false
-                        },
-                        new
-                        {
-                            Id = 9,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8664),
-                            Name = "Satisfying",
-                            SoftDelete = false
-                        },
-                        new
-                        {
-                            Id = 10,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8665),
-                            Name = "Delicious",
-                            SoftDelete = false
-                        },
-                        new
-                        {
-                            Id = 11,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8665),
-                            Name = "Fresh",
-                            SoftDelete = false
-                        },
-                        new
-                        {
-                            Id = 12,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8666),
-                            Name = "Juicy",
-                            SoftDelete = false
-                        },
-                        new
-                        {
-                            Id = 13,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8666),
-                            Name = "SpiceUp",
-                            SoftDelete = false
-                        },
-                        new
-                        {
-                            Id = 14,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8668),
-                            Name = "Tasty",
-                            SoftDelete = false
-                        },
-                        new
-                        {
-                            Id = 15,
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8668),
-                            Name = "Zesty",
-                            SoftDelete = false
-                        });
+            modelBuilder.Entity("DomainLayer.Entities.Team", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("About")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Position")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Teams");
                 });
 
             modelBuilder.Entity("DomainLayer.Entities.Wishlist", b =>
@@ -901,22 +786,6 @@ namespace RepositoryLayer.Migrations
                         .IsUnique();
 
                     b.ToTable("Wishlists");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            AppUserId = "b59d27ed-5ac4-4cbc-819e-c36b80e2d334",
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8680),
-                            SoftDelete = false
-                        },
-                        new
-                        {
-                            Id = 2,
-                            AppUserId = "f565482b-e971-4580-8493-e5c5ba0479c9",
-                            CreateDate = new DateTime(2023, 6, 28, 0, 21, 2, 511, DateTimeKind.Local).AddTicks(8681),
-                            SoftDelete = false
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -1061,6 +930,17 @@ namespace RepositoryLayer.Migrations
                         .IsRequired();
 
                     b.Navigation("AppUser");
+                });
+
+            modelBuilder.Entity("DomainLayer.Entities.Blog", b =>
+                {
+                    b.HasOne("DomainLayer.Entities.Team", "Team")
+                        .WithMany("Blogs")
+                        .HasForeignKey("TeamId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Team");
                 });
 
             modelBuilder.Entity("DomainLayer.Entities.Product", b =>
@@ -1335,6 +1215,11 @@ namespace RepositoryLayer.Migrations
             modelBuilder.Entity("DomainLayer.Entities.Tag", b =>
                 {
                     b.Navigation("ProductTags");
+                });
+
+            modelBuilder.Entity("DomainLayer.Entities.Team", b =>
+                {
+                    b.Navigation("Blogs");
                 });
 
             modelBuilder.Entity("DomainLayer.Entities.Wishlist", b =>

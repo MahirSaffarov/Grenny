@@ -16,5 +16,6 @@ namespace ServiceLayer.Services.Interfaces
         Task AddAsync(TagAddVM model);
         Task DeleteAsync(int id);
         Task EditAsync(int tagId, TagEditVM model);
+        Task<IEnumerable<Tag>> GetAllWithIncludes();
     }
 }

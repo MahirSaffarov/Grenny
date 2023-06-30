@@ -16,5 +16,6 @@ namespace ServiceLayer.Services.Interfaces
         Task AddAsync(RatingAddVM model);
         Task DeleteAsync(int id);
         Task EditAsync(int discountId, RatingEditVM model);
+        Task<IEnumerable<Rating>> GetAllWithIncludes();
     }
 }

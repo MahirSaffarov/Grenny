@@ -1,4 +1,4 @@
-﻿@*@model ProductVM*@
+﻿@model ProductPageVM
 
 @{
     ViewData["Title"] = "Index";
@@ -31,18 +31,17 @@
                         <label class="details-label new">new</label><label class="details-label off">-10%</label>
                     </div>
                     <ul class="details-preview">
-                        <li><img src="~/images/product/01.jpg" alt="product" /></li>
-                        <li><img src="~/images/product/01.jpg" alt="product" /></li>
-                        <li><img src="~/images/product/01.jpg" alt="product" /></li>
-                        <li><img src="~/images/product/01.jpg" alt="product" /></li>
-                        <li><img src="~/images/product/01.jpg" alt="product" /></li>
+                        @foreach (var item in Model.ProductVM.Images)
+                        {
+                            <li><img src="~/images/product/@item" alt="product" /></li>
+                        }
+                    
                     </ul>
                     <ul class="details-thumb">
-                        <li><img src="~/images/product/01.jpg" alt="product" /></li>
-                        <li><img src="~/images/product/01.jpg" alt="product" /></li>
-                        <li><img src="~/images/product/01.jpg" alt="product" /></li>
-                        <li><img src="~/images/product/01.jpg" alt="product" /></li>
-                        <li><img src="~/images/product/01.jpg" alt="product" /></li>
+                        @foreach (var item in Model.ProductVM.Images)
+                        {
+                            <li><img src="~/images/product/@item" alt="product" /></li>
+                        }
                     </ul>
                 </div>
             </div>
@@ -66,46 +65,52 @@
                 </ul>
                 <div class="details-content">
                     <h3 class="details-name">
-                        <a href="#">existing product name</a>
+                        <a href="#">@Model.ProductVM.Name</a>
                     </h3>
                     <div class="details-meta">
-                        <p>SKU:<span>1234567</span></p>
-                        <p>BRAND:<a href="#">radhuni</a></p>
+                        <p>SKU:<span>@Model.ProductVM.SkuCode</span></p>
+                        <p>BRAND:<a href="#">@Model.ProductVM.Brand</a></p>
                     </div>
                     <div class="details-rating">
-                        <i class="active icofont-star"></i><i class="active icofont-star"></i><i class="active icofont-star"></i><i class="active icofont-star"></i><i class="icofont-star"></i><a href="#">(3 reviews)</a>
+                        @for (int i = 0; i < Model.ProductVM.Ratings.RatingCount; i++)
+                        {
+                            <i class="active icofont-star"></i>
+                        }
+                        @for (int i = 0; i < (5 - Model.ProductVM.Ratings.RatingCount); i++)
+                        {
+                            <i class="icofont-star"></i>
+                        }
                     </div>
                     <h3 class="details-price">
-                        <del>$38.00</del><span>$24.00<small>/per kilo</small></span>
+                        @if (Model.ProductVM.Discounts.Percent != 0)
+                        {
+                            <span>$@((Model.ProductVM.Price * Model.ProductVM.Discounts.Percent) / 100)</span>
+                        }
+                        <del style="margin-left:5px;">$@Model.ProductVM.Price.ToString("0.#####")<small>/piece</small></del>
                     </h3>
                     <p class="details-desc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit facere
-                        harum natus amet soluta fuga consectetur alias veritatis
-                        quisquam ab eligendi itaque eos maiores quibusdam.
+                        @Model.ProductVM.Desc
                     </p>
                     <div class="details-list-group">
                         <label class="details-list-title">tags:</label>
                         <ul class="details-tag-list">
-                            <li><a href="#">organic</a></li>
-                            <li><a href="#">fruits</a></li>
-                            <li><a href="#">chilis</a></li>
+                            @foreach (var item in Model.ProductVM.Tags)
+                            {
+                                <li><a href="#">@item.Name</a></li>
+                            }
+                           
                         </ul>
                     </div>
                     <div class="details-list-group">
                         <label class="details-list-title">Share:</label>
                         <ul class="details-share-list">
-                            <li>
-                                <a href="#" class="icofont-facebook" title="Facebook"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="icofont-twitter" title="Twitter"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="icofont-linkedin" title="Linkedin"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="icofont-instagram" title="Instagram"></a>
-                            </li>
+                            @foreach(var item in Model.SocialVM)
+                            {
+                                <li>
+                                    <a href="#" title="Facebook">@Html.Raw(item.Icon)</a>
+                                </li>
+                            }
+                            
                         </ul>
                     </div>
                     <div class="details-add-group">
@@ -156,25 +161,8 @@
                 <div class="col-lg-6">
                     <div class="product-details-frame">
                         <div class="tab-descrip">
-                            <p>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                Recusandae delectus natus quasi aperiam. Nulla perspiciatis
-                                ullam ipsa, magni animi eligendi quis mollitia dolor omnis
-                                alias ut aspernatur est voluptatem illo totam iste
-                                consequatur vitae laborum ipsam facilis! Ipsa, voluptatum
-                                neque dolor facere autem maiores pariatur, eveniet veritatis
-                                vero iure obcaecati
+                            <p>@Model.ProductVM.Desc
                             </p>
-                            <ul>
-                                <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                                <li>labore possimus architecto, saepe nobis ex mollitia</li>
-                                <li>
-                                    mollitia soluta magni placeat. Eaque sit praesentium
-                                </li>
-                                <li>
-                                    distinctio ab a exercitationem officiis labore possimus
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -199,19 +187,11 @@
                             <tbody>
                                 <tr>
                                     <th scope="row">Product code</th>
-                                    <td>SKU: 101783</td>
+                                    <td>@Model.ProductVM.SkuCode</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">Weight</th>
-                                    <td>1kg, 2kg</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Styles</th>
-                                    <td>@@Girly</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Properties</th>
-                                    <td>Short Dress</td>
+                                    <th scope="row">Name</th>
+                                    <td>@Model.ProductVM.Name</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -426,56 +406,75 @@
             </div>
 
                 <div class="col">
-                    <div class="product-card">
-                        <div class="product-media">
-                            <div class="product-label">
-                                <label class="label-text sale">sale</label><label class="label-text new">new</label>
+                @foreach (var item in ViewBag.viewProd)
+                {
+                    <div class="col">
+                        <div class="product-card">
+                            <div class="product-media">
+                                <div class="product-label">
+                                    <label class="label-text sale">sale</label>
+                                </div>
+                                <button class="product-wish wish">
+                                    <i class="fas fa-heart"></i>
+                                </button><a class="product-image" asp-controller="Product" asp-action="Index" asp-route-id="@item.Id">
+                                    <img src="~/images/product/@item.Images" alt="product" />
+                                </a>
+                                <div class="product-widget">
+                                    <a title="Product Compare"
+                                       href="compare.html"
+                                       class="fas fa-random"></a><a title="Product Video"
+                                                                    href="https://youtu.be/9xzcVxSBbG8"
+                                                                    class="venobox fas fa-play"
+                                                                    data-autoplay="true"
+                                                                    data-vbtype="video"></a><a title="Product View"
+                                                                                               href="#"
+                                                                                               class="fas fa-eye"
+                                                                                               data-bs-toggle="modal"
+                                                                                               data-bs-target="#product-view"></a>
+                                </div>
                             </div>
-                            <button class="product-wish wish">
-                                <i class="fas fa-heart"></i>
-                            </button><a class="product-image" href="product-video.html">
-                                <img src="~/images/product/@*@Model.Images.FirstOrDefault().Image*@" alt="product" />
-                            </a>
-                            <div class="product-widget">
-                                <a title="Product Compare"
-                                   href="compare.html"
-                                   class="fas fa-random"></a><a title="Product Video"
-                                                                href="https://youtu.be/9xzcVxSBbG8"
-                                                                class="venobox fas fa-play"
-                                                                data-autoplay="true"
-                                                                data-vbtype="video"></a><a title="Product View"
-                                                                                           href="#"
-                                                                                           class="fas fa-eye"
-                                                                                           data-bs-toggle="modal"
-                                                                                           data-bs-target="#product-view"></a>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-rating">
-                                <i class="active icofont-star"></i><i class="active icofont-star"></i><i class="active icofont-star"></i><i class="active icofont-star"></i><i class="icofont-star"></i><a href="product-video.html">(3)</a>
-                            </div>
-                            <h6 class="product-name">
-                                <a href="product-video.html">fresh green chilis</a>
-                            </h6>
-                            <h6 class="product-price">
-                                <del>$34</del><span>$28<small>/piece</small></span>
-                            </h6>
-                            <button class="product-add" title="Add to Cart">
-                                <i class="fas fa-shopping-basket"></i><span>add</span>
-                            </button>
-                            <div class="product-action">
-                                <button class="action-minus" title="Quantity Minus">
-                                    <i class="icofont-minus"></i>
-                                </button><input class="action-input"
-                                                title="Quantity Number"
-                                                type="text"
-                                                name="quantity"
-                                                value="1" /><button class="action-plus" title="Quantity Plus">
-                                    <i class="icofont-plus"></i>
-                                </button>
+                            <div class="product-content">
+                                <div class="product-rating">
+                                    @for (int i = 0; i < item.Rating.RatingCount; i++)
+                                    {
+                                        <i class="active icofont-star"></i>
+                                    }
+                                    @for (int i = 0; i < (5 - item.Rating.RatingCount); i++)
+                                    {
+                                        <i class="icofont-star"></i>
+                                    }
+                                </div>
+                                <h6 class="product-name">
+                                    <a asp-controller="Product" asp-action="Index" asp-route-id="@item.Id">@item.Name</a>
+                                </h6>
+                                <h6 class="product-price">
+                                    @if (item.Discount.Percent != 0)
+                                    {
+                                        <span>$@((item.Price * item.Discount.Percent) / 100)</span>
+                                    }
+                                    <del style="margin-left:5px;">$@item.Price.ToString("0.#####")<small>/piece</small></del>
+                                </h6>
+                                <form method="post" asp-controller="Shop" asp-action="AddBasket" asp-route-id="@item.Id">
+                                    <button type="submit" class="product-add" title="Add to Cart">
+                                        <i class="fas fa-shopping-basket"></i><span>add</span>
+                                    </button>
+                                </form>
+                                <div class="product-action">
+                                    <button class="action-minus" title="Quantity Minus">
+                                        <i class="icofont-minus"></i>
+                                    </button><input class="action-input"
+                                                    title="Quantity Number"
+                                                    type="text"
+                                                    name="quantity"
+                                                    value="1" /><button class="action-plus" title="Quantity Plus">
+                                        <i class="icofont-plus"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                }
                 </div>
 
         </div>
@@ -483,69 +482,6 @@
             <div class="col-lg-12">
                 <div class="section-btn-25">
                     <a href="shop-4column.html" class="btn btn-outline"><i class="fas fa-eye"></i><span>view all related</span></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="news-part"
-         style="background: url(~/images/newsletter.jpg) no-repeat center">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-5 col-lg-6 col-xl-7">
-                <div class="news-text">
-                    <h2>Get 20% Discount for Subscriber</h2>
-                    <p>Lorem ipsum dolor consectetur adipisicing accusantium</p>
-                </div>
-            </div>
-            <div class="col-md-7 col-lg-6 col-xl-5">
-                <form class="news-form">
-                    <input type="text"
-                           placeholder="Enter Your Email Address" /><button>
-                        <span><i class="icofont-ui-email"></i>Subscribe</span>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="intro-part">
-    <div class="container">
-        <div class="row intro-content">
-            <div class="col-sm-6 col-lg-3">
-                <div class="intro-wrap">
-                    <div class="intro-icon"><i class="fas fa-truck"></i></div>
-                    <div class="intro-content">
-                        <h5>free home delivery</h5>
-                        <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="intro-wrap">
-                    <div class="intro-icon"><i class="fas fa-sync-alt"></i></div>
-                    <div class="intro-content">
-                        <h5>instant return policy</h5>
-                        <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="intro-wrap">
-                    <div class="intro-icon"><i class="fas fa-headset"></i></div>
-                    <div class="intro-content">
-                        <h5>quick support system</h5>
-                        <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="intro-wrap">
-                    <div class="intro-icon"><i class="fas fa-lock"></i></div>
-                    <div class="intro-content">
-                        <h5>secure payment way</h5>
-                        <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
-                    </div>
                 </div>
             </div>
         </div>

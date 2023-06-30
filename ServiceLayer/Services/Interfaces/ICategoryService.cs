@@ -13,6 +13,7 @@ namespace ServiceLayer.Services.Interfaces
     public interface ICategoryService
     {
         Task<IEnumerable<Category>> GetAllAsync();
+        Task<IEnumerable<Category>> GetAllWithIncludes();
         Task<Category> GetByIdAsync(int id);
         Task DeleteAsync(int id);
         Task AddAsync(CategoryAddVM model);

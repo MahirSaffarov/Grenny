@@ -15,5 +15,7 @@ namespace ServiceLayer.Services.Interfaces
         Task AddAsync(AddVM model);
         Task DeleteAsync(int id);
         Task EditAsync(int productId, EditVM model);
+        Task DeleteImageByIdAsync(int id);
+        Task ChangeImageIsMainAsync(int id);
     }
 }

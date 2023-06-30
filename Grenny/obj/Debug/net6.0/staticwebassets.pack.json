@@ -41,6 +41,10 @@
       "PackagePath": "staticwebassets\\admin\\js\\categoryFilterForSubcategory.js"
     },
     {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\js\\catogSub.js",
+      "PackagePath": "staticwebassets\\admin\\js\\catogSub.js"
+    },
+    {
       "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\admin\\js\\custom.js",
       "PackagePath": "staticwebassets\\admin\\js\\custom.js"
     },
@@ -725,12 +729,16 @@
       "PackagePath": "staticwebassets\\images\\about\\04.jpg"
     },
     {
-      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\ads\\8c24e4bf-42c6-4098-9ed3-d72c485e2d67_ad1.jpg",
-      "PackagePath": "staticwebassets\\images\\ads\\8c24e4bf-42c6-4098-9ed3-d72c485e2d67_ad1.jpg"
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\ads\\653dc356-7408-4165-a066-1682731432f9_ad2.jpg",
+      "PackagePath": "staticwebassets\\images\\ads\\653dc356-7408-4165-a066-1682731432f9_ad2.jpg"
     },
     {
-      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\ads\\d3ddc0e8-a04a-47be-8255-18994e1eab27_ad2.jpg",
-      "PackagePath": "staticwebassets\\images\\ads\\d3ddc0e8-a04a-47be-8255-18994e1eab27_ad2.jpg"
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\ads\\731b10d7-c14e-4030-8670-28c60533ddaa_ad4.jpg",
+      "PackagePath": "staticwebassets\\images\\ads\\731b10d7-c14e-4030-8670-28c60533ddaa_ad4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\ads\\b783b591-abdf-40e1-a1d4-6b3733b891cf_ad3.jpg",
+      "PackagePath": "staticwebassets\\images\\ads\\b783b591-abdf-40e1-a1d4-6b3733b891cf_ad3.jpg"
     },
     {
       "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\app-store - Copy.png",
@@ -777,44 +785,12 @@
       "PackagePath": "staticwebassets\\images\\blog-widget\\05.jpg"
     },
     {
-      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\blog\\01.jpg",
-      "PackagePath": "staticwebassets\\images\\blog\\01.jpg"
-    },
-    {
-      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\blog\\02.jpg",
-      "PackagePath": "staticwebassets\\images\\blog\\02.jpg"
-    },
-    {
       "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\blog\\026fc4a0-94ca-432b-8577-570bb3e915e7_blog6.jpg",
       "PackagePath": "staticwebassets\\images\\blog\\026fc4a0-94ca-432b-8577-570bb3e915e7_blog6.jpg"
     },
     {
-      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\blog\\03.jpg",
-      "PackagePath": "staticwebassets\\images\\blog\\03.jpg"
-    },
-    {
-      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\blog\\04.jpg",
-      "PackagePath": "staticwebassets\\images\\blog\\04.jpg"
-    },
-    {
       "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\blog\\04f768c2-d2f6-495a-81c8-8375e7d93319_blog7.jpg",
       "PackagePath": "staticwebassets\\images\\blog\\04f768c2-d2f6-495a-81c8-8375e7d93319_blog7.jpg"
-    },
-    {
-      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\blog\\05.jpg",
-      "PackagePath": "staticwebassets\\images\\blog\\05.jpg"
-    },
-    {
-      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\blog\\06.jpg",
-      "PackagePath": "staticwebassets\\images\\blog\\06.jpg"
-    },
-    {
-      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\blog\\07.jpg",
-      "PackagePath": "staticwebassets\\images\\blog\\07.jpg"
-    },
-    {
-      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\blog\\08.jpg",
-      "PackagePath": "staticwebassets\\images\\blog\\08.jpg"
     },
     {
       "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\blog\\1d93686f-cf24-434b-aea5-8c5d69431e58_blog1.jpg",
@@ -993,12 +969,20 @@
       "PackagePath": "staticwebassets\\images\\category\\47862d34-67d7-421d-9f61-d0a81d035882_sweet.jpg"
     },
     {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\category\\6fc7f464-227d-465a-a979-3b0438422d1e_ad4.jpg",
+      "PackagePath": "staticwebassets\\images\\category\\6fc7f464-227d-465a-a979-3b0438422d1e_ad4.jpg"
+    },
+    {
       "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\category\\7eaff1cd-b93c-4c76-9831-66901b7820b0_meat.jpg",
       "PackagePath": "staticwebassets\\images\\category\\7eaff1cd-b93c-4c76-9831-66901b7820b0_meat.jpg"
     },
     {
       "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\category\\80331545-66bf-490f-a0b1-95126dcd26a2_snack.jpg",
       "PackagePath": "staticwebassets\\images\\category\\80331545-66bf-490f-a0b1-95126dcd26a2_snack.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\category\\8d4f80f7-479d-4f8c-84b3-c51f14859a23_city4.jpg",
+      "PackagePath": "staticwebassets\\images\\category\\8d4f80f7-479d-4f8c-84b3-c51f14859a23_city4.jpg"
     },
     {
       "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\category\\92abdacb-b5c4-44ab-b020-ff3397ab4e5c_condiment.jpg",
@@ -1015,6 +999,30 @@
     {
       "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\category\\bc26ff34-1af6-44f0-a599-c0a982181125_vegetable.jpg",
       "PackagePath": "staticwebassets\\images\\category\\bc26ff34-1af6-44f0-a599-c0a982181125_vegetable.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\category\\c119915b-0d85-406a-87e2-ed4c17c28163_city1.jpg",
+      "PackagePath": "staticwebassets\\images\\category\\c119915b-0d85-406a-87e2-ed4c17c28163_city1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\category\\d381732f-c303-436c-9b7b-3c5f6a956ea4_city1.jpg",
+      "PackagePath": "staticwebassets\\images\\category\\d381732f-c303-436c-9b7b-3c5f6a956ea4_city1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\city\\7ad53a14-4897-4950-b102-b2cc532b45ab_city2.jpg",
+      "PackagePath": "staticwebassets\\images\\city\\7ad53a14-4897-4950-b102-b2cc532b45ab_city2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\city\\958f2656-2070-4ab8-a6c7-d45d5e2a3351_city1.jpg",
+      "PackagePath": "staticwebassets\\images\\city\\958f2656-2070-4ab8-a6c7-d45d5e2a3351_city1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\city\\997eb473-e55f-485a-bb72-e0748bd39d6e_city4.jpg",
+      "PackagePath": "staticwebassets\\images\\city\\997eb473-e55f-485a-bb72-e0748bd39d6e_city4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\city\\ed8ef43d-b44d-4d7b-85d0-851978a1ef43_city3.jpg",
+      "PackagePath": "staticwebassets\\images\\city\\ed8ef43d-b44d-4d7b-85d0-851978a1ef43_city3.jpg"
     },
     {
       "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\coming-soon.png",
@@ -1169,28 +1177,148 @@
       "PackagePath": "staticwebassets\\images\\payment\\png\\03.png"
     },
     {
-      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\58b48432-ff33-4ba6-bb2f-2498b5cf7898_WIN_20230624_18_12_46_Pro.jpg",
-      "PackagePath": "staticwebassets\\images\\product\\58b48432-ff33-4ba6-bb2f-2498b5cf7898_WIN_20230624_18_12_46_Pro.jpg"
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\01dd9e89-6cb1-4a1f-9bac-5446c415ff7c_download (23).jpeg",
+      "PackagePath": "staticwebassets\\images\\product\\01dd9e89-6cb1-4a1f-9bac-5446c415ff7c_download (23).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\1e4fa6a6-1fe7-4287-ac0f-7c62c43dc953_download (8).jpeg",
+      "PackagePath": "staticwebassets\\images\\product\\1e4fa6a6-1fe7-4287-ac0f-7c62c43dc953_download (8).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\37a521ec-b95c-4ccd-8680-19a8342ba2e8_soup1.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\37a521ec-b95c-4ccd-8680-19a8342ba2e8_soup1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\3d2afd71-8211-4d63-9ce1-7e34d308dc84_download (9).jpeg",
+      "PackagePath": "staticwebassets\\images\\product\\3d2afd71-8211-4d63-9ce1-7e34d308dc84_download (9).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\45f78d99-d587-413d-b032-cb9915cbe01b_b3f35465-fdbc-4ba8-883f-77a33c931192.6e369d67ea354c620c028832d60250a9.webp",
+      "PackagePath": "staticwebassets\\images\\product\\45f78d99-d587-413d-b032-cb9915cbe01b_b3f35465-fdbc-4ba8-883f-77a33c931192.6e369d67ea354c620c028832d60250a9.webp"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\4bd1b31c-a142-4154-9494-8580616badd8_download (22).jpeg",
+      "PackagePath": "staticwebassets\\images\\product\\4bd1b31c-a142-4154-9494-8580616badd8_download (22).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\4cdc9019-7297-4ebc-a457-3aa1dfe21895_download (3).jpeg",
+      "PackagePath": "staticwebassets\\images\\product\\4cdc9019-7297-4ebc-a457-3aa1dfe21895_download (3).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\4d619936-2345-4f86-9224-918ce2cf9cff_city1.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\4d619936-2345-4f86-9224-918ce2cf9cff_city1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\4e03a133-49e7-48d7-8624-1a1bf099b09f_download (11).jpeg",
+      "PackagePath": "staticwebassets\\images\\product\\4e03a133-49e7-48d7-8624-1a1bf099b09f_download (11).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\5c899011-c469-49e4-a3de-2ae18b895297_images (2).jpeg",
+      "PackagePath": "staticwebassets\\images\\product\\5c899011-c469-49e4-a3de-2ae18b895297_images (2).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\6110f881-bcf3-46c8-b62c-3c04913c0190_download (17).jpeg",
+      "PackagePath": "staticwebassets\\images\\product\\6110f881-bcf3-46c8-b62c-3c04913c0190_download (17).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\6afc2cc2-f78b-4e27-98ec-4dd0af169247_download (16).jpeg",
+      "PackagePath": "staticwebassets\\images\\product\\6afc2cc2-f78b-4e27-98ec-4dd0af169247_download (16).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\6b6bdba9-34f3-4c4e-8f1c-beae142eb273_download (14).jpeg",
+      "PackagePath": "staticwebassets\\images\\product\\6b6bdba9-34f3-4c4e-8f1c-beae142eb273_download (14).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\7c320a48-772c-405a-a3a3-0d1589c89eff_Chicken-Noodle-Casserole18.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\7c320a48-772c-405a-a3a3-0d1589c89eff_Chicken-Noodle-Casserole18.jpg"
     },
     {
       "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\7e96bf98-ae2b-4df6-8bbc-91a0a629a15c_WIN_20230614_16_15_05_Pro.jpg",
       "PackagePath": "staticwebassets\\images\\product\\7e96bf98-ae2b-4df6-8bbc-91a0a629a15c_WIN_20230614_16_15_05_Pro.jpg"
     },
     {
-      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\a36ea8df-7c58-498c-bda9-232010378420_WIN_20230624_18_12_53_Pro.jpg",
-      "PackagePath": "staticwebassets\\images\\product\\a36ea8df-7c58-498c-bda9-232010378420_WIN_20230624_18_12_53_Pro.jpg"
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\8afe31be-12f1-4939-a854-5a30af19ec6f_download (13).jpeg",
+      "PackagePath": "staticwebassets\\images\\product\\8afe31be-12f1-4939-a854-5a30af19ec6f_download (13).jpeg"
     },
     {
-      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\bb58bf43-f81c-42fc-a087-3d2107e39c80_WIN_20230614_16_15_05_Pro.jpg",
-      "PackagePath": "staticwebassets\\images\\product\\bb58bf43-f81c-42fc-a087-3d2107e39c80_WIN_20230614_16_15_05_Pro.jpg"
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\9567e04e-7d15-4c58-8374-e8e57d9c74ec_71kOsITKSkL.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\9567e04e-7d15-4c58-8374-e8e57d9c74ec_71kOsITKSkL.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\961a4e47-b963-436e-9f0c-079150f3dbe0_download (19).jpeg",
+      "PackagePath": "staticwebassets\\images\\product\\961a4e47-b963-436e-9f0c-079150f3dbe0_download (19).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\9bacb416-6c53-4cba-80fa-4b792f0f8848_city4.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\9bacb416-6c53-4cba-80fa-4b792f0f8848_city4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\ae4daa27-a013-40a5-9fd2-f16f5020600d_download (1).jpeg",
+      "PackagePath": "staticwebassets\\images\\product\\ae4daa27-a013-40a5-9fd2-f16f5020600d_download (1).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\b4a25e8d-1a7a-4c59-8a4b-cacd877e4d7a_download (10).jpeg",
+      "PackagePath": "staticwebassets\\images\\product\\b4a25e8d-1a7a-4c59-8a4b-cacd877e4d7a_download (10).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\b57eed8b-2660-4101-92b5-e8c3ca5db7c4_download (20).jpeg",
+      "PackagePath": "staticwebassets\\images\\product\\b57eed8b-2660-4101-92b5-e8c3ca5db7c4_download (20).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\b905daa2-6ddb-4246-9261-1ee51d29acac_download (4).jpeg",
+      "PackagePath": "staticwebassets\\images\\product\\b905daa2-6ddb-4246-9261-1ee51d29acac_download (4).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\bdd1f7b5-a1a8-471d-8141-414ccd2cc308_download (21).jpeg",
+      "PackagePath": "staticwebassets\\images\\product\\bdd1f7b5-a1a8-471d-8141-414ccd2cc308_download (21).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\c2770012-a4f4-439f-a392-1be1916e8fa3_download (24).jpeg",
+      "PackagePath": "staticwebassets\\images\\product\\c2770012-a4f4-439f-a392-1be1916e8fa3_download (24).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\c51e04bb-c853-4b42-ab2c-90fb9745ce10_Green_and_Black's_dark_chocolate_bar_2.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\c51e04bb-c853-4b42-ab2c-90fb9745ce10_Green_and_Black's_dark_chocolate_bar_2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\c5de89ad-0deb-42f9-91fe-700b2e130b59_city2.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\c5de89ad-0deb-42f9-91fe-700b2e130b59_city2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\ccb467ae-2265-4105-ab5c-0ef88453cf96_city4.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\ccb467ae-2265-4105-ab5c-0ef88453cf96_city4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\d9f55be8-80ed-49f4-9399-8f13bf4c95aa_download (12).jpeg",
+      "PackagePath": "staticwebassets\\images\\product\\d9f55be8-80ed-49f4-9399-8f13bf4c95aa_download (12).jpeg"
     },
     {
       "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\da254747-7ddb-42ac-878e-d9e62783846e_WIN_20230624_18_12_46_Pro.jpg",
       "PackagePath": "staticwebassets\\images\\product\\da254747-7ddb-42ac-878e-d9e62783846e_WIN_20230624_18_12_46_Pro.jpg"
     },
     {
-      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\de77413a-acec-4588-9687-529fc2b43f35_WIN_20230614_16_15_05_Pro.jpg",
-      "PackagePath": "staticwebassets\\images\\product\\de77413a-acec-4588-9687-529fc2b43f35_WIN_20230614_16_15_05_Pro.jpg"
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\dacc2a8b-d506-4365-b144-7bb827ad5591_download (15).jpeg",
+      "PackagePath": "staticwebassets\\images\\product\\dacc2a8b-d506-4365-b144-7bb827ad5591_download (15).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\e59e2607-b2ed-42b0-9e68-f6c36d825af2_download (5).jpeg",
+      "PackagePath": "staticwebassets\\images\\product\\e59e2607-b2ed-42b0-9e68-f6c36d825af2_download (5).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\e68160a7-78a8-4cb4-9121-2820044c9247_download (18).jpeg",
+      "PackagePath": "staticwebassets\\images\\product\\e68160a7-78a8-4cb4-9121-2820044c9247_download (18).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\e728baeb-7ec4-472e-a945-50ab852c590d_download (7).jpeg",
+      "PackagePath": "staticwebassets\\images\\product\\e728baeb-7ec4-472e-a945-50ab852c590d_download (7).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\fab518b4-78f4-4aed-9040-0c607debf12f_download (6).jpeg",
+      "PackagePath": "staticwebassets\\images\\product\\fab518b4-78f4-4aed-9040-0c607debf12f_download (6).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\product\\ffecee34-1d47-4383-be0f-a1e723048f08_download (2).jpeg",
+      "PackagePath": "staticwebassets\\images\\product\\ffecee34-1d47-4383-be0f-a1e723048f08_download (2).jpeg"
     },
     {
       "Id": "C:\\Users\\mahir\\Documents\\CodeAcademy\\Asp.NET Core MVC\\Grenny\\Grenny\\wwwroot\\images\\promo\\blog\\01.jpg",

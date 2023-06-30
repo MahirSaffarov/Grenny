@@ -6,7 +6,7 @@ using ServiceLayer.ViewModels.Blog;
 using ServiceLayer.ViewModels.BlogPageVM;
 using ServiceLayer.ViewModels.Category;
 using ServiceLayer.ViewModels.Social;
-using ServiceLayer.ViewModels.Tag;
+using ServiceLayer.ViewModels.Tags;
 using ServiceLayer.ViewModels.Team;
 
 namespace Grenny.Controllers

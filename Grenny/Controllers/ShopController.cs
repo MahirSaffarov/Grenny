@@ -11,7 +11,7 @@ using ServiceLayer.ViewModels.Brand;
 using ServiceLayer.ViewModels.Category;
 using ServiceLayer.ViewModels.Product;
 using ServiceLayer.ViewModels.ShopPageVM;
-using ServiceLayer.ViewModels.Tag;
+using ServiceLayer.ViewModels.Tags;
 using System.Linq;
 
 namespace Grenny.Controllers

@@ -1,6 +1,7 @@
 ﻿using DomainLayer.Entities;
-using Grenny.Helpers;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore.Query;
+using Microsoft.EntityFrameworkCore;
 using RepositoryLayer.Repositories;
 using RepositoryLayer.Repositories.Interfaces;
 using ServiceLayer.Services.Interfaces;
@@ -11,6 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ServiceLayer.Helpers;
 
 namespace ServiceLayer.Services.Implementations
 {
@@ -87,6 +89,16 @@ namespace ServiceLayer.Services.Implementations
             category.Name = model.Name;
 
             await _categoryRepository.EditAsync(category);
+        }
+
+        public async Task<IEnumerable<Category>> GetAllWithIncludes()
+        {
+            Func<IQueryable<Category>, IIncludableQueryable<Category, object>>[] includeFuncs =
+            {
+                entity => entity.Include(m=>m.Products),
+            };
+
+            return await _categoryRepository.GetAllWithIncludesAsync(includeFuncs);
         }
     }
 }

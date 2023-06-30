@@ -11,6 +11,7 @@ namespace ServiceLayer.ViewModels.AdminVM.DiscountVM
     {
         [Required]
         public string Name { get; set; }
+        [Required]
         public byte Percent { get; set; }
     }
 }

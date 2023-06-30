@@ -1,10 +1,11 @@
 ﻿using DomainLayer.Entities;
-using Grenny.Helpers;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 using Org.BouncyCastle.Asn1.Ocsp;
+using RepositoryLayer.Repositories;
 using RepositoryLayer.Repositories.Interfaces;
+using ServiceLayer.Helpers;
 using ServiceLayer.Services.Interfaces;
 using ServiceLayer.ViewModels.AdminVM.ProductVM;
 using System;
@@ -55,7 +56,7 @@ namespace ServiceLayer.Services.Implementations
                 Description = model.Description,
                 Price = model.Price,
                 BrandId = model.BrandId,
-                RatingId = 5,
+                RatingId = 6,
                 CategoryId = model.CategoryId,
                 SubCategoryId = model.SubCategoryId,
                 DiscountId = model.DiscountId,
@@ -210,6 +211,35 @@ namespace ServiceLayer.Services.Implementations
             await _productRepository.EditAsync(product);
         }
 
+        public async Task DeleteImageByIdAsync(int id)
+        {
+            ProductImage image = await _productImageService.GetByIdAsync(id);
 
+            await _productImageService.DeleteAsync(image);
+
+            string path = Path.Combine(_env.WebRootPath, "images/product", image.Image);
+
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+        }
+        public async Task ChangeImageIsMainAsync(int id)
+        {
+            ProductImage image = await _productImageService.GetByIdAsync(id);
+            var images = await _productImageService.GetAllAsync();
+            foreach (var item in images)
+            {
+                if (item.IsMain && item.ProductId == image.ProductId)
+                {
+                    item.IsMain = false;
+                }
+            }
+            image.IsMain = true;
+            foreach (var item in images)
+            {
+                await _productImageService.EditAsync(item);
+            }
+        }
     }
 }

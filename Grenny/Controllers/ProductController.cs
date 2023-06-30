@@ -1,48 +1,85 @@
 ﻿using DomainLayer.Entities;
 using Microsoft.AspNetCore.Mvc;
 using ServiceLayer.Services.Interfaces;
+using ServiceLayer.ViewModels.HomePageVM;
+using ServiceLayer.ViewModels.Product;
+using ServiceLayer.ViewModels.ProductPageVM;
+using ServiceLayer.ViewModels.Social;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Grenny.Controllers
 {
     public class ProductController : Controller
     {
         private readonly IProductService _productService;
-        public ProductController(IProductService productService)
+        private readonly ISocialService _socialService;
+
+        public ProductController(IProductService productService, ISocialService socialService)
         {
             _productService = productService;
+            _socialService = socialService;
         }
 
         public async Task<IActionResult> Index(int? id)
         {
-            if(id is null) return BadRequest();
+            if (id == null)
+                return BadRequest();
 
-            IEnumerable<Product> products = await _productService.GetAllWithIncludes();
+            var product = await _productService.GetByIdWithAllIncludesAsync(id.Value);
+            var products = await _productService.GetAllWithIncludes();
+            if (product == null)
+                return NotFound();
+            
+            var productVM = await GetProductVM(product);
 
-            if(products is null) return NotFound();
+            var productPageVM = new ProductPageVM
+            {
+                ProductVM = productVM,
+                SocialVM = await GetSocialVM()
+            };
+            var p = products.Where(m => m.CategoryId == product.CategoryId);
+            ViewBag.viewProd = p;
+            return View(productPageVM);
+        }
 
-            AppUser user = new();
+        private async Task<ProductVM> GetProductVM(Product product)
+        {
+            List<string> images = product.Images.Select(image => image.Image).ToList();
+            var tags = product.ProductTags.Select(m => m.Tag);
 
-            //foreach (var product in products)
-            //{
-            //    ProductVM productVM = new()
-            //    {
-            //        Id = product.Id,
-            //        Name = product.Name,
-            //        SKUCode = product.SKUCode,
-            //        Brand = product.Brand.Name,
-            //        Rating = product.Rating.RatingCount,
-            //        Reviews = product.Reviews.FirstOrDefault().Describe,
-            //        ReviewCount = product.Reviews.Count(),
-            //        ReviewCreateDate = product.CreateDate.ToString("dd/MMMM/yy"),
-            //        Price = product.Price,
-            //        Discount = product.Discount.Percent,
-            //        Description = product.Description,
-            //        //Tag = product.ProductTags.FirstOrDefault().Tag.Name,
-            //        Images = product.Images,
-            //        UserFullName = user.FullName
-            //    };
-            //}
-            return View();
+            var productVM = new ProductVM
+            {
+                Id = product.Id,
+                Name = product.Name,
+                Images = images,
+                Discounts = product.Discount,
+                Price = product.Price,
+                Rating = product.Rating.RatingCount,
+                Ratings = product.Rating,
+                ReviewCount = product.Reviews.Count(),
+                Desc = product.Description,
+                SaleCount = product.SalesCount,
+                SkuCode = product.SKUCode,
+                Brand = product.Brand.Name,
+                Tags = tags,
+            };
+
+            return productVM;
+        }
+
+        private async Task<IEnumerable<SocialVM>> GetSocialVM()
+        {
+            IEnumerable<Social> socials = await _socialService.GetAllAsync();
+
+            List<SocialVM> socialViewModels = socials.Select(member => new SocialVM
+            {
+                Icon = member.Icon,
+                Name = member.Name
+            }).ToList();
+
+            return socialViewModels;
         }
     }
 }

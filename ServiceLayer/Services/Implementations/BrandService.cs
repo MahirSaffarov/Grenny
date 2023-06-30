@@ -1,5 +1,4 @@
 ﻿using DomainLayer.Entities;
-using Grenny.Helpers;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore.Query;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +13,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
+using ServiceLayer.ViewModels.BrandPageVM;
+using ServiceLayer.Helpers;
 
 namespace ServiceLayer.Services.Implementations
 {
@@ -91,6 +92,42 @@ namespace ServiceLayer.Services.Implementations
             brand.Name = model.Name;
 
             await _brandRepository.EditAsync(brand);
+        }
+
+        public async Task<IEnumerable<Brand>> GetAllWithIncludes()
+        {
+            Func<IQueryable<Brand>, IIncludableQueryable<Brand, object>>[] includeFuncs =
+            {
+                entity => entity.Include(m=>m.Products),
+            };
+
+            return await _brandRepository.GetAllWithIncludesAsync(includeFuncs);
+        }
+
+        public async Task<List<Brand>> GetPaginatedDatasAsync(int page, int take)
+        {
+            var allDatas = await GetAllWithIncludes();
+            return allDatas.Skip((page - 1) * take).Take(take).ToList();
+        }
+        public List<BrandPageVM> GetMappedDatas(List<Brand> brands)
+        {
+            List<BrandPageVM> list = new();
+            foreach (var brand in brands)
+            {
+                list.Add(new BrandPageVM
+                {
+                    Name = brand.Name,
+                    Image = brand.Image,
+                    ProductCount = brand.Products.Count(),
+                });
+            }
+            return list;
+        }
+
+        public async Task<int> GetCountAsync()
+        {
+            var brands = await _brandRepository.GetAllAsync();
+            return brands.Count();
         }
     }
 }

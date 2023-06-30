@@ -78,7 +78,9 @@ namespace Grenny.Controllers
                 Price = member.Price,
                 Rating = member.Rating.RatingCount,
                 Ratings = member.Rating,
-                ReviewCount = member.Reviews.Count()
+                ReviewCount = member.Reviews.Count(),
+                Desc = member.Description,
+                SaleCount = member.SalesCount
             });
 
             return productViewModels;
@@ -154,18 +156,25 @@ namespace Grenny.Controllers
                 Id = member.Id,
                 Name = member.Name,
                 ProductCount = member.Products.Count(),
+                Image = member.Image
+                
             });
 
             return blogViewModels;
         }
         private async Task<IEnumerable<BlogVM>> GetBlogVMs()
         {
-            var blogs = await _brandService.GetAllWithIncludes();
+            var blogs = await _blogService.GetAllWithIncludes();
 
             var blogVM = new List<BlogVM>();
 
             var blogViewModels = blogs.Select(member => new BlogVM
             {
+                Team = member.Team.Name,
+                Text = member.Text,
+                Title = member.Title,
+                CreateDate = member.CreateDate.ToString("dddd/MMMM/yyyyy"),
+                Image = member.Image
             });
 
             return blogViewModels;

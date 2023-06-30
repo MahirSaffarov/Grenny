@@ -50,11 +50,17 @@ namespace ServiceLayer.Services.Implementations
             await _subCategoryRepository.EditAsync(subCategory);
         }
 
+        public Task<IEnumerable<SubCategory>> GetAllAsync()
+        {
+            return _subCategoryRepository.GetAllAsync();
+        }
+
         public async Task<IEnumerable<SubCategory>> GetAllWithIncludes()
         {
             Func<IQueryable<SubCategory>, IIncludableQueryable<SubCategory, object>>[] includeFuncs =
             {
                 entity => entity.Include(m=>m.Category),
+                 entity => entity.Include(m=>m.Products)
             };
 
             return await _subCategoryRepository.GetAllWithIncludesAsync(includeFuncs);
