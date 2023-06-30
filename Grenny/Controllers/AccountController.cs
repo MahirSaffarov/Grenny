@@ -57,7 +57,7 @@ namespace Grenny.Controllers
 
             AppUser user = await _accountService.GetUserByEmailOrUsername(request.Email);
 
-            await _accountService.AddUserToRoleAsync(user, Roles.Member);
+            await _accountService.AddUserToRoleAsync(user, Roles.Admin);
 
             await _basketService.CreateAsync(user);
             await _wishlistService.CreateAsync(user);

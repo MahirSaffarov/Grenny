@@ -4,10 +4,12 @@ using ServiceLayer.Services.Implementations;
 using ServiceLayer.Services.Interfaces;
 using ServiceLayer.ViewModels.AdminVM.SliderInfoVM;
 using ServiceLayer.ViewModels.AdminVM.SliderVM;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Grenny.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class SliderInfoController : Controller
     {
         private readonly ISliderInfoService _sliderInfoService;

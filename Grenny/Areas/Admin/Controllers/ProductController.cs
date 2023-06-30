@@ -14,7 +14,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Grenny.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    //[Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin")]
     public class ProductController : Controller
     {
         private readonly IProductService _productService;

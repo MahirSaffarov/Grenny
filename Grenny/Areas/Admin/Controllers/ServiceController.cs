@@ -3,10 +3,12 @@ using Microsoft.AspNetCore.Mvc;
 using ServiceLayer.Services.Interfaces;
 using ServiceLayer.ViewModels.AdminVM.DiscountVM;
 using ServiceLayer.ViewModels.AdminVM.ServiceVM;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Grenny.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class ServiceController : Controller
     {
         private readonly IServiceService _serviceService;

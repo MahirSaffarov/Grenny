@@ -1,4 +1,5 @@
 ﻿using DomainLayer.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ServiceLayer.Helpers;
 using ServiceLayer.Services.Implementations;
@@ -9,6 +10,7 @@ using ServiceLayer.ViewModels.AdminVM.ProductVM;
 namespace Grenny.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class BrandController : Controller
     {
         private readonly IBrandService _brandService;

@@ -1,13 +1,15 @@
 ﻿using DomainLayer.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ServiceLayer.Helpers;
 using ServiceLayer.Services.Interfaces;
 using ServiceLayer.ViewModels.AdminVM.CategoryVM;
 using ServiceLayer.ViewModels.AdminVM.TeamVM;
-
+using Microsoft.AspNetCore.Authorization;
 namespace Grenny.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class TeamController : Controller
     {
         private readonly ITeamService _teamService;

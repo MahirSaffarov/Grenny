@@ -2,10 +2,12 @@
 using Microsoft.AspNetCore.Mvc;
 using ServiceLayer.Services.Interfaces;
 using ServiceLayer.ViewModels.AdminVM.RatingVM;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Grenny.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class RatingController : Controller
     {
         private readonly IRatingService _ratingService;

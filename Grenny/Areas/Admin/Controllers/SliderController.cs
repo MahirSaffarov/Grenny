@@ -11,6 +11,7 @@ using ServiceLayer.ViewModels.AdminVM.SliderVM;
 namespace Grenny.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class SliderController : Controller
     {
         private readonly ISliderService _sliderService;

@@ -1,0 +1,5 @@
+username: MSafarov
+password: Cavid123_
+email: mahirsafarovv@gmail.com
+
+Basket databaza ile isleyir scripti yoxdu.

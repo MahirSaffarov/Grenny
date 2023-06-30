@@ -3,10 +3,12 @@ using Microsoft.AspNetCore.Mvc;
 using ServiceLayer.Services.Interfaces;
 using ServiceLayer.ViewModels.AdminVM.DiscountVM;
 using ServiceLayer.ViewModels.AdminVM.TagVM;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Grenny.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class TagController : Controller
     {
         private readonly ITagService _tagService;

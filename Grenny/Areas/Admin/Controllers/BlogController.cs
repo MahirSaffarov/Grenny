@@ -1,4 +1,5 @@
 ﻿using DomainLayer.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using ServiceLayer.Helpers;
@@ -10,6 +11,7 @@ using ServiceLayer.ViewModels.AdminVM.CategoryVM;
 namespace Grenny.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class BlogController : Controller
     {
         private readonly IBlogService _blogService;

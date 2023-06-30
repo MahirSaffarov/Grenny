@@ -1,4 +1,5 @@
 ﻿using DomainLayer.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ServiceLayer.Helpers;
 using ServiceLayer.Services.Interfaces;
@@ -8,6 +9,7 @@ using ServiceLayer.ViewModels.AdminVM.CityVM;
 namespace Grenny.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class CityController : Controller
     {
         private readonly ICityService _cityService;

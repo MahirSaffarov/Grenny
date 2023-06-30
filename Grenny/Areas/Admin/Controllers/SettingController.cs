@@ -7,8 +7,10 @@ using ServiceLayer.ViewModels.AdminVM.DiscountVM;
 using ServiceLayer.ViewModels.AdminVM.SettingVM;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 [Area("Admin")]
+[Authorize(Roles = "Admin")]
 public class SettingController : Controller
 {
     private readonly ISettingService _settingService;
