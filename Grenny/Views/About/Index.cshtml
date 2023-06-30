@@ -1,4 +1,6 @@
-﻿@section css{
+﻿@model AboutPageVM
+
+@section css{
     <link rel="stylesheet" href="~/css/about.css" />
 }
 @{
@@ -59,42 +61,24 @@
 <section class="inner-section about-testimonial">
     <div class="container">
         <ul class="testi-slider slider-arrow">
-            <li>
-                <div class="testi-content d-flex">
-                    <a class="testi-img" href="#">
-                        <img src="~/images/testimonial/01.jpg" alt="testimonial" />
-                    </a>
-                    <div class="testi-quote">
-                        <i class="icofont-quote-left"></i>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit neque
-                            earum sapiente vitae obcaecati magnam doloribus magni
-                            provident ab ipsam sint dolores repellat inventore sequi
-                            temporibus natus.
-                        </p>
-                        <h4>tahmina labonno</h4>
-                        <h6>Former MD - joomtech.com</h6>
+            @foreach (var item in Model.TeamVM)
+            {
+                <li>
+                    <div class="testi-content d-flex">
+                        <a class="testi-img" href="#">
+                            <img src="~/images/team/@item.Image" alt="testimonial" />
+                        </a>
+                        <div class="testi-quote">
+                            <i class="icofont-quote-left"></i>
+                            <p>
+                                @item.About
+                            </p>
+                            <h4>@item.Name</h4>
+                            <h6>@item.Position</h6>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li>
-                <div class="testi-content d-flex">
-                    <a class="testi-img" href="#">
-                        <img src="~/images/testimonial/02.jpg" alt="testimonial" />
-                    </a>
-                    <div class="testi-quote">
-                        <i class="icofont-quote-left"></i>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit neque
-                            earum sapiente vitae obcaecati magnam doloribus magni
-                            provident ab ipsam sint dolores repellat inventore sequi
-                            temporibus natus.
-                        </p>
-                        <h4>miron mahmud</h4>
-                        <h6>Senior Accountant - farmfresh.com</h6>
-                    </div>
-                </div>
-            </li>
+                </li>
+            }
         </ul>
     </div>
 </section>
@@ -108,60 +92,18 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6">
-                <div class="choose-card">
-                    <div class="choose-icon"><i class="icofont-fruits"></i></div>
-                    <div class="choose-text">
-                        <h4>100% fresh organic food</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing tempora
-                            pariatur provident animi error dignissimo cumque minus facere
-                            dolores cupiditate debitis
-                        </p>
+            @foreach (var item in Model.ServiceVM)
+            {
+                <div class="col-lg-6">
+                    <div class="choose-card">
+                        <div class="choose-icon"><i class="icofont-fruits"></i></div>
+                        <div class="choose-text">
+                            <h4>@item.Title</h4>
+                            <p>@item.Text</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="choose-card">
-                    <div class="choose-icon">
-                        <i class="icofont-vehicle-delivery-van"></i>
-                    </div>
-                    <div class="choose-text">
-                        <h4>Delivery within one hour</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing tempora
-                            pariatur provident animi error dignissimo cumque minus facere
-                            dolores cupiditate debitis
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="choose-card">
-                    <div class="choose-icon"><i class="icofont-loop"></i></div>
-                    <div class="choose-text">
-                        <h4>quickly return policy</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing tempora
-                            pariatur provident animi error dignissimo cumque minus facere
-                            dolores cupiditate debitis
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="choose-card">
-                    <div class="choose-icon"><i class="icofont-support"></i></div>
-                    <div class="choose-text">
-                        <h4>instant support team</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing tempora
-                            pariatur provident animi error dignissimo cumque minus facere
-                            dolores cupiditate debitis
-                        </p>
-                    </div>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </section>
@@ -175,66 +117,24 @@
         <div class="row">
             <div class="col-lg-12">
                 <ul class="team-slider slider-arrow">
-                    <li>
-                        <figure class="team-media">
-                            <img src="~/images/team/01.jpg" alt="team" />
-                            <div class="team-overlay">
-                                <a href="#" class="icofont-facebook facebook"></a><a href="#" class="icofont-twitter twitter"></a><a href="#" class="icofont-linkedin linkedin"></a>
+                    @foreach (var item in Model.TeamVM)
+                    {
+                        <li>
+                            <figure class="team-media">
+                                <img src="~/images/team/@item.Image" alt="team" />
+                                @foreach (var socials in Model.SocialVM)
+                                {
+                                    <div class="team-overlay">
+                                        <a href="#" class="">@Html.Raw(socials.Icon)</a>
+                                    </div>
+                                }
+                            </figure>
+                            <div class="team-meta">
+                                <h5><a href="#">@item.Name</a></h5>
+                                <p>@item.Position</p>
                             </div>
-                        </figure>
-                        <div class="team-meta">
-                            <h5><a href="#">Jhonson Hononr</a></h5>
-                            <p>Founder & CEO</p>
-                        </div>
-                    </li>
-                    <li>
-                        <figure class="team-media">
-                            <img src="~/images/team/02.jpg" alt="team" />
-                            <div class="team-overlay">
-                                <a href="#" class="icofont-facebook facebook"></a><a href="#" class="icofont-twitter twitter"></a><a href="#" class="icofont-linkedin linkedin"></a>
-                            </div>
-                        </figure>
-                        <div class="team-meta">
-                            <h5><a href="#">Jhonson Hononr</a></h5>
-                            <p>Web developer</p>
-                        </div>
-                    </li>
-                    <li>
-                        <figure class="team-media">
-                            <img src="~/images/team/03.jpg" alt="team" />
-                            <div class="team-overlay">
-                                <a href="#" class="icofont-facebook facebook"></a><a href="#" class="icofont-twitter twitter"></a><a href="#" class="icofont-linkedin linkedin"></a>
-                            </div>
-                        </figure>
-                        <div class="team-meta">
-                            <h5><a href="#">Jhonson Hononr</a></h5>
-                            <p>graphics designer</p>
-                        </div>
-                    </li>
-                    <li>
-                        <figure class="team-media">
-                            <img src="~/images/team/04.jpg" alt="team" />
-                            <div class="team-overlay">
-                                <a href="#" class="icofont-facebook facebook"></a><a href="#" class="icofont-twitter twitter"></a><a href="#" class="icofont-linkedin linkedin"></a>
-                            </div>
-                        </figure>
-                        <div class="team-meta">
-                            <h5><a href="#">Jhonson Hononr</a></h5>
-                            <p>digital marketer</p>
-                        </div>
-                    </li>
-                    <li>
-                        <figure class="team-media">
-                            <img src="~/images/team/05.jpg" alt="team" />
-                            <div class="team-overlay">
-                                <a href="#" class="icofont-facebook facebook"></a><a href="#" class="icofont-twitter twitter"></a><a href="#" class="icofont-linkedin linkedin"></a>
-                            </div>
-                        </figure>
-                        <div class="team-meta">
-                            <h5><a href="#">Jhonson Hononr</a></h5>
-                            <p>article writer</p>
-                        </div>
-                    </li>
+                        </li>
+                    }
                 </ul>
             </div>
         </div>
@@ -257,48 +157,6 @@
                         <span><i class="icofont-ui-email"></i>Subscribe</span>
                     </button>
                 </form>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="intro-part">
-    <div class="container">
-        <div class="row intro-content">
-            <div class="col-sm-6 col-lg-3">
-                <div class="intro-wrap">
-                    <div class="intro-icon"><i class="fas fa-truck"></i></div>
-                    <div class="intro-content">
-                        <h5>free home delivery</h5>
-                        <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="intro-wrap">
-                    <div class="intro-icon"><i class="fas fa-sync-alt"></i></div>
-                    <div class="intro-content">
-                        <h5>instant return policy</h5>
-                        <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="intro-wrap">
-                    <div class="intro-icon"><i class="fas fa-headset"></i></div>
-                    <div class="intro-content">
-                        <h5>quick support system</h5>
-                        <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="intro-wrap">
-                    <div class="intro-icon"><i class="fas fa-lock"></i></div>
-                    <div class="intro-content">
-                        <h5>secure payment way</h5>
-                        <p>Lorem ipsum dolor sit amet adipisicing elit nobis.</p>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

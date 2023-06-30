@@ -1,124 +1,84 @@
-﻿@model HomeVM
+﻿@model HomePageVM
 
 @{
     ViewData["Title"] = "Home Page";
 }
 
  <section class="home-index-slider slider-arrow slider-dots">
-      <div class="banner-part banner-1">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-md-6 col-lg-6">
-              <div class="banner-content">
-                <h1>free home delivery within 24 hours now.</h1>
-                <p>
-                  Lorem ipsum dolor consectetur adipisicing elit modi
-                  consequatur eaque expedita porro necessitatibus eveniet
-                  voluptatum quis pariatur Laboriosam molestiae architecto
-                  excepturi
-                </p>
-                <div class="banner-btn">
-                  <a class="btn btn-inline" href="shop-4column.html"
-                    ><i class="fas fa-shopping-basket"></i
-                    ><span>shop now</span></a
-                  ><a class="btn btn-outline" href="offer.html"
-                    ><i class="icofont-sale-discount"></i
-                    ><span>get offer</span></a
-                  >
+    @foreach (var slider in Model.SliderVM)
+    {
+        @foreach (var sliderInfo in Model.SliderInfoVM)
+        {
+            <div class="banner-part banner-1">
+                <div class="container">
+                    <div class="row align-items-center">
+                        @if (sliderInfo != null)
+                        {
+                            if (slider.Image != null)
+                            {
+                                <div class="col-md-6 col-lg-6">
+                                    <div class="banner-content">
+                                        <h1>@sliderInfo.Title</h1>
+                                        <p>
+                                            @sliderInfo.Text
+                                        </p>
+                                        <div class="banner-btn">
+                                            <a class="btn btn-inline" href="shop-4column.html">
+                                                <i class="fas fa-shopping-basket"></i><span>shop now</span>
+                                            </a><a class="btn btn-outline" href="offer.html">
+                                                <i class="icofont-sale-discount"></i><span>get offer</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6">
+                                    <div class="banner-img">
+                                        <img src="~/images/slider/@slider.Image" alt="index" />
+                                    </div>
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            <div class="col-md-6 col-lg-6">
+                                <div class="banner-img">
+                                <img src="~/images/slider/@slider.Image" alt="index" />
+                            </div>
+                                <div class="col-md-6 col-lg-6">
+                                    <div class="banner-content">
+                                        <h1>@sliderInfo.Title</h1>
+                                        <p>
+                                            @sliderInfo.Text
+                                        </p>
+                                        <div class="banner-btn">
+                                            <a class="btn btn-inline" href="shop-4column.html">
+                                                <i class="fas fa-shopping-basket"></i><span>shop now</span>
+                                            </a><a class="btn btn-outline" href="offer.html">
+                                                <i class="icofont-sale-discount"></i><span>get offer</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    }
                 </div>
-              </div>
             </div>
-            <div class="col-md-6 col-lg-6">
-              <div class="banner-img">
-                <img src="~/images/home/index/01.png" alt="index" />
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="banner-part banner-2">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-md-6 col-lg-6">
-              <div class="banner-img">
-                <img src="~/images/home/index/02.png" alt="index" />
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-6">
-              <div class="banner-content">
-                <h1>free home delivery within 24 hours now.</h1>
-                <p>
-                  Lorem ipsum dolor consectetur adipisicing elit modi
-                  consequatur eaque expedita porro necessitatibus eveniet
-                  voluptatum quis pariatur Laboriosam molestiae architecto
-                  excepturi
-                </p>
-                <div class="banner-btn">
-                  <a class="btn btn-inline" href="shop-4column.html"
-                    ><i class="fas fa-shopping-basket"></i
-                    ><span>shop now</span></a
-                  ><a class="btn btn-outline" href="offer.html"
-                    ><i class="icofont-sale-discount"></i
-                    ><span>get offer</span></a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        }
+    }
     </section>
     <section class="section suggest-part">
       <div class="container">
         <ul class="suggest-slider slider-arrow">
-          <li>
-            <a class="suggest-card" href="shop-4column.html"
-              ><img src="~/images/suggest/01.jpg" alt="suggest" />
-              <h5>vegetables <span>34 items</span></h5></a
-            >
-          </li>
-          <li>
-            <a class="suggest-card" href="shop-4column.html"
-              ><img src="~/images/suggest/02.jpg" alt="suggest" />
-              <h5>fruits <span>89 items</span></h5></a
-            >
-          </li>
-          <li>
-            <a class="suggest-card" href="shop-4column.html"
-              ><img src="~/images/suggest/03.jpg" alt="suggest" />
-              <h5>groceries <span>45 items</span></h5></a
-            >
-          </li>
-          <li>
-            <a class="suggest-card" href="shop-4column.html"
-              ><img src="~/images/suggest/04.jpg" alt="suggest" />
-              <h5>dairy farm <span>83 items</span></h5></a
-            >
-          </li>
-          <li>
-            <a class="suggest-card" href="shop-4column.html"
-              ><img src="~/images/suggest/05.jpg" alt="suggest" />
-              <h5>sea foods <span>40 items</span></h5></a
-            >
-          </li>
-          <li>
-            <a class="suggest-card" href="shop-4column.html"
-              ><img src="~/images/suggest/06.jpg" alt="suggest" />
-              <h5>vegan foods <span>57 items</span></h5></a
-            >
-          </li>
-          <li>
-            <a class="suggest-card" href="shop-4column.html"
-              ><img src="~/images/suggest/07.jpg" alt="suggest" />
-              <h5>dry foods <span>23 items</span></h5></a
-            >
-          </li>
-          <li>
-            <a class="suggest-card" href="shop-4column.html"
-              ><img src="~/images/suggest/08.jpg" alt="suggest" />
-              <h5>fast foods <span>97 items</span></h5></a
-            >
-          </li>
+            @foreach (var item in Model.CategoryVM)
+            {
+                <li>
+                    <a class="suggest-card" href="shop-4column.html">
+                        <img src="~/images/category/@item.Image" alt="suggest" style="width:240px; height:135px;"/>
+                        <h5>@item.Name <span>@item.ProductCount items</span></h5>
+                    </a>
+                </li>
+            }
         </ul>
       </div>
     </section>
@@ -130,7 +90,7 @@
           </div>
         </div>
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
-            @foreach(var item in Model.Products)
+            @foreach(var item in Model.ProductVM)
             {
                 <div class="col">
                     <div class="product-card">
@@ -141,7 +101,7 @@
                             <button class="product-wish wish">
                                 <i class="fas fa-heart"></i>
                             </button><a class="product-image" asp-controller="Product" asp-action="Index" asp-route-id="@item.Id">
-                                <img src="~/images/product/@item.Images.FirstOrDefault().Image" alt="product" />
+                                <img src="~/images/product/@item.Image" alt="product" />
                             </a>
                             <div class="product-widget">
                                 <a title="Product Compare"
@@ -159,25 +119,24 @@
                         </div>
                         <div class="product-content">
                             <div class="product-rating">
-                                @for (int i = 0; i < item.Rating.RatingCount; i++)
+                                @for (int i = 0; i < item.Ratings.RatingCount; i++)
                                 {
                                     <i class="active icofont-star"></i>
                                 }
-                                @for (int i = 0; i < (5 - item.Rating.RatingCount); i++)
+                                @for (int i = 0; i < (5 - item.Ratings.RatingCount); i++)
                                 {
                                     <i class="icofont-star"></i>
                                 }
-                                <a href="product-video.html">(@item.Reviews.Count())</a>
                             </div>
                             <h6 class="product-name">
                                 <a href="product-video.html">@item.Name</a>
                             </h6>
                             <h6 class="product-price">
-                                @if(item.Discount.Percent != 0)
+                                @if (item.Discounts.Percent != 0)
                                 {
-                                     <del>$@((item.Price * item.Discount.Percent) / 100)</del>
+                                    <span>$@((item.Price * item.Discounts.Percent) / 100)</span>
                                 }
-                                <span>$@item.Price.ToString("0.#####")<small>/piece</small></span>
+                                <del style="margin-left:5px;">$@item.Price.ToString("0.#####")<small>/piece</small></del>
                             </h6>
                             <form method="post" asp-controller="Shop" asp-action="AddBasket" asp-route-id="@item.Id">
                                 <button type="submit" class="product-add" title="Add to Cart">
@@ -217,7 +176,7 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="promo-img">
-              <a href="#"><img src="~/images/promo/home/03.jpg" alt="promo" /></a>
+              <a href="#"><img src="~/images/ads/@Model.AdversitmentVM.FirstOrDefault().Image.OrderByDescending()" alt="promo" /></a>
             </div>
           </div>
         </div>

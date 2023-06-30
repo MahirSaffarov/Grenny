@@ -3,7 +3,12 @@
 @{
     ViewData["Title"] = "Edit";
 }
+<style>
+    .main-image {
+        border: 5px solid green;
+    }
 
+</style>
 <div class="container">
     <h1 class="mb-5">Edit Product</h1>
     <form method="post" asp-action="Edit" enctype="multipart/form-data">
@@ -17,9 +22,16 @@
         <div class="product-image d-flex gap-4 justify-content-center mt-5">
             @foreach (var item in Model.Images)
             {
-                <img src="~/images/product/@item.Image" alt="Product Image" />
+                <div margin-bottom:30px" class="image  ">
+                    <button data-id="@item.Id" class="change-ismain @(item.IsMain ? "main-image" : "")" style="width:100%; height:100%;">
+                    <img src="~/images/product/@item.Image" alt="Product Image"   />
+                    </button>
+                    <a data-id="@item.Id" class="btn btn-danger delbtn @(!item.IsMain ? "" : "d-none")">Delete</a>
+
+                </div>
             }
         </div>
+
         <div class="product-info">
             <div class="product-name my-3">
                 <input asp-for="Name" class="animated-input" type="text" placeholder="Name" />
@@ -66,6 +78,7 @@
                             <br />
                     }
                 </span>
+
             </div>
             <div class="detail-item d-flex flex-column">
                 <span class="label">Description:</span>
@@ -86,4 +99,8 @@
 @section AdminScript{
     <script src="~/admin/js/add.js"></script>
     <script src="~/admin/js/categoryFilterForSubcategory.js"></script>
+    <script src="~/admin/js/product.js"></script>
 }
+
+
+  

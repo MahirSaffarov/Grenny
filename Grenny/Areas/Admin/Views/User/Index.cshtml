@@ -24,11 +24,19 @@
                             @foreach (var item in Model)
                             {
                                 <tr style="color:floralwhite" class="parent">
-                                   @* <td><img style="width:100px; height:75px" src="~/images/product/@item.Image" /></td>*@
+                                    <td><img style="width:75px; height:75px" src="~/images/user.png" /></td>
                                     <td>@item.FullName</td>
                                     <td>@item.UserName</td>
                                     <td>@item.Email</td>
                                     <td>@item.EmailConfirmed</td>
+                                    <td class="d-flex flex-column align-items-center">
+                                        <div class="d-flex justify-content-center align-items-center my-2 ">
+                                            <button type="submit" data-id="@item.Id" class="btn btn-outline-danger user-delete"><i class="fa-sharp fa-solid fa-trash"></i></button>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center ">
+                                            <a class="btn btn-outline-info" href="@Url.Action("Detail", new { id = item.Id })"><i class="fa-solid fa-circle-info"></i></a>
+                                        </div>
+                                    </td>
                                 </tr>
                             }
                         </tbody>

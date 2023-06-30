@@ -39,10 +39,10 @@
             <div class="detail-item">
                 <span class="label">Category > SubCategory:</span>
                 <span class="value">
-                    <select id="categoryId" asp-for="CategoryId" asp-items="ViewBag.categories" class="animated-input">
+                    <select asp-for="CategoryId" asp-items="ViewBag.categories" class="animated-input categoryId">
                         <option disabled selected>--Select Category--</option>
                     </select>
-                    <select id="subCatogId" asp-for="SubCategoryId" asp-items="ViewBag.subcategories" class="animated-input"></select>
+                    <select asp-for="SubCategoryId" asp-items="ViewBag.subcategories" class="animated-input subCatogId"></select>
                 </span>
             </div>
             <div class="detail-item flex-column">

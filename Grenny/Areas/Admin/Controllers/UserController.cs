@@ -2,80 +2,47 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using ServiceLayer.Services.Interfaces;
 
 namespace Grenny.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class UserController : Controller
     {
-        private readonly UserManager<AppUser> _userManager;
-        public UserController(UserManager<AppUser> userManager)
+        private readonly IUserService _userService;
+        public UserController(IUserService userService)
         {
-            _userManager = userManager;
+            _userService = userService;
         }
 
         public async Task<IActionResult> Index()
         {
-            var users = await _userManager.Users.ToListAsync();
+            var users = await _userService.GetAllAsync();
             return View(users);
         }
-        //public async Task<IActionResult> Details(string id)
-        //{
-        //    var user = await _userManager.FindByIdAsync(id);
+        public async Task<IActionResult> Detail(string id)
+        {
+            if (id is null) return BadRequest();
 
-        //    if (user == null)
-        //    {
-        //        // Handle user not found error
-        //    }
+            var user = await _userService.GetByIdAsync(id);
 
-        //    return View(user);
-        //}
-        //[HttpPost]
-        //public async Task<IActionResult> Delete(string id)
-        //{
-        //    var user = await _userManager.FindByIdAsync(id);
+            if (user == null) return NotFound();
 
-        //    if (user == null)
-        //    {
-        //        // Handle user not found error
-        //    }
+            return View(user);
+        }
 
-        //    var result = await _userManager.DeleteAsync(user);
+        [HttpPost]
+        public async Task<IActionResult> Delete(string id)
+        {
+            if (id is null) return BadRequest();
 
-        //    if (result.Succeeded)
-        //    {
-        //        return Json(new { success = true });
-        //    }
-        //    else
-        //    {
-        //        // Handle delete error
-        //        return Json(new { success = false });
-        //    }
-        //}
-        //[HttpPost]
-        //public async Task<IActionResult> Block(string id, bool block)
-        //{
-        //    var user = await _userManager.FindByIdAsync(id);
+            var user = await _userService.GetByIdAsync(id);
 
-        //    if (user == null)
-        //    {
-        //        // Handle user not found error
-        //    }
+            if (user == null) return NotFound();
 
-        //    user.IsBlocked = block;
+            await _userService.DeleteAsync(user);
 
-        //    var result = await _userManager.UpdateAsync(user);
-
-        //    if (result.Succeeded)
-        //    {
-        //        return Json(new { success = true });
-        //    }
-        //    else
-        //    {
-        //        // Handle update error
-        //        return Json(new { success = false });
-        //    }
-        //}
-
-
+            return Ok();
+        }
     }
 }

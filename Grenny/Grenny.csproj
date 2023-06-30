@@ -34,6 +34,11 @@
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="wwwroot\images\brand\" />
+    <Folder Include="wwwroot\images\ads\" />
+    <Folder Include="wwwroot\images\city\" />
+    <Folder Include="wwwroot\images\product\" />
+    <Folder Include="wwwroot\images\slider\" />
+    <Folder Include="wwwroot\images\team\" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,64 @@
+﻿@model AppUser
+
+<div class="container">
+    <h1>Product Detail</h1>
+    <div class="product-image d-flex gap-4 justify-content-center">
+            <img src="~/images/user.png" alt="Product Image" />
+    </div>
+    <div class="product-info">
+        <div class="product-name">@Model.FullName</div>
+        <div class="product-category">@Model.UserName</div>
+        <div class="product-brand">Email: @Model.Email</div>
+    </div>
+    <div class="product-details">
+        <div class="detail-item">
+            <span class="label">Is Block:</span>
+            <span class="value">@Model.IsBlock</span>
+        </div>
+        <div class="detail-item">
+            <span class="label">Phone Number Confirmation:</span>
+            <span class="value">@Model.PhoneNumberConfirmed</span>
+        </div>
+        <div class="detail-item">
+            <span class="label">Phone Number:</span>
+            <span class="value">@Model.PhoneNumber</span>
+        </div>
+        <div class="detail-item">
+            <span class="label">Access Failed Count :</span>
+            <span class="value">@Model.AccessFailedCount</span>
+        </div>
+        <div class="detail-item">
+            <span class="label">Two Factor Enabled:</span>
+            <span class="value">@Model.TwoFactorEnabled</span>
+        </div>
+        <div class="detail-item">
+            <span class="label">Lockout Enabled:</span>
+            <span class="value">@Model.LockoutEnabled</span>
+        </div>
+        <div class="detail-item d-flex flex-column my-3">
+            <span class="label">Lockout End:</span>
+            <span class="value my-3">@Model.LockoutEnd</span>
+        </div>
+       @* <div class="detail-item d-flex flex-column  my-3">
+            <span class="label" style="display:block">Reviews:</span>
+            <div class="value">
+                @foreach (var item in Model.Reviews)
+                {
+                    <span style="display:block; font-size:16px; font-weight:bold">@item.AppUser.FullName :</span>
+                    <span>@item.Describe</span>
+                }
+            </div>
+        </div>*@
+        <div style="display:flex; justify-content:right">
+            <a asp-action="Index" class="btn btn-outline-danger">Back</a>
+        </div>
+    </div>
+</div>
+
+@section AdminCss{
+    <link rel="stylesheet" href="~/admin/css/detail.css" />
+}
+
+@section AdminScript{
+    <script src="~/admin/js/detail.js"></script>
+}

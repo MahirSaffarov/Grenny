@@ -90,9 +90,9 @@ namespace Grenny.Areas.Admin.Controllers
             if (id is null)
                 return BadRequest();
 
-            var brand = await _discountService.GetByIdAsync((int)id);
+            var discount = await _discountService.GetByIdAsync((int)id);
 
-            if (brand == null)
+            if (discount == null)
                 return NotFound();
 
             if (!ModelState.IsValid)

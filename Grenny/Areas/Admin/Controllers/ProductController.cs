@@ -6,7 +6,8 @@ using DomainLayer.Entities;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using RepositoryLayer.Repositories;
 using ServiceLayer.Services.Implementations;
-using Grenny.Helpers;
+using RepositoryLayer.Repositories.Interfaces;
+using ServiceLayer.Helpers;
 
 namespace Grenny.Areas.Admin.Controllers
 {
@@ -235,12 +236,25 @@ namespace Grenny.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        [HttpGet]
+        [HttpPost]
+        public async Task<IActionResult> DeleteProductImage(int id)
+        {
+            await _productService.DeleteImageByIdAsync(id);
+            return Ok();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ChangeImageIsMain(int id)
+        {
+            await _productService.ChangeImageIsMainAsync(id);
+            return Ok();
+        }
+        
         public async Task<JsonResult> GetSubCategoryByCategoryId(int categoryId)
         {
             var subCatog = await _subCategoryService.GetAllWithIncludes();
-
-            return Json(subCatog.Where(m => m.CategoryId == categoryId).ToList());
+            var catsub = subCatog.Where(m => m.CategoryId == categoryId).ToList();
+            return Json(catsub);
         }
         private async Task GetAllSelectOptions()
         {

@@ -1,0 +1,34 @@
+﻿@model SliderEditVM
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container">
+    <h1 class="mb-5">Edit Slider</h1>
+    <form method="post" asp-action="Edit" enctype="multipart/form-data">
+        <div class="file-input text-center">
+            <label for="upload" class="file-label">
+                <span class="file-icon"><i class="fas fa-cloud-upload-alt"></i></span>
+                <span class="file-text">Choose a file</span>
+            </label>
+            <input asp-for="NewImage" id="upload" class="file-hidden" multiple />
+        </div>
+        <div class="product-image d-flex gap-4 justify-content-center mt-5">
+            <img src="~/images/slider/@Model.Image" alt="Product Image" />
+        </div>
+        <div style="display:flex; justify-content:center; gap:10px">
+            <button type="submit" class="btn btn-outline-success">Edit</button>
+            <a asp-action="Index" class="btn btn-outline-danger">Back</a>
+        </div>
+    </form>
+</div>
+
+@section AdminCss{
+    <link rel="stylesheet" href="~/admin/css/add.css" />
+}
+
+@section AdminScript{
+    <script src="~/admin/js/add.js"></script>
+    <script src="~/admin/js/subcategoryFilter.js"></script>
+}

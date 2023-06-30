@@ -5,6 +5,17 @@ DoWithoutRefresh(".subcategory-delete", "/admin/SubCategory/Delete", ".parent");
 DoWithoutRefresh(".discount-delete", "/admin/Discount/Delete", ".parent");
 DoWithoutRefresh(".tag-delete", "/admin/Tag/Delete", ".parent");
 DoWithoutRefresh(".rating-delete", "/admin/Rating/Delete", ".parent");
+DoWithoutRefresh(".user-delete", "/admin/User/Delete", ".parent");
+DoWithoutRefresh(".slider-delete", "/admin/Slider/Delete", ".parent");
+DoWithoutRefresh(".sliderInfo-delete", "/admin/SliderInfo/Delete", ".parent");
+DoWithoutRefresh(".setting-delete", "/admin/Setting/Delete", ".parent");
+DoWithoutRefresh(".ads-delete", "/admin/Adversitment/Delete", ".parent");
+DoWithoutRefresh(".blog-delete", "/admin/Blog/Delete", ".parent");
+DoWithoutRefresh(".team-delete", "/admin/Team/Delete", ".parent");
+DoWithoutRefresh(".social-delete", "/admin/Social/Delete", ".parent");
+DoWithoutRefresh(".service-delete", "/admin/Service/Delete", ".parent");
+DoWithoutRefresh(".contact-delete", "/admin/Contact/Delete", ".parent");
+DoWithoutRefresh(".city-delete", "/admin/City/Delete", ".parent");
 
 //DoWithoutRefresh(".restore-item", "Restore");
 
@@ -35,49 +46,3 @@ function DoWithoutRefresh(btn, url,closest) {
     })
 }
 
-//$(document).on("click", ".load-more", function () {
-
-//    let parent = $(".parent-products-elem");
-
-//    let skip = $(parent).children().length;
-
-//    let datas = $(parent).attr("data-count");
-//    console.log(parent);
-//    console.log(datas);
-
-//    $.ajax({
-//        url: `course/loadmore?skip=${skip}`,
-//        type: "Get",
-//        success: function (res) {
-
-
-//            $(parent).append(res);
-//            console.log(res);
-
-//            skip = $(parent).children().length;
-
-//            if (skip >= datas) {
-//                $(".load-more").addClass("d-none");
-
-//            }
-//        }
-
-//    })
-//});
-
-
-//$(document).on("click", ".add-card", function (e) {
-//    e.preventDefault()
-//    let id = $(this).attr("data-id");
-//    let data = { id: id };
-//    console.log(id)
-//    $.ajax({
-//        url: "Course/AddBasket",
-//        type: "Post",
-//        data: data,
-//        success: function () {
-//            console.log("ok")
-
-//        }
-//    })
-//})

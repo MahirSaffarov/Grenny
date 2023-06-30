@@ -1,0 +1,23 @@
+﻿@model SliderInfoDetailVM
+
+<div class="container">
+    <h1>SliderInfo Detail</h1>
+    <div class="product-info">
+        <div class="product-name">@Model.Title</div>
+        <div class="product-brand">Date: @Model.CreateDate</div>
+    </div>
+    <div class="product-info">
+        <div class="product-name">@Model.Text</div>
+    </div>
+    <div style="display:flex; justify-content:right">
+        <a asp-action="Index" class="btn btn-outline-danger">Back</a>
+    </div>
+</div>
+
+@section AdminCss{
+    <link rel="stylesheet" href="~/admin/css/detail.css" />
+}
+
+@section AdminScript{
+    <script src="~/admin/js/detail.js"></script>
+}

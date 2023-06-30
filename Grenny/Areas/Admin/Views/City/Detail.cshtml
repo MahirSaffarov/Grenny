@@ -1,0 +1,26 @@
+﻿@model CityDetailVM
+
+<div class="container">
+    <h1>City Detail</h1>
+    <div class="product-image d-flex gap-4 justify-content-center">
+
+        <img src="~/images/city/@Model.Image" alt="City Image" />
+
+    </div>
+    <div class="product-info">
+        <div class="product-name">@Model.Name</div>
+        <div class="product-name">@Model.Address</div>
+        <div class="product-brand">Date: @Model.CreateDate</div>
+    </div>
+    <div style="display:flex; justify-content:right">
+        <a asp-action="Index" class="btn btn-outline-danger">Back</a>
+    </div>
+</div>
+
+@section AdminCss{
+    <link rel="stylesheet" href="~/admin/css/detail.css" />
+}
+
+@section AdminScript{
+    <script src="~/admin/js/detail.js"></script>
+}
